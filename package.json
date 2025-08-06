@@ -1,0 +1,29 @@
+{
+  "name": "the-energy-museum",
+  "version": "1.0.0",
+  "description": "A visual storytelling museum website with React frontend and Grav CMS backend",
+  "main": "index.js",
+  "scripts": {
+    "dev:frontend": "cd frontend && npm start",
+    "build:frontend": "cd frontend && npm run build",
+    "dev:backend": "cd backend && php -S localhost:8001 system/router.php",
+    "dev:api": "cd api && php -S localhost:8002",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && composer install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:api\" \"npm run dev:frontend\"",
+    "setup": "npm run install:frontend && npm run install:backend"
+  },
+  "keywords": [
+    "museum",
+    "react",
+    "grav",
+    "cms",
+    "visual-storytelling",
+    "exhibitions"
+  ],
+  "author": "The Energy Museum Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
