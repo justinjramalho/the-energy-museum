@@ -75,7 +75,7 @@ const MissionBox = styled.div`
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 255, 255, 0.05));
   border: 1px solid rgba(0, 212, 255, 0.3);
   border-radius: 16px;
-  padding: 3rem;
+  padding: 4rem 3rem 3rem;
   margin: 3rem auto;
   max-width: 800px;
   text-align: center;
@@ -85,11 +85,11 @@ const MissionBox = styled.div`
     content: '🎯';
     font-size: 3rem;
     position: absolute;
-    top: -1.5rem;
+    top: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    background: #0a0f1c;
-    padding: 0 1rem;
+    background: transparent;
+    padding: 0;
   }
 `;
 
@@ -175,6 +175,195 @@ const FounderBio = styled.p`
   margin-bottom: 1.5rem;
 `;
 
+const BoardMembersGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+`;
+
+const BoardMemberCard = styled.div`
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-3px);
+    border-color: rgba(0, 212, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+  }
+`;
+
+const MemberImage = styled.div`
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #0a0f1c;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+`;
+
+const MemberName = styled.h4`
+  color: #00d4ff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+`;
+
+const MemberTitle = styled.p`
+  color: #b0b7c3;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+`;
+
+const LearnMoreLink = styled.button`
+  background: none;
+  border: none;
+  color: #00d4ff;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.95rem;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  opacity: ${props => props.isOpen ? 1 : 0};
+  visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
+  transition: all 0.3s ease;
+`;
+
+const ModalContent = styled.div`
+  background: linear-gradient(135deg, #0a0f1c, #1a2332);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 16px;
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  transform: ${props => props.isOpen ? 'scale(1)' : 'scale(0.9)'};
+  transition: all 0.3s ease;
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #b0b7c3;
+  font-size: 2rem;
+  cursor: pointer;
+  
+  &:hover {
+    color: #00d4ff;
+  }
+`;
+
+const ModalImage = styled.div`
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #0a0f1c;
+  font-weight: bold;
+  margin: 0 auto 2rem;
+`;
+
+const ModalName = styled.h3`
+  color: #00d4ff;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+`;
+
+const ModalTitle = styled.h4`
+  color: #b0b7c3;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 500;
+`;
+
+const ModalBio = styled.div`
+  color: #e0e6ed;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  
+  p {
+    margin-bottom: 1rem;
+  }
+`;
+
+const ContactInfo = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+`;
+
+const ContactLink = styled.a`
+  color: #00d4ff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: rgba(0, 212, 255, 0.1);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(0, 212, 255, 0.2);
+    transform: translateY(-2px);
+  }
+`;
+
+const HistoryImage = styled.div`
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  margin: 3rem auto;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 2px solid #00d4ff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00d4ff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 2rem;
+  line-height: 1.5;
+`;
+
 const StatsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -254,6 +443,10 @@ const ServicesTeaser = styled.div`
   text-align: center;
   margin: 3rem auto;
   max-width: 800px;
+  
+  p {
+    margin-top: 1.5rem;
+  }
 `;
 
 const ServicesList = styled.div`
@@ -306,6 +499,9 @@ const AnimatedSection = styled.div`
 `;
 
 function About() {
+  const [selectedMember, setSelectedMember] = React.useState(null);
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  
   const heroAnimation = useScrollAnimation({ threshold: 0.1 });
   const missionAnimation = useScrollAnimation({ threshold: 0.3 });
   const teamAnimation = useScrollAnimation({ threshold: 0.3 });
@@ -313,6 +509,47 @@ function About() {
   const impactAnimation = useScrollAnimation({ threshold: 0.3 });
   const valuesAnimation = useScrollAnimation({ threshold: 0.3 });
   const servicesAnimation = useScrollAnimation({ threshold: 0.3 });
+
+  // Board members data
+  const boardMembers = [
+    {
+      id: 1,
+      name: "Dr. Sarah Martinez",
+      title: "Board Member & Education Director",
+      initials: "SM",
+      email: "s.martinez@energymuseum.org",
+      linkedin: "https://linkedin.com/in/sarahmartinez",
+      bio: [
+        "Dr. Sarah Martinez brings over 15 years of experience in STEM education and curriculum development. She holds a PhD in Educational Technology from Stanford University and has been instrumental in developing innovative energy literacy programs.",
+        "As Board Member and Education Director, Dr. Martinez oversees our curriculum development initiatives and ensures all programs meet the highest educational standards. Her research focuses on making complex scientific concepts accessible to diverse learning populations.",
+        "Dr. Martinez has authored numerous publications on energy education and has spoken at international conferences on sustainable education practices."
+      ]
+    },
+    {
+      id: 2,
+      name: "Michael Chen",
+      title: "Board Member & Technology Advisor",
+      initials: "MC",
+      email: "m.chen@energymuseum.org",
+      twitter: "https://twitter.com/michaelchen_tech",
+      linkedin: "https://linkedin.com/in/michaelchen",
+      bio: [
+        "Michael Chen is a technology innovator and entrepreneur with a passion for educational technology. He founded two successful EdTech companies and has been recognized as a leader in digital learning platforms.",
+        "As Board Member and Technology Advisor, Michael guides our digital strategy and helps integrate cutting-edge technology into our educational programs. His expertise in user experience design ensures our digital museum platform is engaging and accessible.",
+        "Michael holds a Master's degree in Computer Science from MIT and frequently consults for educational organizations on technology integration and digital transformation."
+      ]
+    }
+  ];
+
+  const openModal = (member) => {
+    setSelectedMember(member);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedMember(null);
+  };
 
   return (
     <PageContainer>
@@ -383,6 +620,17 @@ function About() {
                 </a>
               </FounderInfo>
             </FounderSpotlight>
+
+            <BoardMembersGrid>
+              {boardMembers.map((member) => (
+                <BoardMemberCard key={member.id} onClick={() => openModal(member)}>
+                  <MemberImage>{member.initials}</MemberImage>
+                  <MemberName>{member.name}</MemberName>
+                  <MemberTitle>{member.title}</MemberTitle>
+                  <LearnMoreLink>Learn more →</LearnMoreLink>
+                </BoardMemberCard>
+              ))}
+            </BoardMembersGrid>
           </TeamSection>
         </AnimatedSection>
       </Section>
@@ -401,6 +649,12 @@ function About() {
               and communities. What started as innovative curriculum development has evolved into a 
               comprehensive platform for energy education.
             </p>
+            
+            <HistoryImage>
+              Historical Timeline Image<br/>
+              [Placeholder for Energy Museum evolution timeline]
+            </HistoryImage>
+            
             <p style={{ color: '#b0b7c3', fontSize: '1rem', lineHeight: '1.7' }}>
               From our early days developing hands-on STEM activities to our current digital storytelling 
               platform, we've remained committed to making energy education engaging, accessible, and 
@@ -559,6 +813,50 @@ function About() {
           </ServicesTeaser>
         </AnimatedSection>
       </Section>
+
+      {/* Modal for Board Member Details */}
+      <Modal isOpen={isModalOpen} onClick={closeModal}>
+        <ModalContent isOpen={isModalOpen} onClick={(e) => e.stopPropagation()}>
+          <CloseButton onClick={closeModal}>×</CloseButton>
+          {selectedMember && (
+            <>
+              <ModalImage>{selectedMember.initials}</ModalImage>
+              <ModalName>{selectedMember.name}</ModalName>
+              <ModalTitle>{selectedMember.title}</ModalTitle>
+              <ModalBio>
+                {selectedMember.bio.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </ModalBio>
+              <ContactInfo>
+                <ContactLink href={`mailto:${selectedMember.email}`} title="Email">
+                  📧
+                </ContactLink>
+                {selectedMember.linkedin && (
+                  <ContactLink 
+                    href={selectedMember.linkedin} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    title="LinkedIn"
+                  >
+                    💼
+                  </ContactLink>
+                )}
+                {selectedMember.twitter && (
+                  <ContactLink 
+                    href={selectedMember.twitter} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    title="Twitter"
+                  >
+                    🐦
+                  </ContactLink>
+                )}
+              </ContactInfo>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </PageContainer>
   );
 }
