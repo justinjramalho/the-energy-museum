@@ -139,6 +139,9 @@ function Header() {
           <NavLink to="/" $isActive={isActive('/')}>
             Home
           </NavLink>
+          <NavLink to="/about" $isActive={isActive('/about')}>
+            About
+          </NavLink>
           <NavLink to="/exhibitions" $isActive={isActive('/exhibitions')}>
             Exhibitions
           </NavLink>
