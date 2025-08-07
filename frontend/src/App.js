@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 
 // Pages
 import Home from './pages/Home';
+import About from './pages/About';
 import Exhibitions from './pages/Exhibitions';
 import ExhibitionDetail from './pages/ExhibitionDetail';
 import Support from './pages/Support';
@@ -76,6 +77,7 @@ function App() {
         <MainContent>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/exhibitions" element={<Exhibitions />} />
             <Route path="/exhibitions/:id" element={<ExhibitionDetail />} />
             <Route path="/support" element={<Support />} />
