@@ -75,7 +75,7 @@ const MissionBox = styled.div`
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 255, 255, 0.05));
   border: 1px solid rgba(0, 212, 255, 0.3);
   border-radius: 16px;
-  padding: 4rem 3rem 3rem;
+  padding: 5.5rem 3rem 3rem;
   margin: 3rem auto;
   max-width: 800px;
   text-align: center;
@@ -83,13 +83,14 @@ const MissionBox = styled.div`
   
   &::before {
     content: '🎯';
-    font-size: 3rem;
+    font-size: 2.5rem;
     position: absolute;
     top: 1rem;
     left: 50%;
     transform: translateX(-50%);
     background: transparent;
     padding: 0;
+    z-index: 1;
   }
 `;
 
@@ -351,7 +352,7 @@ const HistoryImage = styled.div`
   height: 300px;
   margin: 3rem auto;
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 255, 255, 0.05));
-  border: 2px solid #00d4ff;
+  border: 4px solid #00d4ff;
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -510,8 +511,22 @@ function About() {
   const valuesAnimation = useScrollAnimation({ threshold: 0.3 });
   const servicesAnimation = useScrollAnimation({ threshold: 0.3 });
 
-  // Board members data
+  // Board members data (including founder)
   const boardMembers = [
+    {
+      id: 0,
+      name: "Dr. Edward Cohen",
+      title: "Founder & Chief Executive Officer",
+      initials: "EC",
+      email: "e.cohen@energymuseum.org",
+      linkedin: "https://linkedin.com/in/edwardcohen",
+      bio: [
+        "Dr. Edward Cohen, EdD, founded The Energy Museum with a revolutionary vision to democratize energy education and make complex sustainability concepts accessible to learners of all ages. With over two decades of experience in educational leadership and STEM curriculum development, Dr. Cohen has dedicated his career to transforming how we teach and learn about energy.",
+        "As Founder and Chief Executive Officer, Dr. Cohen leads our strategic vision and ensures that every program, exhibition, and initiative aligns with our mission of expanding access to quality energy literacy. His innovative approach to digital storytelling has revolutionized how educational content is delivered, making complex scientific concepts engaging and memorable for diverse learning populations.",
+        "Dr. Cohen holds an EdD in Educational Leadership from Columbia University and has been recognized nationally for his contributions to STEM education. He frequently speaks at educational conferences worldwide and has authored numerous publications on energy literacy and innovative pedagogy. His philosophy of 'lifelong learning from 2 to 102' drives our commitment to serving learners across all age groups.",
+        "Under his leadership, The Energy Museum has grown from a small curriculum development initiative to a comprehensive platform that serves over 100,000 students and educators annually. Dr. Cohen's vision continues to inspire our team to push the boundaries of what's possible in energy education and community engagement."
+      ]
+    },
     {
       id: 1,
       name: "Dr. Sarah Martinez",
@@ -559,7 +574,7 @@ function About() {
           ref={heroAnimation.ref}
           shouldAnimate={heroAnimation.shouldAnimate}
         >
-          <HeroTitle>About The Energy Museum</HeroTitle>
+          <HeroTitle>About Us</HeroTitle>
           <HeroSubtitle>
             Empowering the next generation through innovative energy education, 
             hands-on STEM learning, and sustainable future thinking.
@@ -612,17 +627,14 @@ function About() {
                   Dr. Cohen works to expand access to quality energy literacy programs 
                   that nurture innovation in every classroom and community.
                 </FounderBio>
-                <a 
-                  href="#" 
-                  style={{ color: '#00d4ff', textDecoration: 'none', fontWeight: '500' }}
-                >
+                <LearnMoreLink onClick={() => openModal(boardMembers[0])}>
                   Learn more →
-                </a>
+                </LearnMoreLink>
               </FounderInfo>
             </FounderSpotlight>
 
             <BoardMembersGrid>
-              {boardMembers.map((member) => (
+              {boardMembers.filter(member => member.id !== 0).map((member) => (
                 <BoardMemberCard key={member.id} onClick={() => openModal(member)}>
                   <MemberImage>{member.initials}</MemberImage>
                   <MemberName>{member.name}</MemberName>
