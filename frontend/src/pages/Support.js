@@ -283,7 +283,7 @@ function Support() {
   return (
     <PageContainer>
       <PageHeader>
-        <PageTitle>Professional Support</PageTitle>
+        <PageTitle>Contact Us</PageTitle>
         <PageSubtitle>
           Get expert guidance and personalized consultation from our network of energy professionals. 
           Whether you're a student, educator, business owner, or researcher, we're here to help.

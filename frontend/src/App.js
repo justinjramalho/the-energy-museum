@@ -13,6 +13,7 @@ import Services from './pages/Services';
 import Exhibitions from './pages/Exhibitions';
 import ExhibitionDetail from './pages/ExhibitionDetail';
 import Support from './pages/Support';
+import Donate from './pages/Donate';
 
 // Global Styles
 const GlobalStyle = createGlobalStyle`
@@ -83,6 +84,7 @@ function App() {
                     <Route path="/exhibitions" element={<Exhibitions />} />
                     <Route path="/exhibitions/:id" element={<ExhibitionDetail />} />
                     <Route path="/support" element={<Support />} />
+                    <Route path="/donate" element={<Donate />} />
                     <Route path="*" element={<Home />} />
                   </Routes>
         </MainContent>

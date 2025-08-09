@@ -163,7 +163,7 @@ function Footer() {
 
           <FooterSection>
             <h3>Support & Services</h3>
-            <Link to="/support">Professional Consultation</Link>
+            <Link to="/support">Contact Us</Link>
             <a href="/support#education">Educational Support</a>
             <a href="/support#business">Business Consulting</a>
             <a href="/support#research">Research Collaboration</a>

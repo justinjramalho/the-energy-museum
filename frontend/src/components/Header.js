@@ -150,8 +150,11 @@ function Header() {
           <NavLink to="/exhibitions" $isActive={isActive('/exhibitions')}>
             Field Experience
           </NavLink>
-          <CTAButton to="/support">
-            Get Support
+          <NavLink to="/support" $isActive={isActive('/support')}>
+            Contact
+          </NavLink>
+          <CTAButton to="/donate">
+            Donate
           </CTAButton>
         </Nav>
 

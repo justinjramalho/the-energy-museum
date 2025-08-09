@@ -311,7 +311,7 @@ function Home() {
               🎭 Explore Exhibitions
             </PrimaryButton>
             <SecondaryButton to="/support">
-              🤝 Get Expert Support
+              🤝 Contact Us
             </SecondaryButton>
           </CTAContainer>
         </HeroContent>
