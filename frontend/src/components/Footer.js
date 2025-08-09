@@ -153,8 +153,8 @@ function Footer() {
           </FooterSection>
 
           <FooterSection>
-            <h3>Exhibitions</h3>
-            <Link to="/exhibitions">All Exhibitions</Link>
+            <h3>Field Experience</h3>
+            <Link to="/exhibitions">All Field Experiences</Link>
             <a href="/exhibitions/renewable-revolution">Renewable Revolution</a>
             <a href="/exhibitions/physics-of-power">Physics of Power</a>
             <a href="/exhibitions/energy-society">Energy and Society</a>

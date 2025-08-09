@@ -267,6 +267,11 @@ function Exhibitions() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [exhibitions, setExhibitions] = useState(exhibitionsData);
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     // Filter exhibitions based on selected category
     if (selectedCategory === 'all') {
@@ -279,7 +284,7 @@ function Exhibitions() {
   return (
     <PageContainer>
       <PageHeader>
-        <PageTitle>Digital Exhibitions</PageTitle>
+        <PageTitle>Field Experience</PageTitle>
         <PageSubtitle>
           Explore our immersive collection of energy-focused exhibitions designed to educate, 
           inspire, and engage visitors of all backgrounds through interactive storytelling.
@@ -317,7 +322,7 @@ function Exhibitions() {
 
               <ExhibitionFooter>
                 <ViewButton to={`/exhibitions/${exhibition.id}`}>
-                  Explore Exhibition
+                  Explore Exhibit
                 </ViewButton>
                 <InteractionStats>
                   <span>👥 {exhibition.visitors}</span>

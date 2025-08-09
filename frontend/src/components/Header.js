@@ -136,14 +136,19 @@ function Header() {
         </Logo>
         
         <Nav $isOpen={isMenuOpen}>
+          {/* Home link commented out - logo serves as home link for modern UX
           <NavLink to="/" $isActive={isActive('/')}>
             Home
           </NavLink>
+          */}
           <NavLink to="/about" $isActive={isActive('/about')}>
             About
           </NavLink>
+          <NavLink to="/services" $isActive={isActive('/services')}>
+            Services
+          </NavLink>
           <NavLink to="/exhibitions" $isActive={isActive('/exhibitions')}>
-            Exhibitions
+            Field Experience
           </NavLink>
           <CTAButton to="/support">
             Get Support

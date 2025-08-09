@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 // Pages
 import Home from './pages/Home';
 import About from './pages/About';
+import Services from './pages/Services';
 import Exhibitions from './pages/Exhibitions';
 import ExhibitionDetail from './pages/ExhibitionDetail';
 import Support from './pages/Support';
@@ -75,14 +76,15 @@ function App() {
       <AppContainer>
         <Header />
         <MainContent>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/exhibitions" element={<Exhibitions />} />
-            <Route path="/exhibitions/:id" element={<ExhibitionDetail />} />
-            <Route path="/support" element={<Support />} />
-            <Route path="*" element={<Home />} />
-          </Routes>
+                            <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/exhibitions" element={<Exhibitions />} />
+                    <Route path="/exhibitions/:id" element={<ExhibitionDetail />} />
+                    <Route path="/support" element={<Support />} />
+                    <Route path="*" element={<Home />} />
+                  </Routes>
         </MainContent>
         <Footer />
       </AppContainer>

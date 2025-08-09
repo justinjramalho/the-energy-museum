@@ -511,6 +511,11 @@ function About() {
   const valuesAnimation = useScrollAnimation({ threshold: 0.3 });
   const servicesAnimation = useScrollAnimation({ threshold: 0.3 });
 
+  // Scroll to top when component mounts
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Board members data (including founder)
   const boardMembers = [
     {
@@ -819,7 +824,7 @@ function About() {
               </ServiceItem>
             </ServicesList>
             
-            <CTAButton to="/support">
+            <CTAButton to="/services">
               Explore Our Services
             </CTAButton>
           </ServicesTeaser>

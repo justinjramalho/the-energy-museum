@@ -247,6 +247,11 @@ function Support() {
   });
   const [showSuccess, setShowSuccess] = useState(false);
 
+  // Scroll to top when component mounts
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { submit: submitRequest, loading: isSubmitting, error } = useApiSubmit(
     (data) => apiService.submitSupportRequest(data),
     (response) => {
