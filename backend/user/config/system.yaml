@@ -43,3 +43,15 @@ debugger:
     close_connection: true
 gpm:
   verify_peer: true
+
+# Production Database Configuration for Hostinger
+database:
+  default:
+    driver: mysql
+    host: localhost
+    port: 3306
+    database: u747221136_energy_museum
+    username: u747221136_justinjramalho
+    password: JustinIsTheBest1!
+    charset: utf8mb4
+    collation: utf8mb4_unicode_ci

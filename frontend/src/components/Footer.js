@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { FiLinkedin, FiYoutube, FiInstagram } from 'react-icons/fi';
+import { RiTwitterXLine } from 'react-icons/ri';
 
 const FooterContainer = styled.footer`
   background: rgba(10, 15, 28, 0.95);
@@ -64,6 +66,7 @@ const SocialLinks = styled.div`
 
     &:hover {
       background: rgba(0, 212, 255, 0.2);
+      color: #00a8cc;
       transform: translateY(-2px);
     }
   }
@@ -145,10 +148,18 @@ function Footer() {
               the science that powers our world.
             </p>
             <SocialLinks>
-              <a href="https://twitter.com/energymuseum" title="Twitter">🐦</a>
-              <a href="https://linkedin.com/company/energymuseum" title="LinkedIn">💼</a>
-              <a href="https://youtube.com/energymuseum" title="YouTube">📺</a>
-              <a href="https://instagram.com/energymuseum" title="Instagram">📸</a>
+              <a href="https://x.com/energymuseum" title="X (formerly Twitter)" target="_blank" rel="noopener noreferrer">
+                <RiTwitterXLine />
+              </a>
+              <a href="https://linkedin.com/company/energymuseum" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <FiLinkedin />
+              </a>
+              <a href="https://youtube.com/energymuseum" title="YouTube" target="_blank" rel="noopener noreferrer">
+                <FiYoutube />
+              </a>
+              <a href="https://instagram.com/energymuseum" title="Instagram" target="_blank" rel="noopener noreferrer">
+                <FiInstagram />
+              </a>
             </SocialLinks>
           </FooterSection>
 

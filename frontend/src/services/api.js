@@ -1,8 +1,13 @@
 import axios from 'axios';
 
 // Base URLs for different services
-const BASE_URL = 'http://localhost:8001'; // Grav CMS backend
-const API_SERVER_URL = 'http://localhost:8002'; // Standalone API server
+const BASE_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://theenergymuseum.com' 
+  : 'http://localhost:8001'; // Grav CMS backend
+
+const API_SERVER_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://theenergymuseum.com/api' 
+  : 'http://localhost:8002'; // Standalone API server
 
 // Create axios instance for Grav CMS
 const api = axios.create({

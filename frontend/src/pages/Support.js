@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { apiService } from '../services/api';
 import { useApiSubmit } from '../hooks/useApi';
+import { FiMail, FiClock, FiMessageCircle } from 'react-icons/fi';
 
 const PageContainer = styled.div`
   max-width: 1200px;
@@ -422,7 +423,7 @@ function Support() {
 
       <ContactInfo>
         <ContactCard>
-          <h3>📧 Email Support</h3>
+          <h3><FiMail style={{ marginRight: '0.5rem', verticalAlign: 'middle' }} />Email Support</h3>
           <p>General Inquiries:</p>
           <a href="mailto:info@energymuseum.org">info@energymuseum.org</a>
           <p>Consultation Requests:</p>
@@ -430,14 +431,14 @@ function Support() {
         </ContactCard>
 
         <ContactCard>
-          <h3>🕒 Response Time</h3>
+          <h3><FiClock style={{ marginRight: '0.5rem', verticalAlign: 'middle' }} />Response Time</h3>
           <p>Initial Response: Within 24 hours</p>
           <p>Consultation Scheduling: 2-3 business days</p>
           <p>Office Hours: Mon-Fri, 9 AM - 5 PM EST</p>
         </ContactCard>
 
         <ContactCard>
-          <h3>💬 Community Support</h3>
+          <h3><FiMessageCircle style={{ marginRight: '0.5rem', verticalAlign: 'middle' }} />Community Support</h3>
           <p>Join our discussion forums for community-driven support and networking opportunities.</p>
           <a href="#forums">Visit Community Forums</a>
         </ContactCard>

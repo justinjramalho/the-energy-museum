@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { FiLinkedin, FiMail } from 'react-icons/fi';
+import { RiTwitterXLine } from 'react-icons/ri';
 
 const PageContainer = styled.div`
   min-height: 100vh;
@@ -335,14 +337,20 @@ const ContactLink = styled.a`
   color: #00d4ff;
   font-size: 1.5rem;
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.75rem;
   border-radius: 50%;
   background: rgba(0, 212, 255, 0.1);
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
   
   &:hover {
     background: rgba(0, 212, 255, 0.2);
-    transform: translateY(-2px);
+    color: #00a8cc;
+    transform: scale(1.1) translateY(-2px);
   }
 `;
 
@@ -551,7 +559,7 @@ function About() {
       title: "Board Member & Technology Advisor",
       initials: "MC",
       email: "m.chen@energymuseum.org",
-      twitter: "https://twitter.com/michaelchen_tech",
+      twitter: "https://x.com/michaelchen_tech",
       linkedin: "https://linkedin.com/in/michaelchen",
       bio: [
         "Michael Chen is a technology innovator and entrepreneur with a passion for educational technology. He founded two successful EdTech companies and has been recognized as a leader in digital learning platforms.",
@@ -847,7 +855,7 @@ function About() {
               </ModalBio>
               <ContactInfo>
                 <ContactLink href={`mailto:${selectedMember.email}`} title="Email">
-                  📧
+                  <FiMail />
                 </ContactLink>
                 {selectedMember.linkedin && (
                   <ContactLink 
@@ -856,7 +864,7 @@ function About() {
                     rel="noopener noreferrer"
                     title="LinkedIn"
                   >
-                    💼
+                    <FiLinkedin />
                   </ContactLink>
                 )}
                 {selectedMember.twitter && (
@@ -864,9 +872,9 @@ function About() {
                     href={selectedMember.twitter} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    title="Twitter"
+                    title="X (formerly Twitter)"
                   >
-                    🐦
+                    <RiTwitterXLine />
                   </ContactLink>
                 )}
               </ContactInfo>
