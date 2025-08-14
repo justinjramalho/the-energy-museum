@@ -134,9 +134,17 @@ const FeatureItem = styled.li`
 
 const PricingGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin: 3rem 0;
+  
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const PricingCard = styled.div`
@@ -171,6 +179,39 @@ const PricingDetails = styled.div`
   color: #b0b7c3;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+`;
+
+const LastRowWrapper = styled.div`
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  
+  /* Ensure cards maintain consistent width */
+  & > ${PricingCard} {
+    flex: 0 0 auto;
+    width: calc((100% - 4rem) / 3); /* Same width as grid cards */
+  }
+  
+  @media (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    
+    & > ${PricingCard} {
+      width: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    
+    & > ${PricingCard} {
+      width: auto;
+    }
+  }
 `;
 
 const StepsContainer = styled.div`
@@ -329,10 +370,10 @@ function Services() {
           <ServiceGrid>
             <ServiceCard>
               <ServiceIcon>🔬</ServiceIcon>
-              <ServiceTitle>Laboratory Immersions</ServiceTitle>
+              <ServiceTitle>Engineering & Design Challenges</ServiceTitle>
               <ServiceDescription>
-                Transform learning through authentic laboratory experiences where students 
-                conduct real energy research alongside professional scientists.
+                Transform learning through authentic engineering and design experiences where students 
+                conduct real energy research alongside experienced professionals.
               </ServiceDescription>
               <FeatureList>
                 <FeatureItem>Renewable energy testing stations</FeatureItem>
@@ -408,7 +449,7 @@ function Services() {
                 designed to revolutionize your science curriculum delivery.
               </ServiceDescription>
               <FeatureList>
-                <FeatureItem>4-day intensive workshops</FeatureItem>
+                <FeatureItem>1-hour to 4-day workshops</FeatureItem>
                 <FeatureItem>Unit-specific training modules</FeatureItem>
                 <FeatureItem>Virtual coaching support</FeatureItem>
                 <FeatureItem>Assessment alignment strategies</FeatureItem>
@@ -423,7 +464,7 @@ function Services() {
                 and enhancing content for maximum student engagement and learning outcomes.
               </ServiceDescription>
               <FeatureList>
-                <FeatureItem>Standards-aligned lesson development</FeatureItem>
+                <FeatureItem>NGSS-aligned lesson development</FeatureItem>
                 <FeatureItem>Assessment design and rubrics</FeatureItem>
                 <FeatureItem>Hands-on activity integration</FeatureItem>
                 <FeatureItem>Technology integration strategies</FeatureItem>
@@ -439,7 +480,7 @@ function Services() {
               </ServiceDescription>
               <FeatureList>
                 <FeatureItem>Inquiry-based learning mastery</FeatureItem>
-                <FeatureItem>Digital storytelling in STEM</FeatureItem>
+                <FeatureItem>Advanced pedagogical techniques</FeatureItem>
                 <FeatureItem>Project-based learning design</FeatureItem>
                 <FeatureItem>Student-centered assessment</FeatureItem>
               </FeatureList>
@@ -475,7 +516,7 @@ function Services() {
           <ServiceGrid>
             <ServiceCard>
               <ServiceIcon>👨‍👩‍👧‍👦</ServiceIcon>
-              <ServiceTitle>Family STEM Nights</ServiceTitle>
+              <ServiceTitle>Family & Friends STEM Nights</ServiceTitle>
               <ServiceDescription>
                 Create unforgettable intergenerational learning experiences that strengthen 
                 family bonds while exploring the fascinating world of energy science.
@@ -505,14 +546,14 @@ function Services() {
 
             <ServiceCard>
               <ServiceIcon>🏢</ServiceIcon>
-              <ServiceTitle>Corporate & Government Training</ServiceTitle>
+              <ServiceTitle>Corporate & Government</ServiceTitle>
               <ServiceDescription>
                 Elevate organizational sustainability through comprehensive energy literacy 
                 programs designed for adult learners and professional teams.
               </ServiceDescription>
               <FeatureList>
                 <FeatureItem>Sustainability workshops</FeatureItem>
-                <FeatureItem>Energy systems training</FeatureItem>
+                <FeatureItem>Grant writing & implementation</FeatureItem>
                 <FeatureItem>Climate literacy programs</FeatureItem>
                 <FeatureItem>Team-building STEM challenges</FeatureItem>
               </FeatureList>
@@ -536,7 +577,7 @@ function Services() {
           ref={pricingAnimation.ref}
           shouldAnimate={pricingAnimation.shouldAnimate}
         >
-          <SectionTitle>Investment Packages</SectionTitle>
+          <SectionTitle>Pricing</SectionTitle>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <p style={{ color: '#e0e6ed', fontSize: '1.2rem', lineHeight: '1.8', maxWidth: '800px', margin: '0 auto' }}>
               Transparent, value-driven pricing that makes world-class energy education 
@@ -547,10 +588,36 @@ function Services() {
 
           <PricingGrid>
             <PricingCard>
+              <PricingTitle>Grant Execution</PricingTitle>
+              <PricingPrice>$300</PricingPrice>
+              <PricingDetails>
+                <strong>Hourly Writing & Implementation</strong><br/>
+                • Grant research & identification<br/>
+                • Professional grant writing<br/>
+                • Application management<br/>
+                • Implementation support<br/>
+                • Reporting assistance
+              </PricingDetails>
+            </PricingCard>
+
+            <PricingCard>
+              <PricingTitle>Unit-Specific Virtual PD</PricingTitle>
+              <PricingPrice>$450-2,250</PricingPrice>
+              <PricingDetails>
+                <strong>90-minute Sessions<br/>(1-5 Units)</strong><br/>
+                • Virtual coaching support<br/>
+                • Unit-specific training<br/>
+                • Key points walkthrough<br/>
+                • Implementation guidance<br/>
+                • Assessment strategies
+              </PricingDetails>
+            </PricingCard>
+
+            <PricingCard>
               <PricingTitle>Mini Museum Visit</PricingTitle>
               <PricingPrice>$750</PricingPrice>
               <PricingDetails>
-                <strong>3-hour hands-on exhibits</strong><br/>
+                <strong>3-hour Hands-on Exhibits</strong><br/>
                 • Up to 100 students<br/>
                 • Interactive energy stations<br/>
                 • Expert facilitation<br/>
@@ -560,10 +627,10 @@ function Services() {
             </PricingCard>
 
             <PricingCard>
-              <PricingTitle>STEM Night or Family Event</PricingTitle>
+              <PricingTitle>STEM Night</PricingTitle>
               <PricingPrice>$950</PricingPrice>
               <PricingDetails>
-                <strong>2-hour event with stations</strong><br/>
+                <strong>2-hour Event with Stations</strong><br/>
                 • Multiple learning stations<br/>
                 • Professional facilitators<br/>
                 • Take-home materials<br/>
@@ -573,28 +640,15 @@ function Services() {
             </PricingCard>
 
             <PricingCard>
-              <PricingTitle>PD Workshop (Half Day)</PricingTitle>
-              <PricingPrice>$1,200</PricingPrice>
+              <PricingTitle>PD Workshop</PricingTitle>
+              <PricingPrice>$1,200-2,400</PricingPrice>
               <PricingDetails>
-                <strong>Interactive NGSS or PBL training</strong><br/>
-                • Up to 30 teachers<br/>
+                <strong>Half- to Full-day Interactive Training</strong><br/>
+                • Up to 30 instructors<br/>
                 • Standards-aligned content<br/>
-                • Hands-on activities<br/>
+                • PBL and hands-on activities<br/>
                 • Implementation strategies<br/>
                 • Follow-up resources
-              </PricingDetails>
-            </PricingCard>
-
-            <PricingCard>
-              <PricingTitle>Unit-Specific Virtual PD</PricingTitle>
-              <PricingPrice>$2,250</PricingPrice>
-              <PricingDetails>
-                <strong>Key points walkthrough (5 Sessions)</strong><br/>
-                • Virtual coaching support<br/>
-                • Unit-specific training<br/>
-                • Implementation guidance<br/>
-                • Assessment strategies<br/>
-                • Ongoing consultation
               </PricingDetails>
             </PricingCard>
 
@@ -602,7 +656,7 @@ function Services() {
               <PricingTitle>Maker Camp (1 Week)</PricingTitle>
               <PricingPrice>$3,500</PricingPrice>
               <PricingDetails>
-                <strong>Design-based learning</strong><br/>
+                <strong>Design-based Learning</strong><br/>
                 • 15-25 youth participants<br/>
                 • Engineering challenges<br/>
                 • Energy project creation<br/>
@@ -611,31 +665,33 @@ function Services() {
               </PricingDetails>
             </PricingCard>
 
-            <PricingCard>
-              <PricingTitle>OpenSciEd 4-Day Launch</PricingTitle>
-              <PricingPrice>$10,000</PricingPrice>
-              <PricingDetails>
-                <strong>Comprehensive high school training</strong><br/>
-                • Complete curriculum implementation<br/>
-                • Intensive 4-day workshop<br/>
-                • All materials included<br/>
-                • Assessment alignment<br/>
-                • Year-long support package
-              </PricingDetails>
-            </PricingCard>
+            <LastRowWrapper>
+              <PricingCard>
+                <PricingTitle>OpenSciEd Launch<br/>PL Training</PricingTitle>
+                <PricingPrice>$5-10,000</PricingPrice>
+                <PricingDetails>
+                  <strong>Full-day Intensive Workshop<br/>(2-4 Days)</strong><br/>
+                  • 1 certified, in-person trainer<br/>
+                  • Complete curriculum implementation<br/>
+                  • All materials included<br/>
+                  • Assessment alignment<br/>
+                  • Year-long support package
+                </PricingDetails>
+              </PricingCard>
 
-            <PricingCard>
-              <PricingTitle>Custom Solutions</PricingTitle>
-              <PricingPrice>Custom Pricing</PricingPrice>
-              <PricingDetails>
-                <strong>Tailored to Your Needs</strong><br/>
-                • Corporate training programs<br/>
-                • Multi-site implementations<br/>
-                • Extended partnerships<br/>
-                • Specialized workshops<br/>
-                • Long-term consulting
-              </PricingDetails>
-            </PricingCard>
+              <PricingCard>
+                <PricingTitle>Custom Solutions</PricingTitle>
+                <PricingPrice>Custom Pricing</PricingPrice>
+                <PricingDetails>
+                  <strong>Tailored to Your Needs</strong><br/>
+                  • Corporate training programs<br/>
+                  • Multi-site implementations<br/>
+                  • Extended partnerships<br/>
+                  • Specialized workshops<br/>
+                  • Long-term consulting
+                </PricingDetails>
+              </PricingCard>
+            </LastRowWrapper>
           </PricingGrid>
 
           <HighlightBox>
@@ -719,13 +775,13 @@ function Services() {
         shouldAnimate={ctaAnimation.shouldAnimate}
       >
         <CTASection>
-          <CTATitle>Ready to Transform Your STEM Education?</CTATitle>
+          <CTATitle>Ready to Elevate Your STEM Education?</CTATitle>
           <CTADescription>
             Join hundreds of educators, administrators, and community leaders who have 
             revolutionized their approach to energy literacy through our expert services. 
             Let's craft an experience that ignites passion and drives real learning outcomes.
           </CTADescription>
-          <CTAButton to="/support">
+          <CTAButton to="/contact">
             Start Your Transformation Today
           </CTAButton>
           <div style={{ marginTop: '2rem', color: '#64ffda', fontSize: '1rem' }}>

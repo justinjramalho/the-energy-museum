@@ -315,14 +315,6 @@ function Support() {
             Energy policy analysis, community planning, stakeholder engagement, and environmental impact.
           </SupportDescription>
         </SupportCard>
-
-        <SupportCard>
-          <SupportIcon>🔬</SupportIcon>
-          <SupportTitle>Technical Support</SupportTitle>
-          <SupportDescription>
-            System design, performance analysis, troubleshooting, and innovation consulting.
-          </SupportDescription>
-        </SupportCard>
       </SupportGrid>
 
       <ContactForm>
@@ -397,7 +389,6 @@ function Support() {
               <option value="educational">Educational Support</option>
               <option value="business">Business Consultation</option>
               <option value="policy">Policy & Planning</option>
-              <option value="technical">Technical Support</option>
               <option value="research">Research Collaboration</option>
               <option value="other">Other</option>
             </Select>

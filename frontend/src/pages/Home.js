@@ -307,10 +307,10 @@ function Home() {
             learning about energy engaging, interactive, and inspiring.
           </HeroDescription>
           <CTAContainer>
-            <PrimaryButton to="/exhibitions">
-              🎭 Explore Exhibitions
+            <PrimaryButton to="/experiences">
+              🎭 Explore Experiences
             </PrimaryButton>
-            <SecondaryButton to="/support">
+            <SecondaryButton to="/contact">
               🤝 Contact Us
             </SecondaryButton>
           </CTAContainer>

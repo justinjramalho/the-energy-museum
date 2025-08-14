@@ -284,7 +284,7 @@ function Exhibitions() {
   return (
     <PageContainer>
       <PageHeader>
-        <PageTitle>Field Experience</PageTitle>
+        <PageTitle>Experiences</PageTitle>
         <PageSubtitle>
           Explore our immersive collection of energy-focused exhibitions designed to educate, 
           inspire, and engage visitors of all backgrounds through interactive storytelling.
@@ -321,7 +321,7 @@ function Exhibitions() {
               </ExhibitionMeta>
 
               <ExhibitionFooter>
-                <ViewButton to={`/exhibitions/${exhibition.id}`}>
+                <ViewButton to={`/experiences/${exhibition.id}`}>
                   Explore Exhibit
                 </ViewButton>
                 <InteractionStats>

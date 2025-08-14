@@ -69,7 +69,7 @@ export const apiService = {
   // Get exhibitions list
   getExhibitions: async () => {
     try {
-      const response = await api.get('/exhibitions');
+      const response = await api.get('/experiences');
       return response.data;
     } catch (error) {
       console.error('Error fetching exhibitions:', error);
@@ -80,7 +80,7 @@ export const apiService = {
   // Get specific exhibition by slug
   getExhibition: async (slug) => {
     try {
-      const response = await api.get(`/exhibitions/${slug}`);
+      const response = await api.get(`/experiences/${slug}`);
       return response.data;
     } catch (error) {
       console.error(`Error fetching exhibition ${slug}:`, error);

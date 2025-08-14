@@ -164,21 +164,21 @@ function Footer() {
           </FooterSection>
 
           <FooterSection>
-            <h3>Field Experience</h3>
-            <Link to="/exhibitions">All Field Experiences</Link>
-            <a href="/exhibitions/renewable-revolution">Renewable Revolution</a>
-            <a href="/exhibitions/physics-of-power">Physics of Power</a>
-            <a href="/exhibitions/energy-society">Energy and Society</a>
-            <a href="/exhibitions/climate-solutions">Climate Solutions</a>
+            <h3>Experiences</h3>
+            <Link to="/experiences">All Experiences</Link>
+            <a href="/experiences/renewable-revolution">Renewable Revolution</a>
+            <a href="/experiences/physics-of-power">Physics of Power</a>
+            <a href="/experiences/energy-society">Energy and Society</a>
+            <a href="/experiences/climate-solutions">Climate Solutions</a>
           </FooterSection>
 
           <FooterSection>
             <h3>Support & Services</h3>
-            <Link to="/support">Contact Us</Link>
-            <a href="/support#education">Educational Support</a>
-            <a href="/support#business">Business Consulting</a>
-            <a href="/support#research">Research Collaboration</a>
-            <a href="/support#community">Community Forums</a>
+            <Link to="/contact">Contact Us</Link>
+            <a href="/contact#education">Educational Support</a>
+            <a href="/contact#business">Business Consulting</a>
+            <a href="/contact#research">Research Collaboration</a>
+            <a href="/contact#community">Community Forums</a>
           </FooterSection>
 
           <FooterSection>

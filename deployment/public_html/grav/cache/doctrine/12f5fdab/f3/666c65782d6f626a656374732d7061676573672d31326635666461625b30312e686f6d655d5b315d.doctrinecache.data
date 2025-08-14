@@ -1,0 +1,44 @@
+1754508325
+O:39:"Grav\Common\Flex\Types\Pages\PageObject":4:{s:4:"type";s:5:"pages";s:3:"key";s:4:"home";s:8:"elements";a:4:{s:4:"root";b:0;s:6:"header";a:4:{s:5:"title";s:4:"Home";s:4:"menu";s:4:"Home";s:12:"body_classes";s:23:"title-center title-h1h2";s:8:"metadata";a:2:{s:11:"description";s:98:"Welcome to The Energy Museum - Explore the fascinating world of energy through digital exhibitions";s:8:"keywords";s:71:"energy museum, digital exhibitions, renewable energy, science education";}}s:11:"frontmatter";s:276:"title: Home
+menu: Home
+body_classes: title-center title-h1h2
+metadata:
+    description: 'Welcome to The Energy Museum - Explore the fascinating world of energy through digital exhibitions'
+    keywords: 'energy museum, digital exhibitions, renewable energy, science education'";s:8:"markdown";s:1582:"# Welcome to The Energy Museum 🔬⚡
+
+## Discover the Power of Energy Through Digital Storytelling
+
+Step into a world where science meets art, where complex energy concepts come alive through immersive digital experiences. Our museum offers cutting-edge virtual exhibitions that make learning about energy engaging, interactive, and inspiring.
+
+### 🏛️ Digital Exhibitions
+
+Explore our curated collection of digital exhibitions that showcase the fascinating world of energy:
+
+* **Renewable Revolution** - Journey through the evolution of renewable energy technologies
+* **The Physics of Power** - Interactive visualizations of energy principles and laws
+* **Energy and Society** - How energy shapes our modern world and future
+* **Climate Solutions** - Innovative technologies fighting climate change
+
+### 🎨 Interactive Experience
+
+Our platform combines **visual storytelling** with **scientific accuracy** to create:
+
+- Immersive 3D visualizations
+- Interactive simulations and experiments
+- Real-time data and case studies
+- Community discussions and expert insights
+
+### 💬 Join the Conversation
+
+Every exhibition includes:
+- **Comment sections** for visitor discussions
+- **Expert Q&A** opportunities
+- **Professional consultation** requests
+- **Educational resources** for deeper learning
+
+### 🌟 Get Started
+
+Ready to explore? Visit our **Exhibitions** section to begin your journey through the world of energy science.
+
+! **New to digital museums?** Our exhibitions are designed to be accessible to all audiences, from curious beginners to energy professionals.
+";}s:7:"storage";a:6:{s:3:"key";s:4:"home";s:11:"storage_key";s:7:"01.home";s:8:"template";s:7:"default";s:17:"storage_timestamp";i:1754501307;s:8:"markdown";a:1:{s:0:"";a:1:{s:7:"default";i:1754501307;}}s:8:"checksum";s:32:"1e2343d5aa1f04e2ac8795dd9114acd3";}}

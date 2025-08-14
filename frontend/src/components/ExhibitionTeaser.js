@@ -281,7 +281,7 @@ function ExhibitionTeaser({
           </StoryElement>
         </StoryElements>
         
-        <ExploreButton to={`/exhibitions/${exhibition.id}`}>
+        <ExploreButton to={`/experiences/${exhibition.id}`}>
           Begin Your Journey
           <span>→</span>
         </ExploreButton>

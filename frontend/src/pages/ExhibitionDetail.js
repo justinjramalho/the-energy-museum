@@ -69,8 +69,8 @@ function ExhibitionDetail() {
 
   return (
     <PageContainer>
-      <BackLink to="/exhibitions">
-        ← Back to Exhibitions
+      <BackLink to="/experiences">
+        ← Back to Experiences
       </BackLink>
 
       <HeroSection>
@@ -88,7 +88,7 @@ function ExhibitionDetail() {
         <br />
         <p style={{ color: '#8892a6' }}>
           Want to be notified when this exhibition launches? 
-                  <Link to="/support" style={{ color: '#00d4ff', marginLeft: '0.5rem' }}>
+                  <Link to="/contact" style={{ color: '#00d4ff', marginLeft: '0.5rem' }}>
           Request updates from our team
         </Link>
       </p>

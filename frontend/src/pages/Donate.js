@@ -71,7 +71,7 @@ function Donate() {
         <br />
         <p style={{ color: '#8892a6' }}>
           In the meantime, if you'd like to make a donation or learn about sponsorship opportunities, 
-          please <a href="/support" style={{ color: '#00d4ff', marginLeft: '0.5rem' }}>
+          please <a href="/contact" style={{ color: '#00d4ff', marginLeft: '0.5rem' }}>
             contact our team directly
           </a>
         </p>

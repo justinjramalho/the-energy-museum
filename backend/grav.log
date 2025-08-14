@@ -1,0 +1,1610 @@
+[Mon Aug 11 13:51:29 2025] PHP 8.4.11 Development Server (http://localhost:8001) started
+[Mon Aug 11 13:51:43 2025] [::1]:57598 Accepted
+[Mon Aug 11 13:51:43 2025] ::1:57598 [200]: /
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Grav::setup(): Implicitly marking parameter $environment as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Grav.php on line 203
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Grav::header(): Implicitly marking parameter $response as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Grav.php on line 525
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Grav::fireEvent(): Implicitly marking parameter $event as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Grav.php on line 588
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Debugger::profile(): Implicitly marking parameter $message as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Debugger.php on line 547
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Debugger::stopProfiling(): Implicitly marking parameter $message as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Debugger.php on line 588
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Debugger::addEvent(): Implicitly marking parameter $time as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Debugger.php on line 779
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Data\Data::file(): Implicitly marking parameter $storage as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Data/Data.php on line 326
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Data\DataInterface::file(): Implicitly marking parameter $storage as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Data/DataInterface.php on line 83
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Utils::pathinfo(): Implicitly marking parameter $flags as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Utils.php on line 1008
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Utils::getPagePathFromToken(): Implicitly marking parameter $page as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Utils.php on line 1621
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Utils::getSupportPageTypes(): Implicitly marking parameter $defaults as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Utils.php on line 1950
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  RocketTheme\Toolbox\File\YamlFile::globalSettings(): Implicitly marking parameter $settings as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/rockettheme/toolbox/File/src/YamlFile.php on line 48
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  RocketTheme\Toolbox\File\YamlFile::settings(): Implicitly marking parameter $settings as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/rockettheme/toolbox/File/src/YamlFile.php on line 73
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  RocketTheme\Toolbox\File\AbstractFile::settings(): Implicitly marking parameter $settings as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/rockettheme/toolbox/File/src/AbstractFile.php on line 67
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Framework\RequestHandler\RequestHandler::__construct(): Implicitly marking parameter $container as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/RequestHandler/RequestHandler.php on line 36
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Processors\InitializeProcessor::handleRedirectRequest(): Implicitly marking parameter $code as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Processors/InitializeProcessor.php on line 418
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Iterator::filter(): Implicitly marking parameter $callback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Iterator.php on line 233
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Iterator::sort(): Implicitly marking parameter $callback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Iterator.php on line 253
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  RocketTheme\Toolbox\ResourceLocator\UniformResourceIterator::__construct(): Implicitly marking parameter $locator as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/rockettheme/toolbox/ResourceLocator/src/UniformResourceIterator.php on line 37
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Plugin::__construct(): Implicitly marking parameter $config as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Plugin.php on line 75
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Plugin::inheritedConfigOption(): Implicitly marking parameter $page as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Plugin.php on line 417
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Plugin\FormPlugin::onTwigVariables(): Implicitly marking parameter $event as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/form/form.php on line 416
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Plugin\FormPlugin::form(): Implicitly marking parameter $page as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/form/form.php on line 1179
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Plugin\FormPlugin::createForm(): Implicitly marking parameter $name as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/form/form.php on line 1231
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Plugin\FormPlugin::createForm(): Implicitly marking parameter $form as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/form/form.php on line 1231
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Symfony\Component\VarDumper\Cloner\AbstractCloner::__construct(): Implicitly marking parameter $casters as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/var-dumper/Cloner/AbstractCloner.php on line 190
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Language\Language::getFallbackPageExtensions(): Implicitly marking parameter $fileExtension as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Language/Language.php on line 361
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Language\Language::getFallbackPageExtensions(): Implicitly marking parameter $languageCode as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Language/Language.php on line 361
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Language\Language::getFallbackLanguages(): Implicitly marking parameter $languageCode as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Language/Language.php on line 414
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Language\Language::translate(): Implicitly marking parameter $languages as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Language/Language.php on line 492
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Page\Pages::evaluate(): Implicitly marking parameter $self as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Page/Pages.php on line 648
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Page\Pages::all(): Implicitly marking parameter $current as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Page/Pages.php on line 1159
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Page\Pages::getList(): Implicitly marking parameter $current as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Page/Pages.php on line 1233
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Common\Page\Pages::recurse(): Implicitly marking parameter $parent as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Page/Pages.php on line 1821
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Grav\Framework\Session\Session::getCookieOptions(): Implicitly marking parameter $lifetime as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Session/Session.php on line 480
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Symfony\Component\VarDumper\Dumper\HtmlDumper::__construct(): Implicitly marking parameter $charset as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/var-dumper/Dumper/HtmlDumper.php on line 80
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Symfony\Component\VarDumper\Dumper\CliDumper::__construct(): Implicitly marking parameter $charset as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/var-dumper/Dumper/CliDumper.php on line 67
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Symfony\Component\VarDumper\Dumper\AbstractDumper::__construct(): Implicitly marking parameter $charset as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/var-dumper/Dumper/AbstractDumper.php on line 45
+[Mon Aug 11 13:51:43 2025] PHP Deprecated:  Symfony\Component\VarDumper\Caster\Caster::castObject(): Implicitly marking parameter $debugClass as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/var-dumper/Caster/Caster.php on line 48
+[Mon Aug 11 13:51:43 2025] [::1]:57598 Closing
+[Mon Aug 11 13:51:46 2025] [::1]:57599 Accepted
+[Mon Aug 11 13:51:46 2025] ::1:57599 [200]: /admin/
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Psr7\Response::__construct(): Implicitly marking parameter $reason as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Psr7/Response.php on line 38
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Psr7\Response::withJson(): Implicitly marking parameter $status as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Psr7/Response.php on line 58
+[Mon Aug 11 13:51:46 2025] [::1]:57599 Closing
+[Mon Aug 11 13:51:46 2025] [::1]:57600 Accepted
+[Mon Aug 11 13:51:46 2025] ::1:57600 [200]: /admin
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Flex::getDirectories(): Implicitly marking parameter $types as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Flex.php on line 97
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Flex::getCollection(): Implicitly marking parameter $keys as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Flex.php on line 128
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Flex::getCollection(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Flex.php on line 128
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Flex::getObject(): Implicitly marking parameter $type as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Flex.php on line 274
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Flex::getObject(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Flex.php on line 274
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Flex::resolveKeyAndType(): Implicitly marking parameter $type as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Flex.php on line 306
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Flex::resolveType(): Implicitly marking parameter $type as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Flex.php on line 326
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexInterface::getDirectories(): Implicitly marking parameter $types as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexInterface.php on line 49
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexInterface::getCollection(): Implicitly marking parameter $keys as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexInterface.php on line 64
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexInterface::getCollection(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexInterface.php on line 64
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexInterface::getObject(): Implicitly marking parameter $type as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexInterface.php on line 94
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexInterface::getObject(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexInterface.php on line 94
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Form\FormFlash::addUploadedFile(): Implicitly marking parameter $field as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/FormFlash.php on line 323
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Form\FormFlash::addUploadedFile(): Implicitly marking parameter $crop as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/FormFlash.php on line 323
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Form\FormFlash::addFile(): Implicitly marking parameter $crop as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/FormFlash.php on line 351
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Form\FormFlash::removeFile(): Implicitly marking parameter $field as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/FormFlash.php on line 372
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Form\FormFlash::setUser(): Implicitly marking parameter $user as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/FormFlash.php on line 450
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Form\FormFlash::setUserName(): Implicitly marking parameter $username as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/FormFlash.php on line 468
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Form\FormFlash::setUserEmail(): Implicitly marking parameter $email as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/FormFlash.php on line 479
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Form\FormFlash::addFileInternal(): Implicitly marking parameter $crop as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/FormFlash.php on line 541
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Form\Interfaces\FormFlashInterface::addUploadedFile(): Implicitly marking parameter $field as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/Interfaces/FormFlashInterface.php on line 149
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Form\Interfaces\FormFlashInterface::addUploadedFile(): Implicitly marking parameter $crop as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/Interfaces/FormFlashInterface.php on line 149
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Form\Interfaces\FormFlashInterface::addFile(): Implicitly marking parameter $crop as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/Interfaces/FormFlashInterface.php on line 159
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Form\Interfaces\FormFlashInterface::removeFile(): Implicitly marking parameter $field as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/Interfaces/FormFlashInterface.php on line 168
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::getConfig(): Implicitly marking parameter $name as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 158
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::getSearchOptions(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 200
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::getDirectoryForm(): Implicitly marking parameter $name as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 217
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::getDirectoryConfigUri(): Implicitly marking parameter $name as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 314
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::getDirectoryConfig(): Implicitly marking parameter $name as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 326
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::getCollection(): Implicitly marking parameter $keys as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 375
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::getCollection(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 375
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::getIndex(): Implicitly marking parameter $keys as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 402
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::getIndex(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 402
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::getObject(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 425
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::getCache(): Implicitly marking parameter $namespace as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 441
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::getStorageFolder(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 509
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::getMediaFolder(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 518
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::createCollection(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 558
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::createIndex(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 575
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::loadCollection(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 629
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexDirectory::update(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexDirectory.php on line 1123
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Traits\FlexAuthorizeTrait::isAuthorized(): Implicitly marking parameter $scope as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Traits/FlexAuthorizeTrait.php on line 37
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Traits\FlexAuthorizeTrait::isAuthorized(): Implicitly marking parameter $user as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Traits/FlexAuthorizeTrait.php on line 37
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexDirectoryInterface::getConfig(): Implicitly marking parameter $name as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexDirectoryInterface.php on line 52
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexDirectoryInterface::getDirectoryForm(): Implicitly marking parameter $name as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexDirectoryInterface.php on line 60
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexDirectoryInterface::getDirectoryConfigUri(): Implicitly marking parameter $name as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexDirectoryInterface.php on line 81
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexDirectoryInterface::getCollection(): Implicitly marking parameter $keys as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexDirectoryInterface.php on line 110
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexDirectoryInterface::getCollection(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexDirectoryInterface.php on line 110
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexDirectoryInterface::getIndex(): Implicitly marking parameter $keys as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexDirectoryInterface.php on line 122
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexDirectoryInterface::getIndex(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexDirectoryInterface.php on line 122
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexDirectoryInterface::getObject(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexDirectoryInterface.php on line 133
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexDirectoryInterface::getCache(): Implicitly marking parameter $namespace as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexDirectoryInterface.php on line 139
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexDirectoryInterface::getStorageFolder(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexDirectoryInterface.php on line 150
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexDirectoryInterface::getMediaFolder(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexDirectoryInterface.php on line 156
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexDirectoryInterface::createCollection(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexDirectoryInterface.php on line 177
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexDirectoryInterface::createIndex(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexDirectoryInterface.php on line 185
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexDirectoryInterface::loadCollection(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexDirectoryInterface.php on line 208
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexAuthorizeInterface::isAuthorized(): Implicitly marking parameter $scope as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexAuthorizeInterface.php on line 32
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexAuthorizeInterface::isAuthorized(): Implicitly marking parameter $user as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexAuthorizeInterface.php on line 32
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexCollection::createFromArray(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexCollection.php on line 87
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexCollection::__construct(): Implicitly marking parameter $directory as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexCollection.php on line 99
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexCollection::search(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexCollection.php on line 148
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexCollection::getDistinctValues(): Implicitly marking parameter $separator as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexCollection.php on line 301
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexCollection::withKeyField(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexCollection.php on line 323
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexCollection::render(): Implicitly marking parameter $layout as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexCollection.php on line 369
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexCollection::getCache(): Implicitly marking parameter $namespace as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexCollection.php on line 488
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexCollection::isAuthorized(): Implicitly marking parameter $scope as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexCollection.php on line 508
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\FlexCollection::isAuthorized(): Implicitly marking parameter $user as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexCollection.php on line 508
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexCollectionInterface::createFromArray(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexCollectionInterface.php on line 40
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexCollectionInterface::__construct(): Implicitly marking parameter $directory as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexCollectionInterface.php on line 51
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexCollectionInterface::search(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexCollectionInterface.php on line 63
+[Mon Aug 11 13:51:46 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexCollectionInterface::withKeyField(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexCollectionInterface.php on line 119
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Interfaces\RenderInterface::render(): Implicitly marking parameter $layout as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Interfaces/RenderInterface.php on line 37
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Users\Storage\UserFileStorage::getMediaPath(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Users/Storage/UserFileStorage.php on line 26
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Storage\FileStorage::getMediaPath(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Storage/FileStorage.php on line 45
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Storage\FolderStorage::readRows(): Implicitly marking parameter $fetched as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Storage/FolderStorage.php on line 138
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Storage\FolderStorage::getStoragePath(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Storage/FolderStorage.php on line 280
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Storage\FolderStorage::getMediaPath(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Storage/FolderStorage.php on line 304
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexStorageInterface::readRows(): Implicitly marking parameter $fetched as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexStorageInterface.php on line 81
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexStorageInterface::getStoragePath(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexStorageInterface.php on line 129
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexStorageInterface::getMediaPath(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexStorageInterface.php on line 137
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\File\Formatter\AbstractFormatter::getConfig(): Implicitly marking parameter $name as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/File/Formatter/AbstractFormatter.php on line 109
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexIndex::createFromArray(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexIndex.php on line 68
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexIndex::__construct(): Implicitly marking parameter $directory as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexIndex.php on line 108
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexIndex::search(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexIndex.php on line 163
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexIndex::withKeyField(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexIndex.php on line 285
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexIndex::render(): Implicitly marking parameter $layout as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexIndex.php on line 331
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexIndex::getIndexMap(): Implicitly marking parameter $indexKey as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexIndex.php on line 340
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexIndex::getCache(): Implicitly marking parameter $namespace as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexIndex.php on line 376
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexIndex::createFrom(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexIndex.php on line 560
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexIndex::setKeyField(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexIndex.php on line 573
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexIndex::loadElements(): Implicitly marking parameter $entries as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexIndex.php on line 644
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexIndex::loadCollection(): Implicitly marking parameter $entries as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexIndex.php on line 657
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Collection\AbstractIndexCollection::loadElements(): Implicitly marking parameter $entries as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Collection/AbstractIndexCollection.php on line 554
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Collection\AbstractIndexCollection::loadCollection(): Implicitly marking parameter $entries as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Collection/AbstractIndexCollection.php on line 561
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexIndexInterface::withKeyField(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexIndexInterface.php on line 57
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexIndexInterface::getIndexMap(): Implicitly marking parameter $indexKey as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexIndexInterface.php on line 63
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Users\UserObject::authorize(): Implicitly marking parameter $scope as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Users/UserObject.php on line 273
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Users\UserObject::file(): Implicitly marking parameter $storage as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Users/UserObject.php on line 560
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\FlexObject::getFormValue(): Implicitly marking parameter $separator as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/FlexObject.php on line 35
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexObject::search(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexObject.php on line 288
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexObject::searchProperty(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexObject.php on line 365
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexObject::searchNestedProperty(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexObject.php on line 379
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexObject::searchValue(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexObject.php on line 398
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexObject::getCache(): Implicitly marking parameter $namespace as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexObject.php on line 518
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexObject::render(): Implicitly marking parameter $layout as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexObject.php on line 549
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexObject::create(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexObject.php on line 717
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexObject::createCopy(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexObject.php on line 734
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexObject::check(): Implicitly marking parameter $user as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexObject.php on line 744
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexObject::getForm(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexObject.php on line 868
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexObject::getDefaultValue(): Implicitly marking parameter $separator as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexObject.php on line 882
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexObject::getFormValue(): Implicitly marking parameter $separator as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexObject.php on line 923
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexObject::doUnserialize(): Implicitly marking parameter $directory as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexObject.php on line 1021
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\FlexObject::createFormObject(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexObject.php on line 1109
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexObjectInterface::search(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexObjectInterface.php on line 58
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexObjectInterface::create(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexObjectInterface.php on line 139
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexObjectInterface::getForm(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexObjectInterface.php on line 178
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexObjectInterface::getDefaultValue(): Implicitly marking parameter $separator as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexObjectInterface.php on line 189
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexObjectInterface::getFormValue(): Implicitly marking parameter $separator as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexObjectInterface.php on line 210
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Traits\FlexMediaTrait::checkUploadedMediaFile(): Implicitly marking parameter $filename as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Traits/FlexMediaTrait.php on line 244
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Traits\FlexMediaTrait::checkUploadedMediaFile(): Implicitly marking parameter $field as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Traits/FlexMediaTrait.php on line 244
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Traits\FlexMediaTrait::uploadMediaFile(): Implicitly marking parameter $filename as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Traits/FlexMediaTrait.php on line 261
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Traits\FlexMediaTrait::uploadMediaFile(): Implicitly marking parameter $field as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Traits/FlexMediaTrait.php on line 261
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Traits\FlexMediaTrait::buildMediaObject(): Implicitly marking parameter $image as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Traits/FlexMediaTrait.php on line 308
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Acl\Access::__construct(): Implicitly marking parameter $rules as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Acl/Access.php on line 48
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Acl\Access::inherit(): Implicitly marking parameter $name as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Acl/Access.php on line 73
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Acl\Access::authorize(): Implicitly marking parameter $scope as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Acl/Access.php on line 91
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Login\Login::checkLoginRateLimit(): Implicitly marking parameter $ip as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/classes/Login.php on line 314
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Login\Login::resetLoginRateLimit(): Implicitly marking parameter $ip as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/classes/Login.php on line 333
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Login\Login::getIpKey(): Implicitly marking parameter $ip as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/classes/Login.php on line 344
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Login\Login::sendInviteEmail(): Implicitly marking parameter $message as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/classes/Login.php on line 523
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Login\Login::sendInviteEmail(): Implicitly marking parameter $user as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/classes/Login.php on line 523
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Login\Login::getPage(): Implicitly marking parameter $route as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/classes/Login.php on line 626
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Login\Login::getPage(): Implicitly marking parameter $page as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/classes/Login.php on line 626
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Login\Login::addPage(): Implicitly marking parameter $route as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/classes/Login.php on line 666
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Login\Login::addPage(): Implicitly marking parameter $page as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/classes/Login.php on line 666
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Login\Login::getRoute(): Implicitly marking parameter $enabled as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/classes/Login.php on line 688
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Login\Login::isUserAuthorizedForPage(): Implicitly marking parameter $config as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/classes/Login.php on line 735
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Email\Email::message(): Implicitly marking parameter $subject as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/email/classes/Email.php on line 72
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Email\Email::message(): Implicitly marking parameter $body as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/email/classes/Email.php on line 72
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Email\Email::message(): Implicitly marking parameter $contentType as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/email/classes/Email.php on line 72
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Email\Email::message(): Implicitly marking parameter $charset as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/email/classes/Email.php on line 72
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Email\Email::send(): Implicitly marking parameter $envelope as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/email/classes/Email.php on line 92
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Form\Form::getFileUploadError(): Implicitly marking parameter $language as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/form/classes/Form.php on line 751
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Form\Form::removeFlashUpload(): Implicitly marking parameter $field as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/form/classes/Form.php on line 1259
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Form\Traits\FormTrait::getData(): Implicitly marking parameter $name as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/Traits/FormTrait.php on line 197
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Form\Traits\FormTrait::submit(): Implicitly marking parameter $files as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/Traits/FormTrait.php on line 369
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Form\Traits\FormTrait::render(): Implicitly marking parameter $layout as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/Traits/FormTrait.php on line 505
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Form\Interfaces\FormInterface::submit(): Implicitly marking parameter $files as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Form/Interfaces/FormInterface.php on line 143
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Controller\Traits\ControllerResponseTrait::createHtmlResponse(): Implicitly marking parameter $code as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Controller/Traits/ControllerResponseTrait.php on line 52
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Controller\Traits\ControllerResponseTrait::createHtmlResponse(): Implicitly marking parameter $headers as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Controller/Traits/ControllerResponseTrait.php on line 52
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Controller\Traits\ControllerResponseTrait::createJsonResponse(): Implicitly marking parameter $code as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Controller/Traits/ControllerResponseTrait.php on line 69
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Controller\Traits\ControllerResponseTrait::createJsonResponse(): Implicitly marking parameter $headers as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Controller/Traits/ControllerResponseTrait.php on line 69
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Controller\Traits\ControllerResponseTrait::createDownloadResponse(): Implicitly marking parameter $headers as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Controller/Traits/ControllerResponseTrait.php on line 90
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Controller\Traits\ControllerResponseTrait::createDownloadResponse(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Controller/Traits/ControllerResponseTrait.php on line 90
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Controller\Traits\ControllerResponseTrait::createRedirectResponse(): Implicitly marking parameter $code as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Controller/Traits/ControllerResponseTrait.php on line 137
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Route\Route::getBase(): Implicitly marking parameter $language as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Route/Route.php on line 95
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Backup\Backups::backup(): Implicitly marking parameter $status as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Backup/Backups.php on line 197
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Scheduler\Scheduler::run(): Implicitly marking parameter $runTime as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Scheduler/Scheduler.php on line 191
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Scheduler\Job::isDue(): Implicitly marking parameter $date as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Scheduler/Job.php on line 191
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Scheduler\Job::onlyOne(): Implicitly marking parameter $whenOverlapping as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Scheduler/Job.php on line 262
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Cron\CronExpression::factory(): Implicitly marking parameter $fieldFactory as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/dragonmantank/cron-expression/src/Cron/CronExpression.php on line 69
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Twig\Environment::__construct(): Implicitly marking parameter $loader as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/twig/twig/src/Environment.php on line 122
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Twig\Extension\GravExtension::translateLanguage(): Implicitly marking parameter $languages as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Twig/Extension/GravExtension.php on line 935
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Form\TwigExtension::includeFormField(): Implicitly marking parameter $default as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/form/classes/TwigExtension.php on line 146
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Page\Page::parent(): Implicitly marking parameter $var as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Page/Page.php on line 2398
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Page\Interfaces\PageRoutableInterface::parent(): Implicitly marking parameter $var as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Page/Interfaces/PageRoutableInterface.php on line 136
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  RocketTheme\Toolbox\File\MarkdownFile::header(): Implicitly marking parameter $var as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/rockettheme/toolbox/File/src/MarkdownFile.php on line 44
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Symfony\Component\Yaml\Parser::getNextEmbedBlock(): Implicitly marking parameter $indentation as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/yaml/Parser.php on line 578
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Symfony\Component\Yaml\Parser::preg_match(): Implicitly marking parameter $matches as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/yaml/Parser.php on line 1094
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Symfony\Component\Yaml\Inline::initialize(): Implicitly marking parameter $parsedLineNumber as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/yaml/Inline.php on line 37
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Symfony\Component\Yaml\Inline::initialize(): Implicitly marking parameter $parsedFilename as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/yaml/Inline.php on line 37
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Symfony\Component\Yaml\Inline::parse(): Implicitly marking parameter $value as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/yaml/Inline.php on line 61
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Symfony\Component\Yaml\Inline::parseScalar(): Implicitly marking parameter $delimiters as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/yaml/Inline.php on line 272
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Symfony\Component\Yaml\Inline::parseScalar(): Implicitly marking parameter $isQuoted as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/yaml/Inline.php on line 272
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Symfony\Component\Yaml\Inline::evaluateScalar(): Implicitly marking parameter $isQuotedString as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/yaml/Inline.php on line 565
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Login\Events\PageAuthorizeEvent::__construct(): Implicitly marking parameter $config as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/classes/Events/PageAuthorizeEvent.php on line 40
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Form\Forms::createPageForm(): Implicitly marking parameter $name as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/form/classes/Forms.php on line 65
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Plugin\Form\Forms::createPageForm(): Implicitly marking parameter $form as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/form/classes/Forms.php on line 65
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Pages\PageCollection::withTranslation(): Implicitly marking parameter $languageCode as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Pages/PageCollection.php on line 769
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Pages\PageCollection::withTranslation(): Implicitly marking parameter $fallback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Pages/PageCollection.php on line 769
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Pages\PageCollection::withTranslated(): Implicitly marking parameter $languageCode as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Pages/PageCollection.php on line 781
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Pages\PageCollection::withTranslated(): Implicitly marking parameter $fallback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Pages/PageCollection.php on line 781
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\File\Formatter\MarkdownFormatter::__construct(): Implicitly marking parameter $headerFormatter as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/File/Formatter/MarkdownFormatter.php on line 26
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Pages\PageIndex::__construct(): Implicitly marking parameter $directory as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Pages/PageIndex.php on line 69
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Pages\PageIndex::withTranslated(): Implicitly marking parameter $languageCode as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Pages/PageIndex.php on line 184
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Pages\PageIndex::withTranslated(): Implicitly marking parameter $fallback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Pages/PageIndex.php on line 184
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Pages\PageIndex::createFrom(): Implicitly marking parameter $keyField as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Pages/PageIndex.php on line 416
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Pages\PageIndex::translateEntries(): Implicitly marking parameter $fallback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Pages/PageIndex.php on line 431
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Pages\PageIndex::getFallbackLanguages(): Implicitly marking parameter $languageCode as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Pages/PageIndex.php on line 496
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Pages\PageIndex::getFallbackLanguages(): Implicitly marking parameter $fallback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Pages/PageIndex.php on line 496
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Pages\PageIndex::jsDate(): Implicitly marking parameter $timestamp as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Pages/PageIndex.php on line 784
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Filesystem\Filesystem::getInstance(): Implicitly marking parameter $normalize as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Filesystem/Filesystem.php on line 43
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Filesystem\Filesystem::__construct(): Implicitly marking parameter $normalize as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Filesystem/Filesystem.php on line 66
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Filesystem\Filesystem::setNormalization(): Implicitly marking parameter $normalize as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Filesystem/Filesystem.php on line 81
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Pages\PageObject::getFormValue(): Implicitly marking parameter $separator as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Pages/PageObject.php on line 132
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Pages\PageObject::check(): Implicitly marking parameter $user as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Pages/PageObject.php on line 264
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Pages\FlexPageObject::getFormValue(): Implicitly marking parameter $separator as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Pages/FlexPageObject.php on line 188
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Pages\FlexPageObject::createCopy(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Pages/FlexPageObject.php on line 243
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Pages\Traits\PageAuthorsTrait::isParentAuthorized(): Implicitly marking parameter $scope as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Pages/Traits/PageAuthorsTrait.php on line 119
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Pages\Traits\PageAuthorsTrait::isParentAuthorized(): Implicitly marking parameter $user as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Pages/Traits/PageAuthorsTrait.php on line 119
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Pages\Traits\PageLegacyTrait::copy(): Implicitly marking parameter $parent as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Pages/Traits/PageLegacyTrait.php on line 294
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Pages\Traits\PageRoutableTrait::parent(): Implicitly marking parameter $var as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Pages/Traits/PageRoutableTrait.php on line 412
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Pages\Traits\PageTranslateTrait::hasTranslation(): Implicitly marking parameter $languageCode as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Pages/Traits/PageTranslateTrait.php on line 42
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Pages\Traits\PageTranslateTrait::hasTranslation(): Implicitly marking parameter $fallback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Pages/Traits/PageTranslateTrait.php on line 42
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Pages\Traits\PageTranslateTrait::getTranslation(): Implicitly marking parameter $languageCode as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Pages/Traits/PageTranslateTrait.php on line 54
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Pages\Traits\PageTranslateTrait::getTranslation(): Implicitly marking parameter $fallback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Pages/Traits/PageTranslateTrait.php on line 54
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Pages\Traits\PageTranslateTrait::findTranslation(): Implicitly marking parameter $languageCode as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Pages/Traits/PageTranslateTrait.php on line 150
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Pages\Traits\PageTranslateTrait::findTranslation(): Implicitly marking parameter $fallback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Pages/Traits/PageTranslateTrait.php on line 150
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Pages\Traits\PageTranslateTrait::getFallbackLanguages(): Implicitly marking parameter $languageCode as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Pages/Traits/PageTranslateTrait.php on line 273
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Pages\Traits\PageTranslateTrait::getFallbackLanguages(): Implicitly marking parameter $fallback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Pages/Traits/PageTranslateTrait.php on line 273
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexTranslateInterface::hasTranslation(): Implicitly marking parameter $languageCode as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexTranslateInterface.php on line 26
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexTranslateInterface::hasTranslation(): Implicitly marking parameter $fallback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexTranslateInterface.php on line 26
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexTranslateInterface::getTranslation(): Implicitly marking parameter $languageCode as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexTranslateInterface.php on line 35
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Interfaces\FlexTranslateInterface::getTranslation(): Implicitly marking parameter $fallback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Interfaces/FlexTranslateInterface.php on line 35
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\Pages\Traits\PageRoutableTrait::parent(): Implicitly marking parameter $var as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/Pages/Traits/PageRoutableTrait.php on line 35
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\UserGroups\UserGroupCollection::authorize(): Implicitly marking parameter $scope as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/UserGroups/UserGroupCollection.php on line 41
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Storage\SimpleStorage::readRows(): Implicitly marking parameter $fetched as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Storage/SimpleStorage.php on line 151
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Storage\SimpleStorage::getStoragePath(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Storage/SimpleStorage.php on line 308
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Flex\Storage\SimpleStorage::getMediaPath(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/Storage/SimpleStorage.php on line 317
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Security::detectXssFromSvgFile(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Security.php on line 33
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Security::detectXssFromPages(): Implicitly marking parameter $status as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Security.php on line 98
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Security::detectXssFromArray(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Security.php on line 148
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Security::detectXss(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Security.php on line 179
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Page\Media::__construct(): Implicitly marking parameter $media_order as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Page/Media.php on line 41
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Page\Medium\AbstractMedia::createFromArray(): Implicitly marking parameter $blueprint as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Page/Medium/AbstractMedia.php on line 232
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Media\Traits\MediaUploadTrait::checkUploadedFile(): Implicitly marking parameter $filename as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Media/Traits/MediaUploadTrait.php on line 74
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Media\Traits\MediaUploadTrait::checkUploadedFile(): Implicitly marking parameter $settings as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Media/Traits/MediaUploadTrait.php on line 74
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Media\Traits\MediaUploadTrait::checkFileMetadata(): Implicitly marking parameter $filename as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Media/Traits/MediaUploadTrait.php on line 118
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Media\Traits\MediaUploadTrait::checkFileMetadata(): Implicitly marking parameter $settings as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Media/Traits/MediaUploadTrait.php on line 118
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Media\Traits\MediaUploadTrait::copyUploadedFile(): Implicitly marking parameter $settings as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Media/Traits/MediaUploadTrait.php on line 255
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Media\Traits\MediaUploadTrait::deleteFile(): Implicitly marking parameter $settings as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Media/Traits/MediaUploadTrait.php on line 332
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Media\Traits\MediaUploadTrait::renameFile(): Implicitly marking parameter $settings as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Media/Traits/MediaUploadTrait.php on line 374
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Media\Interfaces\MediaCollectionInterface::createFromArray(): Implicitly marking parameter $blueprint as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Media/Interfaces/MediaCollectionInterface.php on line 108
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Media\Interfaces\MediaUploadInterface::checkUploadedFile(): Implicitly marking parameter $filename as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Media/Interfaces/MediaUploadInterface.php on line 35
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Media\Interfaces\MediaUploadInterface::checkUploadedFile(): Implicitly marking parameter $settings as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Media/Interfaces/MediaUploadInterface.php on line 35
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Media\Interfaces\MediaUploadInterface::copyUploadedFile(): Implicitly marking parameter $settings as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Media/Interfaces/MediaUploadInterface.php on line 54
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Media\Interfaces\MediaUploadInterface::deleteFile(): Implicitly marking parameter $settings as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Media/Interfaces/MediaUploadInterface.php on line 63
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Media\Interfaces\MediaUploadInterface::renameFile(): Implicitly marking parameter $settings as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Media/Interfaces/MediaUploadInterface.php on line 72
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Page\Markdown\Excerpts::__construct(): Implicitly marking parameter $page as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Page/Markdown/Excerpts.php on line 45
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Page\Markdown\Excerpts::__construct(): Implicitly marking parameter $config as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Page/Markdown/Excerpts.php on line 45
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Parsedown::blockSetextHeader(): Implicitly marking parameter $Block as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/erusev/parsedown/Parsedown.php on line 715
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Parsedown::blockTable(): Implicitly marking parameter $Block as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/erusev/parsedown/Parsedown.php on line 853
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Twig\Error\Error::__construct(): Implicitly marking parameter $previous as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/twig/twig/src/Error/Error.php on line 60
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Twig\Error\Error::setSourceContext(): Implicitly marking parameter $source as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/twig/twig/src/Error/Error.php on line 186
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\Flex\Types\UserGroups\UserGroupObject::authorize(): Implicitly marking parameter $scope as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Flex/Types/UserGroups/UserGroupObject.php on line 60
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Framework\Object\Collection\ObjectExpressionVisitor::sortByField(): Implicitly marking parameter $next as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Object/Collection/ObjectExpressionVisitor.php on line 138
+[Mon Aug 11 13:51:47 2025] [::1]:57600 Closing
+[Mon Aug 11 13:51:47 2025] [::1]:57601 Accepted
+[Mon Aug 11 13:51:47 2025] [::1]:57601 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 13:51:47 2025] [::1]:57602 Accepted
+[Mon Aug 11 13:51:47 2025] [::1]:57603 Accepted
+[Mon Aug 11 13:51:47 2025] [::1]:57604 Accepted
+[Mon Aug 11 13:51:47 2025] [::1]:57601 Closing
+[Mon Aug 11 13:51:47 2025] [::1]:57605 Accepted
+[Mon Aug 11 13:51:47 2025] [::1]:57606 Accepted
+[Mon Aug 11 13:51:47 2025] [::1]:57602 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 13:51:47 2025] [::1]:57605 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 13:51:47 2025] [::1]:57606 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 13:51:47 2025] [::1]:57603 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 13:51:47 2025] [::1]:57604 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 13:51:47 2025] [::1]:57607 Accepted
+[Mon Aug 11 13:51:47 2025] [::1]:57607 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 13:51:47 2025] [::1]:57609 Accepted
+[Mon Aug 11 13:51:47 2025] [::1]:57605 Closing
+[Mon Aug 11 13:51:47 2025] [::1]:57606 Closing
+[Mon Aug 11 13:51:47 2025] [::1]:57603 Closing
+[Mon Aug 11 13:51:47 2025] [::1]:57604 Closing
+[Mon Aug 11 13:51:47 2025] [::1]:57610 Accepted
+[Mon Aug 11 13:51:47 2025] [::1]:57602 Closing
+[Mon Aug 11 13:51:47 2025] [::1]:57609 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 13:51:47 2025] [::1]:57611 Accepted
+[Mon Aug 11 13:51:47 2025] [::1]:57610 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 13:51:47 2025] [::1]:57607 Closing
+[Mon Aug 11 13:51:47 2025] [::1]:57612 Accepted
+[Mon Aug 11 13:51:47 2025] [::1]:57611 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 13:51:47 2025] [::1]:57612 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 13:51:47 2025] [::1]:57609 Closing
+[Mon Aug 11 13:51:47 2025] [::1]:57610 Closing
+[Mon Aug 11 13:51:47 2025] [::1]:57611 Closing
+[Mon Aug 11 13:51:47 2025] [::1]:57612 Closing
+[Mon Aug 11 13:51:47 2025] [::1]:57613 Accepted
+[Mon Aug 11 13:51:47 2025] [::1]:57614 Accepted
+[Mon Aug 11 13:51:47 2025] [::1]:57613 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 13:51:47 2025] [::1]:57614 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 13:51:47 2025] [::1]:57614 Closing
+[Mon Aug 11 13:51:47 2025] [::1]:57613 Closing
+[Mon Aug 11 13:51:47 2025] [::1]:57615 Accepted
+[Mon Aug 11 13:51:47 2025] [::1]:57615 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 13:51:47 2025] [::1]:57615 Closing
+[Mon Aug 11 13:51:47 2025] [::1]:57616 Accepted
+[Mon Aug 11 13:51:47 2025] ::1:57616 [200]: /admin/task:getNotifications
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\HTTP\Response::get(): Implicitly marking parameter $callback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/HTTP/Response.php on line 44
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\HTTP\Response::request(): Implicitly marking parameter $callback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/HTTP/Response.php on line 61
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Grav\Common\HTTP\Client::getClient(): Implicitly marking parameter $callback as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/HTTP/Client.php on line 28
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Symfony\Component\HttpClient\CurlHttpClient::stream(): Implicitly marking parameter $timeout as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/http-client/CurlHttpClient.php on line 310
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Symfony\Component\HttpClient\HttpClientTrait::jsonEncode(): Implicitly marking parameter $flags as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/http-client/HttpClientTrait.php on line 387
+[Mon Aug 11 13:51:47 2025] PHP Deprecated:  Symfony\Contracts\HttpClient\HttpClientInterface::stream(): Implicitly marking parameter $timeout as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/contracts/HttpClient/HttpClientInterface.php on line 94
+[Mon Aug 11 13:51:48 2025] PHP Deprecated:  Symfony\Component\HttpClient\Response\CurlResponse::__construct(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/http-client/Response/CurlResponse.php on line 43
+[Mon Aug 11 13:51:48 2025] PHP Deprecated:  Symfony\Component\HttpClient\Response\CurlResponse::__construct(): Implicitly marking parameter $logger as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/http-client/Response/CurlResponse.php on line 43
+[Mon Aug 11 13:51:48 2025] PHP Deprecated:  Symfony\Component\HttpClient\Response\CurlResponse::__construct(): Implicitly marking parameter $resolveRedirect as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/http-client/Response/CurlResponse.php on line 43
+[Mon Aug 11 13:51:48 2025] PHP Deprecated:  Symfony\Component\HttpClient\Response\CurlResponse::__construct(): Implicitly marking parameter $curlVersion as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/http-client/Response/CurlResponse.php on line 43
+[Mon Aug 11 13:51:48 2025] PHP Deprecated:  Symfony\Component\HttpClient\Response\CurlResponse::getInfo(): Implicitly marking parameter $type as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/http-client/Response/CurlResponse.php on line 184
+[Mon Aug 11 13:51:48 2025] PHP Deprecated:  Symfony\Component\HttpClient\Response\CurlResponse::perform(): Implicitly marking parameter $responses as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/http-client/Response/CurlResponse.php on line 265
+[Mon Aug 11 13:51:48 2025] PHP Deprecated:  Symfony\Component\HttpClient\Response\ResponseTrait::stream(): Implicitly marking parameter $timeout as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/http-client/Response/ResponseTrait.php on line 313
+[Mon Aug 11 13:51:48 2025] PHP Deprecated:  Symfony\Contracts\HttpClient\ResponseInterface::getInfo(): Implicitly marking parameter $type as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/symfony/contracts/HttpClient/ResponseInterface.php on line 110
+[Mon Aug 11 13:51:48 2025] [::1]:57616 Closing
+[Mon Aug 11 13:51:48 2025] [::1]:57617 Accepted
+[Mon Aug 11 13:51:48 2025] [::1]:57618 Accepted
+[Mon Aug 11 13:51:48 2025] ::1:57617 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 13:51:48 2025] PHP Deprecated:  Twig\Parser::addImportedSymbol(): Implicitly marking parameter $node as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/twig/twig/src/Parser.php on line 330
+[Mon Aug 11 13:51:48 2025] PHP Deprecated:  Twig\NodeVisitor\SafeAnalysisNodeVisitor::intersectSafe(): Implicitly marking parameter $a as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/twig/twig/src/NodeVisitor/SafeAnalysisNodeVisitor.php on line 141
+[Mon Aug 11 13:51:48 2025] PHP Deprecated:  Twig\NodeVisitor\SafeAnalysisNodeVisitor::intersectSafe(): Implicitly marking parameter $b as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/twig/twig/src/NodeVisitor/SafeAnalysisNodeVisitor.php on line 141
+[Mon Aug 11 13:51:48 2025] PHP Deprecated:  Twig\Node\Expression\ArrayExpression::addElement(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/twig/twig/src/Node/Expression/ArrayExpression.php on line 59
+[Mon Aug 11 13:51:48 2025] PHP Deprecated:  Twig\NodeTraverser::traverseForVisitor(): Implicitly marking parameter $node as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/twig/twig/src/NodeTraverser.php on line 63
+[Mon Aug 11 13:51:48 2025] [::1]:57617 Closing
+[Mon Aug 11 13:51:48 2025] [::1]:57620 Accepted
+[Mon Aug 11 13:51:48 2025] ::1:57618 [200]: /admin/ajax.json/task:getNewsFeed
+[Mon Aug 11 13:51:49 2025] PHP Deprecated:  PicoFeed\Base::__construct(): Implicitly marking parameter $config as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/admin/vendor/p3k/picofeed/lib/PicoFeed/Base.php on line 29
+[Mon Aug 11 13:51:49 2025] PHP Deprecated:  Laminas\Xml\Security::scanString(): Implicitly marking parameter $dom as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/admin/vendor/laminas/laminas-xml/src/Security.php on line 37
+[Mon Aug 11 13:51:49 2025] PHP Deprecated:  Laminas\Xml\Security::scan(): Implicitly marking parameter $dom as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/admin/vendor/laminas/laminas-xml/src/Security.php on line 120
+[Mon Aug 11 13:51:49 2025] PHP Deprecated:  Laminas\Xml\Security::scanHtml(): Implicitly marking parameter $dom as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/admin/vendor/laminas/laminas-xml/src/Security.php on line 137
+[Mon Aug 11 13:51:49 2025] PHP Deprecated:  Laminas\Xml\Security::scanFile(): Implicitly marking parameter $dom as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/admin/vendor/laminas/laminas-xml/src/Security.php on line 153
+[Mon Aug 11 13:51:49 2025] [::1]:57618 Closing
+[Mon Aug 11 13:51:49 2025] ::1:57620 [200]: /favicon.ico
+[Mon Aug 11 13:51:49 2025] PHP Deprecated:  Grav\Framework\RequestHandler\Exception\RequestException::__construct(): Implicitly marking parameter $previous as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/RequestHandler/Exception/RequestException.php on line 76
+[Mon Aug 11 13:51:49 2025] PHP Deprecated:  Grav\Common\Page\Collection::__construct(): Implicitly marking parameter $pages as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Common/Page/Collection.php on line 46
+[Mon Aug 11 13:51:49 2025] [::1]:57620 Closing
+[Mon Aug 11 13:51:55 2025] [::1]:57624 Accepted
+[Mon Aug 11 13:51:55 2025] ::1:57624 [200]: /admin
+[Mon Aug 11 13:51:55 2025] [::1]:57624 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57632 Accepted
+[Mon Aug 11 13:52:33 2025] ::1:57632 [200]: /admin/dashboard
+[Mon Aug 11 13:52:33 2025] [::1]:57632 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57633 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57633 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 13:52:33 2025] [::1]:57633 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57634 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57635 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57636 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57637 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57638 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57634 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 13:52:33 2025] [::1]:57639 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57635 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 13:52:33 2025] [::1]:57636 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 13:52:33 2025] [::1]:57637 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 13:52:33 2025] [::1]:57638 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 13:52:33 2025] [::1]:57639 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 13:52:33 2025] [::1]:57635 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57636 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57640 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57634 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57637 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57638 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57639 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57641 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57642 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57640 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 13:52:33 2025] [::1]:57641 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 13:52:33 2025] [::1]:57642 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 13:52:33 2025] [::1]:57643 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57640 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57641 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57642 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57643 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 13:52:33 2025] [::1]:57643 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57644 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57644 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 13:52:33 2025] [::1]:57645 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57645 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 13:52:33 2025] [::1]:57645 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57646 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57644 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57646 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 13:52:33 2025] [::1]:57646 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57647 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57648 Accepted
+[Mon Aug 11 13:52:33 2025] ::1:57647 [200]: /admin/task:getNotifications
+[Mon Aug 11 13:52:33 2025] [::1]:57647 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57649 Accepted
+[Mon Aug 11 13:52:33 2025] ::1:57648 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 13:52:33 2025] [::1]:57648 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57650 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57649 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 13:52:33 2025] ::1:57650 [200]: /admin/ajax.json/task:getNewsFeed
+[Mon Aug 11 13:52:33 2025] [::1]:57650 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57649 Closing
+[Mon Aug 11 13:52:33 2025] [::1]:57651 Accepted
+[Mon Aug 11 13:52:33 2025] [::1]:57651 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 13:52:33 2025] [::1]:57651 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57654 Accepted
+[Mon Aug 11 13:53:07 2025] ::1:57654 [200]: /admin/pages
+[Mon Aug 11 13:53:07 2025] PHP Deprecated:  Grav\Framework\Flex\FlexForm::__construct(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexForm.php on line 103
+[Mon Aug 11 13:53:07 2025] PHP Deprecated:  Grav\Framework\Flex\FlexForm::getMediaTaskRoute(): Implicitly marking parameter $extension as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Flex/FlexForm.php on line 431
+[Mon Aug 11 13:53:07 2025] PHP Deprecated:  Grav\Framework\Uri\Uri::isSameDocumentReference(): Implicitly marking parameter $base as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Uri/Uri.php on line 212
+[Mon Aug 11 13:53:07 2025] PHP Deprecated:  GuzzleHttp\Psr7\Uri::isSameDocumentReference(): Implicitly marking parameter $base as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/vendor/guzzlehttp/psr7/src/Uri.php on line 291
+[Mon Aug 11 13:53:07 2025] [::1]:57654 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57655 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57655 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57655 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57656 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57657 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57658 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57659 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57660 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57656 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57657 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57661 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57658 [200]: GET /user/plugins/flex-objects/css/admin.css?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57659 [200]: GET /user/plugins/admin/themes/grav/css/codemirror/codemirror.css?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57660 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57661 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57657 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57662 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57658 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57659 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57660 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57656 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57661 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57663 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57664 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57665 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57662 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57666 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57663 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57664 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57665 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57666 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57667 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57662 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57663 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57664 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57665 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57666 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57667 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57667 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57668 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57669 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57670 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57668 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57669 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57670 [200]: GET /user/plugins/flex-objects/js/flex-objects.js?bd0fe82e0e
+[Mon Aug 11 13:53:07 2025] [::1]:57669 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57671 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57671 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 13:53:07 2025] [::1]:57671 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57670 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57668 Closing
+[Mon Aug 11 13:53:07 2025] [::1]:57672 Accepted
+[Mon Aug 11 13:53:07 2025] [::1]:57673 Accepted
+[Mon Aug 11 13:53:07 2025] ::1:57672 [200]: /admin/task:getNotifications
+[Mon Aug 11 13:53:07 2025] [::1]:57672 Closing
+[Mon Aug 11 13:53:07 2025] ::1:57673 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 13:53:08 2025] [::1]:57673 Closing
+[Mon Aug 11 13:53:08 2025] [::1]:57674 Accepted
+[Mon Aug 11 13:53:08 2025] ::1:57674 [200]: /admin/pages
+[Mon Aug 11 13:53:08 2025] [::1]:57674 Closing
+[Mon Aug 11 13:53:08 2025] [::1]:57675 Accepted
+[Mon Aug 11 13:53:08 2025] [::1]:57676 Accepted
+[Mon Aug 11 13:53:08 2025] [::1]:57675 [200]: GET /user/plugins/admin/themes/grav/images/icons/book-edit.svg
+[Mon Aug 11 13:53:08 2025] [::1]:57676 [200]: GET /user/plugins/admin/themes/grav/images/icons/house.svg
+[Mon Aug 11 13:53:08 2025] [::1]:57675 Closing
+[Mon Aug 11 13:53:08 2025] [::1]:57676 Closing
+[Mon Aug 11 13:53:09 2025] [::1]:57677 Accepted
+[Mon Aug 11 13:53:09 2025] ::1:57677 [200]: /admin/pages/home
+[Mon Aug 11 13:53:09 2025] PHP Deprecated:  Grav\Framework\Acl\Permissions::getAccess(): Implicitly marking parameter $access as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/system/src/Grav/Framework/Acl/Permissions.php on line 159
+[Mon Aug 11 13:53:10 2025] [::1]:57677 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57678 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57678 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57678 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57679 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57680 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57681 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57682 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57683 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57679 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57684 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57680 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57681 [200]: GET /user/plugins/flex-objects/css/admin.css?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57682 [200]: GET /user/plugins/admin/themes/grav/css/codemirror/codemirror.css?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57683 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57684 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57680 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57681 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57682 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57683 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57679 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57684 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57685 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57686 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57687 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57685 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57688 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57686 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57687 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57689 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57688 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57690 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57685 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57689 [200]: GET /user/plugins/admin/themes/grav/css/codemirror/themes/paper.css?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57686 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57687 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57690 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57691 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57688 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57689 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57690 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57691 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57691 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57692 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57692 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57693 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57693 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 13:53:10 2025] [::1]:57693 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57692 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57694 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57694 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 13:53:10 2025] [::1]:57694 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57695 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57696 Accepted
+[Mon Aug 11 13:53:10 2025] ::1:57695 [200]: /admin/task:getNotifications
+[Mon Aug 11 13:53:10 2025] [::1]:57695 Closing
+[Mon Aug 11 13:53:10 2025] ::1:57696 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 13:53:10 2025] [::1]:57696 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57697 Accepted
+[Mon Aug 11 13:53:10 2025] ::1:57697 [200]: /admin/pages/home.json/task:listmedia
+[Mon Aug 11 13:53:10 2025] [::1]:57697 Closing
+[Mon Aug 11 13:53:10 2025] [::1]:57698 Accepted
+[Mon Aug 11 13:53:10 2025] [::1]:57698 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 13:53:10 2025] [::1]:57698 Closing
+[Mon Aug 11 13:53:43 2025] [::1]:57702 Accepted
+[Mon Aug 11 13:53:43 2025] ::1:57702 [200]: /
+[Mon Aug 11 13:53:43 2025] [::1]:57702 Closing
+[Mon Aug 11 13:53:43 2025] [::1]:57703 Accepted
+[Mon Aug 11 13:53:43 2025] [::1]:57703 [200]: GET /user/plugins/markdown-notices/assets/notices.css
+[Mon Aug 11 13:53:43 2025] [::1]:57703 Closing
+[Mon Aug 11 13:53:43 2025] [::1]:57704 Accepted
+[Mon Aug 11 13:53:43 2025] [::1]:57705 Accepted
+[Mon Aug 11 13:53:43 2025] [::1]:57706 Accepted
+[Mon Aug 11 13:53:43 2025] [::1]:57707 Accepted
+[Mon Aug 11 13:53:43 2025] [::1]:57708 Accepted
+[Mon Aug 11 13:53:43 2025] [::1]:57704 [200]: GET /user/plugins/form/assets/form-styles.css
+[Mon Aug 11 13:53:43 2025] [::1]:57705 [200]: GET /user/plugins/login/css/login.css
+[Mon Aug 11 13:53:43 2025] [::1]:57706 [200]: GET /user/themes/quark/css-compiled/spectre.min.css
+[Mon Aug 11 13:53:43 2025] [::1]:57707 [200]: GET /user/themes/quark/css-compiled/theme.min.css
+[Mon Aug 11 13:53:43 2025] [::1]:57708 [200]: GET /user/themes/quark/css/custom.css
+[Mon Aug 11 13:53:43 2025] [::1]:57709 Accepted
+[Mon Aug 11 13:53:43 2025] [::1]:57704 Closing
+[Mon Aug 11 13:53:43 2025] [::1]:57708 Closing
+[Mon Aug 11 13:53:43 2025] [::1]:57709 [200]: GET /user/themes/quark/css/line-awesome.min.css
+[Mon Aug 11 13:53:43 2025] [::1]:57710 Accepted
+[Mon Aug 11 13:53:43 2025] [::1]:57705 Closing
+[Mon Aug 11 13:53:43 2025] [::1]:57706 Closing
+[Mon Aug 11 13:53:43 2025] [::1]:57707 Closing
+[Mon Aug 11 13:53:43 2025] [::1]:57710 [200]: GET /system/assets/jquery/jquery-3.x.min.js
+[Mon Aug 11 13:53:43 2025] [::1]:57711 Accepted
+[Mon Aug 11 13:53:43 2025] [::1]:57709 Closing
+[Mon Aug 11 13:53:43 2025] [::1]:57712 Accepted
+[Mon Aug 11 13:53:43 2025] [::1]:57711 [200]: GET /user/themes/quark/js/jquery.treemenu.js
+[Mon Aug 11 13:53:43 2025] [::1]:57712 [200]: GET /user/themes/quark/js/site.js
+[Mon Aug 11 13:53:43 2025] [::1]:57710 Closing
+[Mon Aug 11 13:53:43 2025] [::1]:57711 Closing
+[Mon Aug 11 13:53:43 2025] [::1]:57712 Closing
+[Mon Aug 11 13:53:44 2025] [::1]:57713 Accepted
+[Mon Aug 11 13:53:44 2025] [::1]:57713 [200]: GET /user/themes/quark/fonts/line-awesome.woff2?v=4.7.0
+[Mon Aug 11 13:53:44 2025] [::1]:57713 Closing
+[Mon Aug 11 13:53:44 2025] [::1]:57714 Accepted
+[Mon Aug 11 13:53:44 2025] [::1]:57714 [200]: GET /user/themes/quark/images/favicon.png
+[Mon Aug 11 13:53:44 2025] [::1]:57714 Closing
+[Mon Aug 11 13:53:44 2025] [::1]:57715 Accepted
+[Mon Aug 11 13:53:44 2025] [::1]:57715 [200]: GET /user/themes/quark/images/favicon.png
+[Mon Aug 11 13:53:44 2025] [::1]:57715 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57717 Accepted
+[Mon Aug 11 13:54:03 2025] ::1:57717 [200]: /admin/dashboard
+[Mon Aug 11 13:54:03 2025] [::1]:57717 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57718 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57718 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 13:54:03 2025] [::1]:57718 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57719 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57720 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57721 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57722 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57723 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57719 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 13:54:03 2025] [::1]:57724 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57720 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 13:54:03 2025] [::1]:57721 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 13:54:03 2025] [::1]:57722 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 13:54:03 2025] [::1]:57723 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 13:54:03 2025] [::1]:57724 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 13:54:03 2025] [::1]:57720 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57721 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57722 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57723 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57719 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57724 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57725 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57726 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57727 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57728 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57725 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 13:54:03 2025] [::1]:57725 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57726 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 13:54:03 2025] [::1]:57727 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 13:54:03 2025] [::1]:57728 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 13:54:03 2025] [::1]:57726 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57727 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57728 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57729 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57729 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 13:54:03 2025] [::1]:57730 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57730 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 13:54:03 2025] [::1]:57730 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57729 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57731 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57731 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 13:54:03 2025] [::1]:57731 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57732 Accepted
+[Mon Aug 11 13:54:03 2025] ::1:57732 [200]: /admin/task:getNotifications
+[Mon Aug 11 13:54:03 2025] [::1]:57732 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57733 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57734 Accepted
+[Mon Aug 11 13:54:03 2025] ::1:57733 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 13:54:03 2025] [::1]:57733 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57735 Accepted
+[Mon Aug 11 13:54:03 2025] [::1]:57734 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 13:54:03 2025] ::1:57735 [200]: /admin/ajax.json/task:getNewsFeed
+[Mon Aug 11 13:54:03 2025] [::1]:57735 Closing
+[Mon Aug 11 13:54:03 2025] [::1]:57734 Closing
+[Mon Aug 11 14:12:47 2025] [::1]:57969 Accepted
+[Mon Aug 11 14:12:47 2025] ::1:57969 [200]: /admin/task:logout/logout-nonce:b42e19368937c41c31de73d205073a81
+[Mon Aug 11 14:12:47 2025] [::1]:57969 Closing
+[Mon Aug 11 14:12:47 2025] [::1]:57970 Accepted
+[Mon Aug 11 14:12:47 2025] ::1:57970 [200]: /admin
+[Mon Aug 11 14:12:47 2025] [::1]:57970 Closing
+[Mon Aug 11 14:12:47 2025] [::1]:57971 Accepted
+[Mon Aug 11 14:12:47 2025] [::1]:57971 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 14:12:47 2025] [::1]:57971 Closing
+[Mon Aug 11 14:12:47 2025] [::1]:57972 Accepted
+[Mon Aug 11 14:12:47 2025] [::1]:57973 Accepted
+[Mon Aug 11 14:12:47 2025] [::1]:57974 Accepted
+[Mon Aug 11 14:12:47 2025] [::1]:57975 Accepted
+[Mon Aug 11 14:12:47 2025] [::1]:57976 Accepted
+[Mon Aug 11 14:12:47 2025] [::1]:57972 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 14:12:47 2025] [::1]:57973 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 14:12:47 2025] [::1]:57974 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 14:12:47 2025] [::1]:57975 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 14:12:47 2025] [::1]:57976 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 14:12:47 2025] [::1]:57977 Accepted
+[Mon Aug 11 14:12:47 2025] [::1]:57977 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 14:12:47 2025] [::1]:57978 Accepted
+[Mon Aug 11 14:12:47 2025] [::1]:57973 Closing
+[Mon Aug 11 14:12:47 2025] [::1]:57974 Closing
+[Mon Aug 11 14:12:47 2025] [::1]:57975 Closing
+[Mon Aug 11 14:12:47 2025] [::1]:57976 Closing
+[Mon Aug 11 14:12:47 2025] [::1]:57979 Accepted
+[Mon Aug 11 14:12:47 2025] [::1]:57972 Closing
+[Mon Aug 11 14:12:47 2025] [::1]:57978 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 14:12:47 2025] [::1]:57980 Accepted
+[Mon Aug 11 14:12:47 2025] [::1]:57979 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 14:12:47 2025] [::1]:57977 Closing
+[Mon Aug 11 14:12:47 2025] [::1]:57981 Accepted
+[Mon Aug 11 14:12:47 2025] [::1]:57980 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 14:12:47 2025] [::1]:57981 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 14:12:47 2025] [::1]:57978 Closing
+[Mon Aug 11 14:12:47 2025] [::1]:57979 Closing
+[Mon Aug 11 14:12:47 2025] [::1]:57980 Closing
+[Mon Aug 11 14:12:47 2025] [::1]:57981 Closing
+[Mon Aug 11 14:12:48 2025] [::1]:57982 Accepted
+[Mon Aug 11 14:12:48 2025] [::1]:57982 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 14:12:48 2025] [::1]:57982 Closing
+[Mon Aug 11 14:12:48 2025] [::1]:57983 Accepted
+[Mon Aug 11 14:12:48 2025] [::1]:57983 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 14:12:48 2025] [::1]:57983 Closing
+[Mon Aug 11 14:12:56 2025] [::1]:57985 Accepted
+[Mon Aug 11 14:12:56 2025] ::1:57985 [200]: /admin
+[Mon Aug 11 14:12:56 2025] [::1]:57985 Closing
+[Mon Aug 11 14:12:56 2025] [::1]:57986 Accepted
+[Mon Aug 11 14:12:56 2025] ::1:57986 [200]: /admin
+[Mon Aug 11 14:12:56 2025] [::1]:57986 Closing
+[Mon Aug 11 14:12:56 2025] [::1]:57987 Accepted
+[Mon Aug 11 14:12:56 2025] [::1]:57987 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 14:12:56 2025] [::1]:57987 Closing
+[Mon Aug 11 14:12:56 2025] [::1]:57988 Accepted
+[Mon Aug 11 14:12:56 2025] [::1]:57989 Accepted
+[Mon Aug 11 14:12:56 2025] [::1]:57990 Accepted
+[Mon Aug 11 14:12:56 2025] [::1]:57991 Accepted
+[Mon Aug 11 14:12:56 2025] [::1]:57992 Accepted
+[Mon Aug 11 14:12:56 2025] [::1]:57988 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 14:12:56 2025] [::1]:57989 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 14:12:56 2025] [::1]:57990 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 14:12:56 2025] [::1]:57991 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 14:12:56 2025] [::1]:57992 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 14:12:56 2025] [::1]:57993 Accepted
+[Mon Aug 11 14:12:56 2025] [::1]:57993 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 14:12:56 2025] [::1]:57989 Closing
+[Mon Aug 11 14:12:56 2025] [::1]:57990 Closing
+[Mon Aug 11 14:12:56 2025] [::1]:57991 Closing
+[Mon Aug 11 14:12:56 2025] [::1]:57992 Closing
+[Mon Aug 11 14:12:56 2025] [::1]:57988 Closing
+[Mon Aug 11 14:12:56 2025] [::1]:57993 Closing
+[Mon Aug 11 14:12:56 2025] [::1]:57995 Accepted
+[Mon Aug 11 14:12:56 2025] [::1]:57996 Accepted
+[Mon Aug 11 14:12:56 2025] [::1]:57997 Accepted
+[Mon Aug 11 14:12:56 2025] [::1]:57995 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 14:12:56 2025] [::1]:57998 Accepted
+[Mon Aug 11 14:12:56 2025] [::1]:57995 Closing
+[Mon Aug 11 14:12:56 2025] [::1]:57996 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 14:12:56 2025] [::1]:57997 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 14:12:56 2025] [::1]:57996 Closing
+[Mon Aug 11 14:12:56 2025] [::1]:57997 Closing
+[Mon Aug 11 14:12:56 2025] [::1]:57998 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 14:12:56 2025] [::1]:57998 Closing
+[Mon Aug 11 14:12:57 2025] [::1]:57999 Accepted
+[Mon Aug 11 14:12:57 2025] [::1]:57999 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 14:12:57 2025] [::1]:58000 Accepted
+[Mon Aug 11 14:12:57 2025] [::1]:58000 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 14:12:57 2025] [::1]:58000 Closing
+[Mon Aug 11 14:12:57 2025] [::1]:57999 Closing
+[Mon Aug 11 14:12:57 2025] [::1]:58001 Accepted
+[Mon Aug 11 14:12:57 2025] [::1]:58001 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 14:12:57 2025] [::1]:58001 Closing
+[Mon Aug 11 14:12:57 2025] [::1]:58002 Accepted
+[Mon Aug 11 14:12:57 2025] [::1]:58003 Accepted
+[Mon Aug 11 14:12:57 2025] ::1:58002 [200]: /admin/task:getNotifications
+[Mon Aug 11 14:12:57 2025] [::1]:58002 Closing
+[Mon Aug 11 14:12:57 2025] ::1:58003 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 14:12:57 2025] [::1]:58003 Closing
+[Mon Aug 11 14:12:57 2025] [::1]:58004 Accepted
+[Mon Aug 11 14:12:57 2025] [::1]:58005 Accepted
+[Mon Aug 11 14:12:57 2025] [::1]:58004 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 14:12:57 2025] ::1:58005 [200]: /admin/ajax.json/task:getNewsFeed
+[Mon Aug 11 14:12:57 2025] [::1]:58005 Closing
+[Mon Aug 11 14:12:57 2025] [::1]:58004 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58013 Accepted
+[Mon Aug 11 14:13:00 2025] ::1:58013 [200]: /admin/accounts/users/edthescienceguy
+[Mon Aug 11 14:13:00 2025] PHP Deprecated:  RobThree\Auth\TwoFactorAuth::__construct(): Implicitly marking parameter $qrcodeprovider as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/vendor/robthree/twofactorauth/lib/TwoFactorAuth.php on line 63
+[Mon Aug 11 14:13:00 2025] PHP Deprecated:  RobThree\Auth\TwoFactorAuth::__construct(): Implicitly marking parameter $rngprovider as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/vendor/robthree/twofactorauth/lib/TwoFactorAuth.php on line 63
+[Mon Aug 11 14:13:00 2025] PHP Deprecated:  RobThree\Auth\TwoFactorAuth::__construct(): Implicitly marking parameter $timeprovider as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/vendor/robthree/twofactorauth/lib/TwoFactorAuth.php on line 63
+[Mon Aug 11 14:13:00 2025] PHP Deprecated:  RobThree\Auth\TwoFactorAuth::ensureCorrectTime(): Implicitly marking parameter $timeproviders as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/vendor/robthree/twofactorauth/lib/TwoFactorAuth.php on line 217
+[Mon Aug 11 14:13:00 2025] PHP Deprecated:  BaconQrCode\Encoder\Encoder::chooseMode(): Implicitly marking parameter $encoding as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/vendor/bacon/bacon-qr-code/src/Encoder/Encoder.php on line 158
+[Mon Aug 11 14:13:00 2025] PHP Deprecated:  BaconQrCode\Common\ReedSolomonCodec::decode(): Implicitly marking parameter $erasures as nullable is deprecated, the explicit nullable type must be used instead in /Users/degreemaps/Documents/the-energy-museum/backend/user/plugins/login/vendor/bacon/bacon-qr-code/src/Common/ReedSolomonCodec.php on line 225
+[Mon Aug 11 14:13:00 2025] [::1]:58013 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58014 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58014 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58014 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58015 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58016 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58017 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58018 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58019 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58015 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58020 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58016 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58017 [200]: GET /user/plugins/flex-objects/css/admin.css?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58018 [200]: GET /user/plugins/admin/themes/grav/css/codemirror/codemirror.css?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58019 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58020 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58016 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58017 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58018 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58019 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58021 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58015 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58020 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58022 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58023 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58024 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58021 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58022 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58023 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58024 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58025 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58021 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58022 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58023 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58024 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58026 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58025 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58026 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58025 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58026 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58027 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58027 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58028 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58029 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58028 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58029 [200]: GET /user/plugins/login/js/2fa.js?bd0fe82e0e
+[Mon Aug 11 14:13:00 2025] [::1]:58029 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58028 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58030 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58030 [200]: GET /user/plugins/admin/themes/grav/images/icons/crown.svg
+[Mon Aug 11 14:13:00 2025] [::1]:58030 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58027 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58031 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58031 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 14:13:00 2025] [::1]:58031 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58032 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58033 Accepted
+[Mon Aug 11 14:13:00 2025] ::1:58032 [200]: /admin/task:getNotifications
+[Mon Aug 11 14:13:00 2025] [::1]:58032 Closing
+[Mon Aug 11 14:13:00 2025] ::1:58033 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 14:13:00 2025] [::1]:58033 Closing
+[Mon Aug 11 14:13:00 2025] [::1]:58034 Accepted
+[Mon Aug 11 14:13:00 2025] [::1]:58034 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 14:13:00 2025] [::1]:58034 Closing
+[Mon Aug 11 14:13:02 2025] [::1]:58035 Accepted
+[Mon Aug 11 14:13:02 2025] ::1:58035 [200]: /admin/dashboard
+[Mon Aug 11 14:13:02 2025] [::1]:58035 Closing
+[Mon Aug 11 14:13:02 2025] [::1]:58036 Accepted
+[Mon Aug 11 14:13:02 2025] [::1]:58036 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 14:13:02 2025] [::1]:58036 Closing
+[Mon Aug 11 14:13:02 2025] [::1]:58037 Accepted
+[Mon Aug 11 14:13:02 2025] [::1]:58038 Accepted
+[Mon Aug 11 14:13:02 2025] [::1]:58039 Accepted
+[Mon Aug 11 14:13:02 2025] [::1]:58040 Accepted
+[Mon Aug 11 14:13:02 2025] [::1]:58041 Accepted
+[Mon Aug 11 14:13:02 2025] [::1]:58037 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 14:13:02 2025] [::1]:58042 Accepted
+[Mon Aug 11 14:13:02 2025] [::1]:58038 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 14:13:02 2025] [::1]:58039 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 14:13:02 2025] [::1]:58040 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:02 2025] [::1]:58041 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:02 2025] [::1]:58042 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:02 2025] [::1]:58038 Closing
+[Mon Aug 11 14:13:02 2025] [::1]:58037 Closing
+[Mon Aug 11 14:13:02 2025] [::1]:58039 Closing
+[Mon Aug 11 14:13:02 2025] [::1]:58040 Closing
+[Mon Aug 11 14:13:02 2025] [::1]:58041 Closing
+[Mon Aug 11 14:13:02 2025] [::1]:58043 Accepted
+[Mon Aug 11 14:13:02 2025] [::1]:58042 Closing
+[Mon Aug 11 14:13:02 2025] [::1]:58043 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:02 2025] [::1]:58043 Closing
+[Mon Aug 11 14:13:02 2025] [::1]:58044 Accepted
+[Mon Aug 11 14:13:02 2025] [::1]:58045 Accepted
+[Mon Aug 11 14:13:02 2025] [::1]:58046 Accepted
+[Mon Aug 11 14:13:02 2025] [::1]:58044 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 14:13:02 2025] [::1]:58045 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 14:13:02 2025] [::1]:58046 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:02 2025] [::1]:58044 Closing
+[Mon Aug 11 14:13:02 2025] [::1]:58045 Closing
+[Mon Aug 11 14:13:02 2025] [::1]:58046 Closing
+[Mon Aug 11 14:13:03 2025] [::1]:58047 Accepted
+[Mon Aug 11 14:13:03 2025] [::1]:58047 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:03 2025] [::1]:58048 Accepted
+[Mon Aug 11 14:13:03 2025] [::1]:58048 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:03 2025] [::1]:58048 Closing
+[Mon Aug 11 14:13:03 2025] [::1]:58047 Closing
+[Mon Aug 11 14:13:03 2025] [::1]:58049 Accepted
+[Mon Aug 11 14:13:03 2025] [::1]:58049 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 14:13:03 2025] [::1]:58049 Closing
+[Mon Aug 11 14:13:03 2025] [::1]:58050 Accepted
+[Mon Aug 11 14:13:03 2025] [::1]:58051 Accepted
+[Mon Aug 11 14:13:03 2025] ::1:58050 [200]: /admin/task:getNotifications
+[Mon Aug 11 14:13:03 2025] [::1]:58050 Closing
+[Mon Aug 11 14:13:03 2025] [::1]:58052 Accepted
+[Mon Aug 11 14:13:03 2025] ::1:58051 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 14:13:03 2025] [::1]:58051 Closing
+[Mon Aug 11 14:13:03 2025] [::1]:58053 Accepted
+[Mon Aug 11 14:13:03 2025] [::1]:58052 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 14:13:03 2025] ::1:58053 [200]: /admin/ajax.json/task:getNewsFeed
+[Mon Aug 11 14:13:03 2025] [::1]:58053 Closing
+[Mon Aug 11 14:13:03 2025] [::1]:58052 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58055 Accepted
+[Mon Aug 11 14:13:09 2025] ::1:58055 [200]: /admin/dashboard
+[Mon Aug 11 14:13:09 2025] [::1]:58055 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58056 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58056 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 14:13:09 2025] [::1]:58056 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58057 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58058 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58059 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58060 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58061 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58057 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 14:13:09 2025] [::1]:58058 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 14:13:09 2025] [::1]:58059 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 14:13:09 2025] [::1]:58060 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:09 2025] [::1]:58061 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:09 2025] [::1]:58062 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58062 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:09 2025] [::1]:58058 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58059 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58060 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58061 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58057 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58062 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58063 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58064 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58063 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:09 2025] [::1]:58065 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58064 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 14:13:09 2025] [::1]:58063 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58064 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58066 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58065 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 14:13:09 2025] [::1]:58066 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:09 2025] [::1]:58065 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58066 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58067 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58067 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:09 2025] [::1]:58068 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58068 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:09 2025] [::1]:58068 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58067 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58069 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58069 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 14:13:09 2025] [::1]:58069 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58070 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58071 Accepted
+[Mon Aug 11 14:13:09 2025] ::1:58070 [200]: /admin/task:getNotifications
+[Mon Aug 11 14:13:09 2025] [::1]:58070 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58072 Accepted
+[Mon Aug 11 14:13:09 2025] ::1:58071 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 14:13:09 2025] [::1]:58071 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58073 Accepted
+[Mon Aug 11 14:13:09 2025] [::1]:58072 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 14:13:09 2025] ::1:58073 [200]: /admin/ajax.json/task:getNewsFeed
+[Mon Aug 11 14:13:09 2025] [::1]:58073 Closing
+[Mon Aug 11 14:13:09 2025] [::1]:58072 Closing
+[Mon Aug 11 14:13:23 2025] [::1]:58074 Accepted
+[Mon Aug 11 14:13:23 2025] ::1:58074 [200]: /admin/config
+[Mon Aug 11 14:13:23 2025] [::1]:58074 Closing
+[Mon Aug 11 14:13:23 2025] [::1]:58075 Accepted
+[Mon Aug 11 14:13:23 2025] ::1:58075 [200]: /admin/config/system
+[Mon Aug 11 14:13:24 2025] [::1]:58075 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58076 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58076 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 14:13:24 2025] [::1]:58076 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58077 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58079 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58077 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 14:13:24 2025] [::1]:58080 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58079 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 14:13:24 2025] [::1]:58081 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58080 [200]: GET /user/plugins/admin/themes/grav/css/codemirror/codemirror.css?bd0fe82e0e
+[Mon Aug 11 14:13:24 2025] [::1]:58082 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58081 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 14:13:24 2025] [::1]:58083 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58079 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58082 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:24 2025] [::1]:58084 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58077 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58080 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58083 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:24 2025] [::1]:58081 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58084 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:24 2025] [::1]:58082 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58083 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58084 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58085 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58086 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58087 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58085 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:24 2025] [::1]:58088 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58085 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58086 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 14:13:24 2025] [::1]:58087 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 14:13:24 2025] [::1]:58088 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:24 2025] [::1]:58086 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58087 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58088 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58089 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58089 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:24 2025] [::1]:58090 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58090 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:24 2025] [::1]:58090 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58089 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58091 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58091 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 14:13:24 2025] [::1]:58091 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58092 Accepted
+[Mon Aug 11 14:13:24 2025] ::1:58092 [200]: /admin/task:getNotifications
+[Mon Aug 11 14:13:24 2025] [::1]:58092 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58093 Accepted
+[Mon Aug 11 14:13:24 2025] ::1:58093 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 14:13:24 2025] [::1]:58093 Closing
+[Mon Aug 11 14:13:24 2025] [::1]:58094 Accepted
+[Mon Aug 11 14:13:24 2025] [::1]:58094 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 14:13:24 2025] [::1]:58094 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58096 Accepted
+[Mon Aug 11 14:13:29 2025] ::1:58096 [200]: /admin/pages
+[Mon Aug 11 14:13:29 2025] [::1]:58096 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58097 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58097 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58097 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58098 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58099 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58100 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58101 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58102 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58098 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58103 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58099 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58100 [200]: GET /user/plugins/flex-objects/css/admin.css?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58101 [200]: GET /user/plugins/admin/themes/grav/css/codemirror/codemirror.css?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58102 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58103 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58099 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58100 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58101 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58102 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58098 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58103 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58104 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58105 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58106 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58107 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58108 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58109 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58104 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58105 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58106 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58107 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58108 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58109 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58104 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58105 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58106 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58107 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58108 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58109 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58110 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58110 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58111 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58111 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58112 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58111 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58112 [200]: GET /user/plugins/flex-objects/js/flex-objects.js?bd0fe82e0e
+[Mon Aug 11 14:13:29 2025] [::1]:58113 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58110 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58113 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 14:13:29 2025] [::1]:58112 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58113 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58114 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58115 Accepted
+[Mon Aug 11 14:13:29 2025] ::1:58114 [200]: /admin/task:getNotifications
+[Mon Aug 11 14:13:29 2025] [::1]:58114 Closing
+[Mon Aug 11 14:13:29 2025] ::1:58115 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 14:13:29 2025] [::1]:58115 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58116 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58117 Accepted
+[Mon Aug 11 14:13:29 2025] ::1:58116 [200]: /admin/pages
+[Mon Aug 11 14:13:29 2025] [::1]:58116 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58117 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 14:13:29 2025] [::1]:58117 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58118 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58119 Accepted
+[Mon Aug 11 14:13:29 2025] [::1]:58118 [200]: GET /user/plugins/admin/themes/grav/images/icons/book-edit.svg
+[Mon Aug 11 14:13:29 2025] [::1]:58119 [200]: GET /user/plugins/admin/themes/grav/images/icons/house.svg
+[Mon Aug 11 14:13:29 2025] [::1]:58118 Closing
+[Mon Aug 11 14:13:29 2025] [::1]:58119 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58120 Accepted
+[Mon Aug 11 14:13:31 2025] ::1:58120 [200]: /admin/accounts/users
+[Mon Aug 11 14:13:31 2025] [::1]:58120 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58121 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58121 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58121 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58122 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58123 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58124 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58125 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58126 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58122 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58123 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58124 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58127 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58125 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58126 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58127 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58123 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58124 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58128 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58125 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58126 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58122 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58127 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58129 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58130 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58131 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58128 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58129 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58130 [200]: GET /user/plugins/flex-objects/css/admin.css?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58131 [200]: GET /user/plugins/admin/themes/grav/css/codemirror/codemirror.css?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58132 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58133 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58128 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58129 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58130 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58131 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58132 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58133 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58132 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58133 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58134 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58134 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58135 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58135 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58135 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58136 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58136 [200]: GET /user/plugins/flex-objects/js/flex-objects.js?bd0fe82e0e
+[Mon Aug 11 14:13:31 2025] [::1]:58134 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58137 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58137 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 14:13:31 2025] [::1]:58136 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58137 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58138 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58139 Accepted
+[Mon Aug 11 14:13:31 2025] ::1:58138 [200]: /admin/task:getNotifications
+[Mon Aug 11 14:13:31 2025] [::1]:58138 Closing
+[Mon Aug 11 14:13:31 2025] ::1:58139 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 14:13:31 2025] [::1]:58139 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58140 Accepted
+[Mon Aug 11 14:13:31 2025] [::1]:58141 Accepted
+[Mon Aug 11 14:13:31 2025] ::1:58140 [200]: /admin/accounts/users.json?sort=username%7Casc&page=1&per_page=20
+[Mon Aug 11 14:13:31 2025] [::1]:58140 Closing
+[Mon Aug 11 14:13:31 2025] [::1]:58141 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 14:13:31 2025] [::1]:58141 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58143 Accepted
+[Mon Aug 11 14:13:46 2025] ::1:58143 [200]: /admin/plugins
+[Mon Aug 11 14:13:46 2025] [::1]:58143 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58144 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58144 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 14:13:46 2025] [::1]:58144 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58145 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58146 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58147 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58148 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58149 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58145 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 14:13:46 2025] [::1]:58150 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58146 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 14:13:46 2025] [::1]:58147 [200]: GET /user/plugins/admin/themes/grav/css/codemirror/codemirror.css?bd0fe82e0e
+[Mon Aug 11 14:13:46 2025] [::1]:58148 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 14:13:46 2025] [::1]:58149 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:46 2025] [::1]:58150 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:46 2025] [::1]:58146 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58147 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58148 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58149 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58145 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58150 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58151 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58152 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58153 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58154 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58155 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58151 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:46 2025] [::1]:58152 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 14:13:46 2025] [::1]:58153 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 14:13:46 2025] [::1]:58154 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 14:13:46 2025] [::1]:58155 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:46 2025] [::1]:58151 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58152 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58153 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58154 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58155 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58156 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58156 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:46 2025] [::1]:58157 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58157 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 14:13:46 2025] [::1]:58157 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58158 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58158 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 14:13:46 2025] [::1]:58158 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58156 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58159 Accepted
+[Mon Aug 11 14:13:46 2025] [::1]:58160 Accepted
+[Mon Aug 11 14:13:46 2025] ::1:58159 [200]: /admin/task:getNotifications
+[Mon Aug 11 14:13:46 2025] [::1]:58159 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58161 Accepted
+[Mon Aug 11 14:13:46 2025] ::1:58160 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 14:13:46 2025] [::1]:58160 Closing
+[Mon Aug 11 14:13:46 2025] [::1]:58161 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 14:13:46 2025] [::1]:58161 Closing
+[Mon Aug 11 14:14:00 2025] [::1]:58167 Accepted
+[Mon Aug 11 14:14:00 2025] ::1:58167 [200]: /admin/themes
+[Mon Aug 11 14:14:01 2025] [::1]:58167 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58168 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58168 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 14:14:01 2025] [::1]:58168 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58169 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58170 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58171 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58172 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58173 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58169 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 14:14:01 2025] [::1]:58174 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58170 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 14:14:01 2025] [::1]:58171 [200]: GET /user/plugins/admin/themes/grav/css/codemirror/codemirror.css?bd0fe82e0e
+[Mon Aug 11 14:14:01 2025] [::1]:58172 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 14:14:01 2025] [::1]:58173 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 14:14:01 2025] [::1]:58174 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 14:14:01 2025] [::1]:58170 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58171 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58172 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58173 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58175 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58169 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58174 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58176 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58177 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58178 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58179 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58175 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 14:14:01 2025] [::1]:58176 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 14:14:01 2025] [::1]:58177 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 14:14:01 2025] [::1]:58178 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 14:14:01 2025] [::1]:58179 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 14:14:01 2025] [::1]:58180 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58175 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58176 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58180 [200]: GET /user/themes/quark/thumbnail.jpg
+[Mon Aug 11 14:14:01 2025] [::1]:58177 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58178 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58179 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58180 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58181 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58181 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 14:14:01 2025] [::1]:58182 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58182 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 14:14:01 2025] [::1]:58182 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58181 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58183 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58183 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 14:14:01 2025] [::1]:58183 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58184 Accepted
+[Mon Aug 11 14:14:01 2025] [::1]:58185 Accepted
+[Mon Aug 11 14:14:01 2025] ::1:58184 [200]: /admin/task:getNotifications
+[Mon Aug 11 14:14:01 2025] [::1]:58184 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58186 Accepted
+[Mon Aug 11 14:14:01 2025] ::1:58185 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 14:14:01 2025] [::1]:58185 Closing
+[Mon Aug 11 14:14:01 2025] [::1]:58186 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 14:14:01 2025] [::1]:58186 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58223 Accepted
+[Mon Aug 11 14:15:07 2025] ::1:58223 [200]: /admin/pages
+[Mon Aug 11 14:15:07 2025] [::1]:58223 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58224 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58224 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58224 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58225 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58226 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58227 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58228 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58229 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58230 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58225 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58226 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58227 [200]: GET /user/plugins/flex-objects/css/admin.css?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58228 [200]: GET /user/plugins/admin/themes/grav/css/codemirror/codemirror.css?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58229 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58230 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58226 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58227 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58231 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58228 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58229 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58230 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58225 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58231 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58232 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58231 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58232 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58233 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58234 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58232 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58235 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58236 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58233 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58235 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58236 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58234 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58233 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58235 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58236 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58234 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58237 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58237 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58238 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58238 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58239 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58239 [200]: GET /user/plugins/flex-objects/js/flex-objects.js?bd0fe82e0e
+[Mon Aug 11 14:15:07 2025] [::1]:58238 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58240 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58240 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 14:15:07 2025] [::1]:58240 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58237 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58239 Closing
+[Mon Aug 11 14:15:07 2025] [::1]:58241 Accepted
+[Mon Aug 11 14:15:07 2025] [::1]:58242 Accepted
+[Mon Aug 11 14:15:07 2025] ::1:58241 [200]: /admin/task:getNotifications
+[Mon Aug 11 14:15:07 2025] [::1]:58241 Closing
+[Mon Aug 11 14:15:07 2025] ::1:58242 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 14:15:08 2025] [::1]:58242 Closing
+[Mon Aug 11 14:15:08 2025] [::1]:58243 Accepted
+[Mon Aug 11 14:15:08 2025] [::1]:58244 Accepted
+[Mon Aug 11 14:15:08 2025] ::1:58243 [200]: /admin/pages
+[Mon Aug 11 14:15:08 2025] [::1]:58243 Closing
+[Mon Aug 11 14:15:08 2025] [::1]:58244 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 14:15:08 2025] [::1]:58244 Closing
+[Mon Aug 11 14:15:08 2025] [::1]:58245 Accepted
+[Mon Aug 11 14:15:08 2025] [::1]:58246 Accepted
+[Mon Aug 11 14:15:08 2025] [::1]:58245 [200]: GET /user/plugins/admin/themes/grav/images/icons/book-edit.svg
+[Mon Aug 11 14:15:08 2025] [::1]:58246 [200]: GET /user/plugins/admin/themes/grav/images/icons/house.svg
+[Mon Aug 11 14:15:08 2025] [::1]:58245 Closing
+[Mon Aug 11 14:15:08 2025] [::1]:58246 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58253 Accepted
+[Mon Aug 11 14:16:02 2025] ::1:58253 [200]: /admin/pages/home
+[Mon Aug 11 14:16:02 2025] [::1]:58253 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58254 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58254 [200]: GET /user/plugins/admin/themes/grav/css-compiled/nucleus.css?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58254 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58255 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58256 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58257 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58258 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58259 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58255 [200]: GET /user/plugins/admin/themes/grav/css-compiled/template.css?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58260 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58256 [200]: GET /user/plugins/markdown-notices/assets/notices.css?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58257 [200]: GET /user/plugins/flex-objects/css/admin.css?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58258 [200]: GET /user/plugins/admin/themes/grav/css/codemirror/codemirror.css?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58259 [200]: GET /user/plugins/admin/themes/grav/css-compiled/simple-fonts.css?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58260 [200]: GET /user/plugins/admin/themes/grav/css/fork-awesome.min.css?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58256 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58257 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58258 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58261 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58255 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58259 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58260 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58262 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58263 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58264 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58265 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58266 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58261 [200]: GET /user/plugins/admin/themes/grav/css/chartist.min.css?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58262 [200]: GET /user/plugins/admin/themes/grav/css/selectize.min.css?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58263 [200]: GET /user/plugins/admin/themes/grav/css/hint.base.min.css?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58264 [200]: GET /user/plugins/admin/themes/grav/css/iconpicker.css?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58265 [200]: GET /user/plugins/admin/themes/grav/css/codemirror/themes/paper.css?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58266 [200]: GET /assets/admin-preset.css?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58261 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58267 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58262 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58263 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58264 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58265 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58266 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58267 [200]: GET /system/assets/jquery/jquery-3.x.min.js?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58267 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58268 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58268 [200]: GET /user/plugins/admin/themes/grav/js/vendor.min.js?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58269 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58269 [200]: GET /user/plugins/admin/themes/grav/js/admin.min.js?bd0fe82e0e
+[Mon Aug 11 14:16:02 2025] [::1]:58269 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58268 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58270 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58270 [200]: GET /user/plugins/admin/themes/grav/fonts/forkawesome-webfont.woff2?v=1.1.5
+[Mon Aug 11 14:16:02 2025] [::1]:58270 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58271 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58272 Accepted
+[Mon Aug 11 14:16:02 2025] ::1:58271 [200]: /admin/task:getNotifications
+[Mon Aug 11 14:16:02 2025] [::1]:58271 Closing
+[Mon Aug 11 14:16:02 2025] ::1:58272 [200]: /admin/update.json/task:getUpdates
+[Mon Aug 11 14:16:02 2025] [::1]:58272 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58273 Accepted
+[Mon Aug 11 14:16:02 2025] ::1:58273 [200]: /admin/pages/home.json/task:listmedia
+[Mon Aug 11 14:16:02 2025] [::1]:58273 Closing
+[Mon Aug 11 14:16:02 2025] [::1]:58274 Accepted
+[Mon Aug 11 14:16:02 2025] [::1]:58274 [200]: GET /user/plugins/admin/themes/grav/images/favicon.png
+[Mon Aug 11 14:16:02 2025] [::1]:58274 Closing
+[Mon Aug 11 14:36:03 2025] [::1]:58493 Accepted
+[Mon Aug 11 14:36:03 2025] ::1:58493 [200]: /admin/task:keepAlive
+[Mon Aug 11 14:36:03 2025] [::1]:58493 Closing
+[Mon Aug 11 14:58:12 2025] [::1]:58794 Accepted
+[Mon Aug 11 14:58:12 2025] ::1:58794 [200]: /admin/task:keepAlive
+[Mon Aug 11 14:58:12 2025] [::1]:58794 Closing
+[Mon Aug 11 15:18:12 2025] [::1]:59132 Accepted
+[Mon Aug 11 15:18:12 2025] ::1:59132 [200]: /admin/task:keepAlive
+[Mon Aug 11 15:18:12 2025] [::1]:59132 Closing
+[Mon Aug 11 15:38:12 2025] [::1]:59349 Accepted
+[Mon Aug 11 15:38:12 2025] ::1:59349 [200]: /admin/task:keepAlive
+[Mon Aug 11 15:38:12 2025] [::1]:59349 Closing
+[Mon Aug 11 15:58:12 2025] [::1]:59555 Accepted
+[Mon Aug 11 15:58:12 2025] ::1:59555 [200]: /admin/task:keepAlive
+[Mon Aug 11 15:58:12 2025] [::1]:59555 Closing
+[Mon Aug 11 16:18:12 2025] [::1]:59736 Accepted
+[Mon Aug 11 16:18:12 2025] ::1:59736 [200]: /admin/task:keepAlive
+[Mon Aug 11 16:18:12 2025] [::1]:59736 Closing
+[Mon Aug 11 17:27:35 2025] [::1]:60236 Accepted
+[Mon Aug 11 17:27:35 2025] ::1:60236 [200]: /admin/task:keepAlive
+[Mon Aug 11 17:27:35 2025] [::1]:60236 Closing
+[Mon Aug 11 17:58:33 2025] [::1]:60645 Accepted
+[Mon Aug 11 17:58:33 2025] ::1:60645 [200]: /admin/task:keepAlive
+[Mon Aug 11 17:58:33 2025] [::1]:60645 Closing
+[Mon Aug 11 18:18:32 2025] [::1]:60860 Accepted
+[Mon Aug 11 18:18:32 2025] ::1:60860 [200]: /admin/task:keepAlive
+[Mon Aug 11 18:18:33 2025] [::1]:60860 Closing
+[Mon Aug 11 18:38:32 2025] [::1]:61116 Accepted
+[Mon Aug 11 18:38:32 2025] ::1:61116 [200]: /admin/task:keepAlive
+[Mon Aug 11 18:38:32 2025] [::1]:61116 Closing
+[Mon Aug 11 18:58:33 2025] [::1]:61397 Accepted
+[Mon Aug 11 18:58:33 2025] ::1:61397 [200]: /admin/task:keepAlive
+[Mon Aug 11 18:58:33 2025] [::1]:61397 Closing
+[Mon Aug 11 19:18:32 2025] [::1]:61589 Accepted
+[Mon Aug 11 19:18:32 2025] ::1:61589 [200]: /admin/task:keepAlive
+[Mon Aug 11 19:18:33 2025] [::1]:61589 Closing
+[Mon Aug 11 19:38:32 2025] [::1]:61845 Accepted
+[Mon Aug 11 19:38:33 2025] ::1:61845 [200]: /admin/task:keepAlive
+[Mon Aug 11 19:38:33 2025] [::1]:61845 Closing
+[Mon Aug 11 19:58:24 2025] [::1]:62048 Accepted
+[Mon Aug 11 19:58:24 2025] ::1:62048 [200]: /admin/task:keepAlive
+[Mon Aug 11 19:58:24 2025] [::1]:62048 Closing
+[Tue Aug 12 07:19:57 2025] [::1]:62913 Accepted
+[Tue Aug 12 07:19:57 2025] ::1:62913 [200]: /admin/task:keepAlive
+[Tue Aug 12 07:19:57 2025] [::1]:62913 Closing
+[Tue Aug 12 07:54:18 2025] [::1]:63261 Accepted
+[Tue Aug 12 07:54:18 2025] ::1:63261 [200]: /admin/task:keepAlive
+[Tue Aug 12 07:54:18 2025] [::1]:63261 Closing
+[Tue Aug 12 19:23:30 2025] [::1]:63841 Accepted
+[Tue Aug 12 19:23:30 2025] ::1:63841 [200]: /admin/task:keepAlive
+[Tue Aug 12 19:23:30 2025] [::1]:63841 Closing
+[Tue Aug 12 20:25:33 2025] [::1]:64422 Accepted
+[Tue Aug 12 20:25:33 2025] ::1:64422 [200]: /admin/task:keepAlive
+[Tue Aug 12 20:25:33 2025] [::1]:64422 Closing
+[Tue Aug 12 20:45:53 2025] [::1]:64705 Accepted
+[Tue Aug 12 20:45:53 2025] ::1:64705 [200]: /admin/task:keepAlive
+[Tue Aug 12 20:45:53 2025] [::1]:64705 Closing
+[Tue Aug 12 21:05:55 2025] [::1]:64942 Accepted
+[Tue Aug 12 21:05:55 2025] ::1:64942 [200]: /admin/task:keepAlive
+[Tue Aug 12 21:05:55 2025] [::1]:64942 Closing
+[Tue Aug 12 21:25:55 2025] [::1]:65181 Accepted
+[Tue Aug 12 21:25:55 2025] ::1:65181 [200]: /admin/task:keepAlive
+[Tue Aug 12 21:25:55 2025] [::1]:65181 Closing
+[Tue Aug 12 21:45:55 2025] [::1]:49311 Accepted
+[Tue Aug 12 21:45:55 2025] ::1:49311 [200]: /admin/task:keepAlive
+[Tue Aug 12 21:45:55 2025] [::1]:49311 Closing
+[Tue Aug 12 22:05:55 2025] [::1]:49507 Accepted
+[Tue Aug 12 22:05:55 2025] ::1:49507 [200]: /admin/task:keepAlive
+[Tue Aug 12 22:05:55 2025] [::1]:49507 Closing
+[Tue Aug 12 22:55:03 2025] [::1]:49874 Accepted
+[Tue Aug 12 22:55:03 2025] ::1:49874 [200]: /admin/task:keepAlive
+[Tue Aug 12 22:55:04 2025] [::1]:49874 Closing
+[Wed Aug 13 00:18:29 2025] [::1]:50288 Accepted
+[Wed Aug 13 00:18:29 2025] ::1:50288 [200]: /admin/task:keepAlive
+[Wed Aug 13 00:18:29 2025] [::1]:50288 Closing
+[Wed Aug 13 01:08:22 2025] [::1]:50553 Accepted
+[Wed Aug 13 01:08:22 2025] ::1:50553 [200]: /admin/task:keepAlive
+[Wed Aug 13 01:08:23 2025] [::1]:50553 Closing
+[Wed Aug 13 01:58:17 2025] [::1]:50854 Accepted
+[Wed Aug 13 01:58:17 2025] ::1:50854 [200]: /admin/task:keepAlive
+[Wed Aug 13 01:58:18 2025] [::1]:50854 Closing
+[Wed Aug 13 09:26:30 2025] [::1]:51734 Accepted
+[Wed Aug 13 09:26:30 2025] ::1:51734 [200]: /admin/task:keepAlive
+[Wed Aug 13 09:26:31 2025] [::1]:51734 Closing
+[Wed Aug 13 09:46:30 2025] [::1]:52085 Accepted
+[Wed Aug 13 09:46:30 2025] ::1:52085 [200]: /admin/task:keepAlive
+[Wed Aug 13 09:46:31 2025] [::1]:52085 Closing
+[Wed Aug 13 10:06:30 2025] [::1]:52551 Accepted
+[Wed Aug 13 10:06:30 2025] ::1:52551 [200]: /admin/task:keepAlive
+[Wed Aug 13 10:06:31 2025] [::1]:52551 Closing
+[Wed Aug 13 10:26:31 2025] [::1]:53005 Accepted
+[Wed Aug 13 10:26:31 2025] ::1:53005 [200]: /admin/task:keepAlive
+[Wed Aug 13 10:26:31 2025] [::1]:53005 Closing
+[Wed Aug 13 10:46:31 2025] [::1]:53291 Accepted
+[Wed Aug 13 10:46:31 2025] ::1:53291 [200]: /admin/task:keepAlive
+[Wed Aug 13 10:46:31 2025] [::1]:53291 Closing
+[Wed Aug 13 11:06:31 2025] [::1]:53827 Accepted
+[Wed Aug 13 11:06:31 2025] ::1:53827 [200]: /admin/task:keepAlive
+[Wed Aug 13 11:06:31 2025] [::1]:53827 Closing
+[Wed Aug 13 11:26:31 2025] [::1]:54182 Accepted
+[Wed Aug 13 11:26:31 2025] ::1:54182 [200]: /admin/task:keepAlive
+[Wed Aug 13 11:26:31 2025] [::1]:54182 Closing
+[Wed Aug 13 11:46:31 2025] [::1]:54521 Accepted
+[Wed Aug 13 11:46:31 2025] ::1:54521 [200]: /admin/task:keepAlive
+[Wed Aug 13 11:46:31 2025] [::1]:54521 Closing
+[Wed Aug 13 12:06:31 2025] [::1]:54741 Accepted
+[Wed Aug 13 12:06:31 2025] ::1:54741 [200]: /admin/task:keepAlive
+[Wed Aug 13 12:06:31 2025] [::1]:54741 Closing
+[Wed Aug 13 12:26:31 2025] [::1]:55004 Accepted
+[Wed Aug 13 12:26:31 2025] ::1:55004 [200]: /admin/task:keepAlive
+[Wed Aug 13 12:26:31 2025] [::1]:55004 Closing
+[Wed Aug 13 12:46:31 2025] [::1]:55287 Accepted
+[Wed Aug 13 12:46:31 2025] ::1:55287 [200]: /admin/task:keepAlive
+[Wed Aug 13 12:46:31 2025] [::1]:55287 Closing
+[Wed Aug 13 13:06:31 2025] [::1]:55597 Accepted
+[Wed Aug 13 13:06:31 2025] ::1:55597 [200]: /admin/task:keepAlive
+[Wed Aug 13 13:06:31 2025] [::1]:55597 Closing
+[Wed Aug 13 13:26:31 2025] [::1]:55839 Accepted
+[Wed Aug 13 13:26:31 2025] ::1:55839 [200]: /admin/task:keepAlive
+[Wed Aug 13 13:26:31 2025] [::1]:55839 Closing
+[Wed Aug 13 13:46:31 2025] [::1]:56034 Accepted
+[Wed Aug 13 13:46:31 2025] ::1:56034 [200]: /admin/task:keepAlive
+[Wed Aug 13 13:46:31 2025] [::1]:56034 Closing
+[Wed Aug 13 14:08:22 2025] [::1]:56330 Accepted
+[Wed Aug 13 14:08:22 2025] ::1:56330 [200]: /admin/task:keepAlive
+[Wed Aug 13 14:08:22 2025] [::1]:56330 Closing
+[Wed Aug 13 14:28:22 2025] [::1]:56605 Accepted
+[Wed Aug 13 14:28:22 2025] ::1:56605 [200]: /admin/task:keepAlive
+[Wed Aug 13 14:28:22 2025] [::1]:56605 Closing
+[Wed Aug 13 14:48:22 2025] [::1]:56824 Accepted
+[Wed Aug 13 14:48:22 2025] ::1:56824 [200]: /admin/task:keepAlive
+[Wed Aug 13 14:48:22 2025] [::1]:56824 Closing
+[Wed Aug 13 15:08:22 2025] [::1]:57058 Accepted
+[Wed Aug 13 15:08:22 2025] ::1:57058 [200]: /admin/task:keepAlive
+[Wed Aug 13 15:08:22 2025] [::1]:57058 Closing
+[Wed Aug 13 15:28:22 2025] [::1]:57338 Accepted
+[Wed Aug 13 15:28:22 2025] ::1:57338 [200]: /admin/task:keepAlive
+[Wed Aug 13 15:28:22 2025] [::1]:57338 Closing
+[Wed Aug 13 15:48:22 2025] [::1]:57644 Accepted
+[Wed Aug 13 15:48:22 2025] ::1:57644 [200]: /admin/task:keepAlive
+[Wed Aug 13 15:48:22 2025] [::1]:57644 Closing
+[Wed Aug 13 16:08:22 2025] [::1]:57958 Accepted
+[Wed Aug 13 16:08:22 2025] ::1:57958 [200]: /admin/task:keepAlive
+[Wed Aug 13 16:08:22 2025] [::1]:57958 Closing
+[Wed Aug 13 16:28:22 2025] [::1]:58176 Accepted
+[Wed Aug 13 16:28:22 2025] ::1:58176 [200]: /admin/task:keepAlive
+[Wed Aug 13 16:28:22 2025] [::1]:58176 Closing
+[Wed Aug 13 16:48:26 2025] [::1]:58450 Accepted
+[Wed Aug 13 16:48:26 2025] ::1:58450 [200]: /admin/task:keepAlive
+[Wed Aug 13 16:48:26 2025] [::1]:58450 Closing
+[Wed Aug 13 17:08:22 2025] [::1]:58668 Accepted
+[Wed Aug 13 17:08:22 2025] ::1:58668 [200]: /admin/task:keepAlive
+[Wed Aug 13 17:08:22 2025] [::1]:58668 Closing
+[Wed Aug 13 17:28:22 2025] [::1]:58884 Accepted
+[Wed Aug 13 17:28:22 2025] ::1:58884 [200]: /admin/task:keepAlive
+[Wed Aug 13 17:28:22 2025] [::1]:58884 Closing
+[Wed Aug 13 17:48:22 2025] [::1]:59137 Accepted
+[Wed Aug 13 17:48:22 2025] ::1:59137 [200]: /admin/task:keepAlive
+[Wed Aug 13 17:48:22 2025] [::1]:59137 Closing
+[Wed Aug 13 18:08:22 2025] [::1]:59338 Accepted
+[Wed Aug 13 18:08:22 2025] ::1:59338 [200]: /admin/task:keepAlive
+[Wed Aug 13 18:08:22 2025] [::1]:59338 Closing
+[Wed Aug 13 18:28:22 2025] [::1]:59583 Accepted
+[Wed Aug 13 18:28:22 2025] ::1:59583 [200]: /admin/task:keepAlive
+[Wed Aug 13 18:28:22 2025] [::1]:59583 Closing
+[Wed Aug 13 18:48:22 2025] [::1]:59846 Accepted
+[Wed Aug 13 18:48:22 2025] ::1:59846 [200]: /admin/task:keepAlive
+[Wed Aug 13 18:48:22 2025] [::1]:59846 Closing
+[Wed Aug 13 19:08:22 2025] [::1]:60224 Accepted
+[Wed Aug 13 19:08:22 2025] ::1:60224 [200]: /admin/task:keepAlive
+[Wed Aug 13 19:08:22 2025] [::1]:60224 Closing
+[Wed Aug 13 19:28:22 2025] [::1]:60549 Accepted
+[Wed Aug 13 19:28:22 2025] ::1:60549 [200]: /admin/task:keepAlive
+[Wed Aug 13 19:28:22 2025] [::1]:60549 Closing
+[Wed Aug 13 19:48:22 2025] [::1]:60780 Accepted
+[Wed Aug 13 19:48:22 2025] ::1:60780 [200]: /admin/task:keepAlive
+[Wed Aug 13 19:48:22 2025] [::1]:60780 Closing
+[Wed Aug 13 20:08:22 2025] [::1]:60977 Accepted
+[Wed Aug 13 20:08:22 2025] ::1:60977 [200]: /admin/task:keepAlive
+[Wed Aug 13 20:08:22 2025] [::1]:60977 Closing
+[Wed Aug 13 20:28:22 2025] [::1]:61244 Accepted
+[Wed Aug 13 20:28:22 2025] ::1:61244 [200]: /admin/task:keepAlive
+[Wed Aug 13 20:28:22 2025] [::1]:61244 Closing
+[Wed Aug 13 20:48:22 2025] [::1]:61517 Accepted
+[Wed Aug 13 20:48:22 2025] ::1:61517 [200]: /admin/task:keepAlive
+[Wed Aug 13 20:48:22 2025] [::1]:61517 Closing
