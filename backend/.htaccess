@@ -1,26 +1,41 @@
+# Grav CMS .htaccess file
+
 RewriteEngine On
 
-# Handle API routes for comments
-RewriteRule ^api/comments/([^/]+)/?$ user/pages/api/comments/comments.php [L]
+# Handle Authorization Header
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-# Handle API routes for support  
-RewriteRule ^api/support/?$ user/pages/api/support/support.php [L]
-
-# Handle API routes for exhibitions
-RewriteRule ^api/exhibitions/?$ user/pages/api/exhibitions/exhibitions.md [L]
-
-# Existing Grav rules
-RewriteRule ^cache/   index.php [L]
-RewriteRule ^backup/  index.php [L]
-RewriteRule ^logs/    index.php [L]
-RewriteRule ^images/  index.php [L]
-RewriteRule ^assets/  index.php [L]
-RewriteRule ^system/  index.php [L]
-RewriteRule ^vendor/  index.php [L]
-RewriteRule ^user/    index.php [L]
-RewriteRule ^\.       index.php [L]
-
-# Send all other requests to Grav
-RewriteCond %{REQUEST_FILENAME} !-f
+# Redirect Trailing Slashes If Not A Folder
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=301]
+
+# Send Requests To Front Controller
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [L]
+
+# Admin asset handling
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} ^/backend/user/plugins/admin/
+RewriteRule ^(.*)$ - [L]
+
+# Set proper MIME types for admin assets
+<IfModule mod_mime.c>
+    AddType text/css .css
+    AddType application/javascript .js
+    AddType application/json .json
+</IfModule>
+
+# Enable compression for admin assets
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/css application/javascript
+</IfModule>
+
+# Set cache headers for admin assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>

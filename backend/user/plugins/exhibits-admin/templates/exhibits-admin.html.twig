@@ -1,0 +1,744 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set title = "⚡ Exhibits Manager" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .exhibits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .exhibit-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .exhibit-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+        
+        .exhibit-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+        
+        .exhibit-icon {
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+        }
+        
+        .exhibit-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+        
+        .exhibit-stats {
+            display: flex;
+            gap: 15px;
+            margin: 10px 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .exhibit-stats span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .exhibit-description {
+            color: #555;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+        
+        .exhibit-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin: 10px 0;
+        }
+        
+        .tag {
+            background: #e7f3ff;
+            color: #0066cc;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+        
+        .learning-approaches {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin: 10px 0;
+        }
+        
+        .approach-tag {
+            background: #f0f8ff;
+            color: #0066cc;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            border: 1px solid #cce6ff;
+        }
+        
+        .exhibit-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-edit {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .btn-delete {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .btn-stats {
+            background: #17a2b8;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-add {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .stats-summary {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .sortable {
+            cursor: move;
+        }
+        
+        .drag-handle {
+            cursor: move;
+            color: #999;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        
+        .featured-badge {
+            background: #ffc107;
+            color: #212529;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .published-status {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        
+        .published-status.published {
+            background: #28a745;
+        }
+        
+        .published-status.draft {
+            background: #ffc107;
+        }
+        
+        @media (max-width: 768px) {
+            .exhibits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .stats-summary {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="admin-wrapper">
+    <h1><i class="fa fa-bolt"></i> Exhibits Manager</h1>
+    <p class="lead">Complete control over all exhibits on your Experiences page. No technical knowledge required!</p>
+    
+    {% if message %}
+        <div class="alert alert-success">
+            <i class="fa fa-check"></i> {{ message }}
+        </div>
+    {% endif %}
+    
+    {% if error %}
+        <div class="alert alert-error">
+            <i class="fa fa-exclamation-triangle"></i> {{ error }}
+        </div>
+    {% endif %}
+    
+    <!-- Statistics Summary -->
+    <div class="stats-summary">
+        <div class="stat-item">
+            <div class="stat-number">{{ exhibits|length }}</div>
+            <div class="stat-label">Total Exhibits</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">{{ exhibits|selectattr('is_published')|list|length }}</div>
+            <div class="stat-label">Published</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">{{ exhibits|selectattr('is_featured')|list|length }}</div>
+            <div class="stat-label">Featured</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">{{ exhibits|map(attribute='visitors')|sum }}</div>
+            <div class="stat-label">Total Visitors</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">{{ exhibits|map(attribute='comments')|sum }}</div>
+            <div class="stat-label">Total Comments</div>
+        </div>
+    </div>
+    
+    <!-- Header Actions -->
+    <div class="header-actions">
+        <a href="#" class="btn-add" onclick="openAddExhibitModal()">
+            <i class="fa fa-plus"></i> Add New Exhibit
+        </a>
+        <button class="btn-edit" onclick="toggleSortMode()">
+            <i class="fa fa-sort"></i> Reorder Exhibits
+        </button>
+        <a href="/admin/plugins/exhibits-admin" class="btn-edit">
+            <i class="fa fa-cog"></i> Plugin Settings
+        </a>
+    </div>
+    
+    <!-- Exhibits Grid -->
+    <div class="exhibits-grid" id="exhibitsGrid">
+        {% for exhibit in exhibits %}
+        <div class="exhibit-card sortable" data-id="{{ exhibit.id }}">
+            <div class="drag-handle" style="display: none;">⋮⋮</div>
+            
+            <div class="exhibit-header">
+                <div class="exhibit-icon" style="background: {{ exhibit.gradient }}">
+                    {{ exhibit.icon }}
+                </div>
+                <div>
+                    <h3 class="exhibit-title">
+                        <span class="published-status {{ exhibit.is_published ? 'published' : 'draft' }}"></span>
+                        {{ exhibit.title }}
+                        {% if exhibit.is_featured %}
+                            <span class="featured-badge">FEATURED</span>
+                        {% endif %}
+                    </h3>
+                    <div class="exhibit-stats">
+                        <span><i class="fa fa-users"></i> {{ exhibit.visitors }} visitors</span>
+                        <span><i class="fa fa-comments"></i> {{ exhibit.comments }} comments</span>
+                        <span><i class="fa fa-clock-o"></i> {{ exhibit.duration }}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="exhibit-description">
+                {{ exhibit.description|slice(0, 150) }}{% if exhibit.description|length > 150 %}...{% endif %}
+            </div>
+            
+            <div class="learning-approaches">
+                {% for approach in exhibit.learning_approaches %}
+                    <span class="approach-tag">{{ approach|title|replace('-', ' ') }}</span>
+                {% endfor %}
+            </div>
+            
+            <div class="exhibit-tags">
+                {% for tag in exhibit.tags|split(',') %}
+                    <span class="tag">{{ tag|trim }}</span>
+                {% endfor %}
+            </div>
+            
+            <div class="exhibit-actions">
+                <button class="btn-edit" onclick="openEditModal('{{ exhibit.id }}')">
+                    <i class="fa fa-edit"></i> Edit
+                </button>
+                <button class="btn-stats" onclick="openStatsModal('{{ exhibit.id }}', {{ exhibit.visitors }}, {{ exhibit.comments }})">
+                    <i class="fa fa-bar-chart"></i> Update Stats
+                </button>
+                <button class="btn-delete" onclick="confirmDelete('{{ exhibit.id }}', '{{ exhibit.title }}')">
+                    <i class="fa fa-trash"></i> Delete
+                </button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Edit Exhibit Modal -->
+<div id="editModal" class="modal" style="display: none;">
+    <div class="modal-content" style="max-width: 800px; width: 90%; max-height: 90vh; overflow-y: auto;">
+        <span class="close" onclick="closeModal('editModal')">&times;</span>
+        <h2 id="modalTitle">Edit Exhibit</h2>
+        
+        <form id="exhibitForm" method="post">
+            <input type="hidden" name="task" value="saveexhibit">
+            <input type="hidden" id="exhibitId" name="id">
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                <div>
+                    <label for="title"><strong>Exhibit Title *</strong></label>
+                    <input type="text" id="title" name="title" required style="width: 100%; padding: 8px; margin-top: 5px;">
+                </div>
+                
+                <div>
+                    <label for="icon"><strong>Icon Emoji *</strong></label>
+                    <input type="text" id="icon" name="icon" required style="width: 100%; padding: 8px; margin-top: 5px;" placeholder="🌞">
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="description"><strong>Description *</strong></label>
+                <textarea id="description" name="description" required style="width: 100%; padding: 8px; margin-top: 5px; height: 100px;"></textarea>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                <div>
+                    <label><strong>Learning Approaches *</strong></label>
+                    <div style="margin-top: 5px;">
+                        <label><input type="checkbox" name="learning_approaches[]" value="place-based"> Place-Based</label><br>
+                        <label><input type="checkbox" name="learning_approaches[]" value="virtual"> Virtual</label><br>
+                        <label><input type="checkbox" name="learning_approaches[]" value="problem-based"> Problem-Based</label><br>
+                        <label><input type="checkbox" name="learning_approaches[]" value="narrative-driven"> Narrative-Driven</label><br>
+                        <label><input type="checkbox" name="learning_approaches[]" value="grant-supported"> Grant Supported</label>
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="tags"><strong>Tags (comma-separated) *</strong></label>
+                    <textarea id="tags" name="tags" required style="width: 100%; padding: 8px; margin-top: 5px; height: 80px;" placeholder="Interactive Timeline, Wind Energy, Real-World Application"></textarea>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                <div>
+                    <label for="difficulty"><strong>Difficulty Level</strong></label>
+                    <select id="difficulty" name="difficulty" style="width: 100%; padding: 8px; margin-top: 5px;">
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="duration"><strong>Duration</strong></label>
+                    <input type="text" id="duration" name="duration" style="width: 100%; padding: 8px; margin-top: 5px;" placeholder="15-20 min">
+                </div>
+                
+                <div>
+                    <label for="story_type"><strong>Story Type</strong></label>
+                    <input type="text" id="story_type" name="story_type" style="width: 100%; padding: 8px; margin-top: 5px;" placeholder="Historical Narrative">
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                <div>
+                    <label for="visitors"><strong>Visitor Count</strong></label>
+                    <input type="number" id="visitors" name="visitors" style="width: 100%; padding: 8px; margin-top: 5px;" min="0">
+                </div>
+                
+                <div>
+                    <label for="comments"><strong>Comment Count</strong></label>
+                    <input type="number" id="comments" name="comments" style="width: 100%; padding: 8px; margin-top: 5px;" min="0">
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="gradient"><strong>Background Gradient</strong></label>
+                <input type="text" id="gradient" name="gradient" style="width: 100%; padding: 8px; margin-top: 5px;" placeholder="linear-gradient(135deg, #FFD700, #FFA500)">
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="content"><strong>Full Content (Optional)</strong></label>
+                <textarea id="content" name="content" style="width: 100%; padding: 8px; margin-top: 5px; height: 120px;" placeholder="Detailed exhibit content..."></textarea>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="visitor_stories"><strong>Visitor Stories (Optional)</strong></label>
+                <textarea id="visitor_stories" name="visitor_stories" style="width: 100%; padding: 8px; margin-top: 5px; height: 80px;" placeholder="Inspiring visitor testimonials..."></textarea>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                <div>
+                    <label for="display_order"><strong>Display Order</strong></label>
+                    <input type="number" id="display_order" name="display_order" style="width: 100%; padding: 8px; margin-top: 5px;" min="1">
+                </div>
+                
+                <div style="display: flex; align-items: center; gap: 10px; margin-top: 25px;">
+                    <input type="checkbox" id="is_featured" name="is_featured">
+                    <label for="is_featured"><strong>Featured Exhibit</strong></label>
+                </div>
+                
+                <div style="display: flex; align-items: center; gap: 10px; margin-top: 25px;">
+                    <input type="checkbox" id="is_published" name="is_published">
+                    <label for="is_published"><strong>Published</strong></label>
+                </div>
+            </div>
+            
+            <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                <button type="button" onclick="closeModal('editModal')" style="padding: 10px 20px; background: #6c757d; color: white; border: none; border-radius: 4px;">Cancel</button>
+                <button type="submit" style="padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 4px;"><i class="fa fa-save"></i> Save Exhibit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Stats Update Modal -->
+<div id="statsModal" class="modal" style="display: none;">
+    <div class="modal-content" style="max-width: 400px;">
+        <span class="close" onclick="closeModal('statsModal')">&times;</span>
+        <h2>Update Statistics</h2>
+        
+        <form id="statsForm" onsubmit="updateStats(event)">
+            <input type="hidden" id="statsExhibitId">
+            
+            <div style="margin-bottom: 15px;">
+                <label for="statsVisitors"><strong>👥 Visitor Count</strong></label>
+                <input type="number" id="statsVisitors" min="0" style="width: 100%; padding: 8px; margin-top: 5px;">
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="statsComments"><strong>💬 Comment Count</strong></label>
+                <input type="number" id="statsComments" min="0" style="width: 100%; padding: 8px; margin-top: 5px;">
+            </div>
+            
+            <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                <button type="button" onclick="closeModal('statsModal')" style="padding: 10px 20px; background: #6c757d; color: white; border: none; border-radius: 4px;">Cancel</button>
+                <button type="submit" style="padding: 10px 20px; background: #17a2b8; color: white; border: none; border-radius: 4px;"><i class="fa fa-bar-chart"></i> Update</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #999;
+}
+
+.close:hover {
+    color: #333;
+}
+</style>
+
+<script>
+// Sample exhibit data for demonstration
+const exhibits = {{ exhibits|json_encode|raw }};
+let sortMode = false;
+
+function openEditModal(exhibitId = null) {
+    const modal = document.getElementById('editModal');
+    const form = document.getElementById('exhibitForm');
+    const title = document.getElementById('modalTitle');
+    
+    if (exhibitId) {
+        const exhibit = exhibits.find(e => e.id === exhibitId);
+        if (exhibit) {
+            title.textContent = 'Edit Exhibit: ' + exhibit.title;
+            document.getElementById('exhibitId').value = exhibit.id;
+            document.getElementById('title').value = exhibit.title;
+            document.getElementById('description').value = exhibit.description;
+            document.getElementById('icon').value = exhibit.icon;
+            document.getElementById('tags').value = exhibit.tags;
+            document.getElementById('difficulty').value = exhibit.difficulty;
+            document.getElementById('duration').value = exhibit.duration;
+            document.getElementById('story_type').value = exhibit.story_type;
+            document.getElementById('visitors').value = exhibit.visitors;
+            document.getElementById('comments').value = exhibit.comments;
+            document.getElementById('gradient').value = exhibit.gradient;
+            document.getElementById('content').value = exhibit.content || '';
+            document.getElementById('visitor_stories').value = exhibit.visitor_stories || '';
+            document.getElementById('display_order').value = exhibit.display_order || 1;
+            document.getElementById('is_featured').checked = exhibit.is_featured == 1;
+            document.getElementById('is_published').checked = exhibit.is_published == 1;
+            
+            // Set learning approaches
+            const approaches = exhibit.learning_approaches || [];
+            document.querySelectorAll('input[name="learning_approaches[]"]').forEach(checkbox => {
+                checkbox.checked = approaches.includes(checkbox.value);
+            });
+        }
+    } else {
+        title.textContent = 'Add New Exhibit';
+        form.reset();
+        document.querySelector('input[name="task"]').value = 'addexhibit';
+        document.getElementById('is_published').checked = true;
+    }
+    
+    modal.style.display = 'flex';
+}
+
+function openAddExhibitModal() {
+    openEditModal();
+}
+
+function openStatsModal(exhibitId, visitors, comments) {
+    document.getElementById('statsExhibitId').value = exhibitId;
+    document.getElementById('statsVisitors').value = visitors;
+    document.getElementById('statsComments').value = comments;
+    document.getElementById('statsModal').style.display = 'flex';
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+}
+
+function updateStats(event) {
+    event.preventDefault();
+    
+    const data = {
+        id: document.getElementById('statsExhibitId').value,
+        visitors: document.getElementById('statsVisitors').value,
+        comments: document.getElementById('statsComments').value
+    };
+    
+    fetch('/admin/task:updatestats', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            closeModal('statsModal');
+            location.reload();
+        } else {
+            alert('Error: ' + result.error);
+        }
+    });
+}
+
+function confirmDelete(exhibitId, title) {
+    if (confirm(`Are you sure you want to delete "${title}"? This action cannot be undone.`)) {
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.innerHTML = `
+            <input type="hidden" name="task" value="deleteexhibit">
+            <input type="hidden" name="id" value="${exhibitId}">
+        `;
+        document.body.appendChild(form);
+        form.submit();
+    }
+}
+
+function toggleSortMode() {
+    sortMode = !sortMode;
+    const handles = document.querySelectorAll('.drag-handle');
+    const button = event.target;
+    
+    if (sortMode) {
+        handles.forEach(handle => handle.style.display = 'block');
+        button.innerHTML = '<i class="fa fa-save"></i> Save Order';
+        button.style.background = '#28a745';
+        // Enable drag and drop
+        enableSorting();
+    } else {
+        handles.forEach(handle => handle.style.display = 'none');
+        button.innerHTML = '<i class="fa fa-sort"></i> Reorder Exhibits';
+        button.style.background = '#28a745';
+        // Save order
+        saveOrder();
+    }
+}
+
+function enableSorting() {
+    // Basic drag and drop implementation
+    const grid = document.getElementById('exhibitsGrid');
+    let draggedElement = null;
+    
+    document.querySelectorAll('.exhibit-card').forEach(card => {
+        card.draggable = true;
+        
+        card.addEventListener('dragstart', (e) => {
+            draggedElement = card;
+            e.dataTransfer.effectAllowed = 'move';
+        });
+        
+        card.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+        });
+        
+        card.addEventListener('drop', (e) => {
+            e.preventDefault();
+            if (draggedElement !== card) {
+                const rect = card.getBoundingClientRect();
+                const midpoint = rect.top + rect.height / 2;
+                
+                if (e.clientY < midpoint) {
+                    grid.insertBefore(draggedElement, card);
+                } else {
+                    grid.insertBefore(draggedElement, card.nextSibling);
+                }
+            }
+        });
+    });
+}
+
+function saveOrder() {
+    const cards = document.querySelectorAll('.exhibit-card');
+    const order = Array.from(cards).map(card => card.dataset.id);
+    
+    fetch('/admin/task:reorderexhibits', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ order: order })
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            location.reload();
+        } else {
+            alert('Error saving order: ' + result.error);
+        }
+    });
+}
+
+// Close modals when clicking outside
+window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+}
+</script>
+{% endblock %}

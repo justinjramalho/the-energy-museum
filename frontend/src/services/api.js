@@ -186,15 +186,120 @@ export const apiService = {
     }
   },
 
-  submitForumVote: async (voteData) => {
-    try {
-      const response = await apiServer.post('/forum.php/vote', voteData);
-      return response.data;
-    } catch (error) {
-      console.error('Error submitting vote:', error);
-      throw error;
+      submitForumVote: async (voteData) => {
+      try {
+        const response = await apiServer.post('/forum.php/vote', voteData);
+        return response.data;
+      } catch (error) {
+        console.error('Error submitting vote:', error);
+        throw error;
+      }
+    },
+
+    // Exhibits API methods (Phase 1: Database Integration)
+    getExhibits: async (categoryFilter = 'all') => {
+      try {
+        // In development, return fallback data since local doesn't have database
+        if (process.env.NODE_ENV === 'development') {
+          console.log('🔧 Development mode: Using fallback exhibit data');
+          // Import the fallback data directly
+          const { exhibitionsData } = await import('../pages/Exhibitions');
+          
+          // Filter fallback data based on category
+          let filteredExhibits = exhibitionsData;
+          if (categoryFilter !== 'all') {
+            filteredExhibits = exhibitionsData.filter(exhibition => 
+              exhibition.learningApproach && 
+              exhibition.learningApproach.includes(categoryFilter)
+            );
+          }
+          
+          return { 
+            success: true,
+            exhibits: filteredExhibits
+          };
+        }
+
+        const url = categoryFilter === 'all' 
+          ? '/exhibits.php?action=get_exhibits'
+          : `/exhibits.php?action=get_exhibits&category=${categoryFilter}`;
+        const response = await apiServer.get(url);
+        
+        // Handle different response formats from API
+        if (response.data && Array.isArray(response.data)) {
+          return { success: true, exhibits: response.data };
+        } else if (response.data && response.data.success !== undefined) {
+          return response.data;
+        } else {
+          return { success: true, exhibits: response.data || [] };
+        }
+      } catch (error) {
+        console.error('Error fetching exhibits:', error);
+        throw error;
+      }
+    },
+
+    getExhibitCategories: async () => {
+      try {
+        // In development, return fallback data since local doesn't have database
+        if (process.env.NODE_ENV === 'development') {
+          console.log('🔧 Development mode: Using fallback category data');
+          return { 
+            success: true,
+            categories: [
+              { id: 'all', label: 'All Learning Experiences' },
+              { id: 'place-based', label: 'Place-Based' },
+              { id: 'virtual', label: 'Virtual' },
+              { id: 'problem-based', label: 'Problem-Based' },
+              { id: 'narrative-driven', label: 'Narrative-Driven' },
+              { id: 'grant-supported', label: 'Grant Supported' }
+            ]
+          };
+        }
+
+        const response = await apiServer.get('/exhibits.php?action=get_categories');
+        
+        // Handle different response formats from API
+        if (response.data && Array.isArray(response.data)) {
+          return { success: true, categories: response.data };
+        } else if (response.data && response.data.success !== undefined) {
+          return response.data;
+        } else {
+          return { success: true, categories: response.data || [] };
+        }
+      } catch (error) {
+        console.error('Error fetching exhibit categories:', error);
+        throw error;
+      }
+    },
+
+    getExhibit: async (exhibitId) => {
+      try {
+        // In development, return fallback data since local doesn't have database
+        if (process.env.NODE_ENV === 'development') {
+          console.log('🔧 Development mode: Using fallback exhibit data for', exhibitId);
+          const { exhibitionsData } = await import('../pages/Exhibitions');
+          const exhibit = exhibitionsData.find(ex => ex.id === exhibitId);
+          
+          return { 
+            success: true,
+            exhibit: exhibit || null
+          };
+        }
+
+        const response = await apiServer.get(`/exhibits.php?action=get_exhibit&id=${exhibitId}`);
+        
+        // Handle different response formats from API
+        if (response.data && response.data.success !== undefined) {
+          return response.data;
+        } else {
+          return { success: true, exhibit: response.data || null };
+        }
+      } catch (error) {
+        console.error('Error fetching exhibit:', error);
+        throw error;
+      }
     }
-  }
 };
 
 // Utility function to handle API errors consistently

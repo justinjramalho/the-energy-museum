@@ -38,3 +38,96 @@
 [Fri Aug 15 13:04:27 2025] 127.0.0.1:53693 Accepted
 [Fri Aug 15 13:04:27 2025] 127.0.0.1:53693 [200]: GET /comments.php/renewable-revolution
 [Fri Aug 15 13:04:27 2025] 127.0.0.1:53693 Closing
+[Fri Aug 15 14:51:57 2025] 127.0.0.1:55374 Accepted
+[Fri Aug 15 14:51:57 2025] 127.0.0.1:55376 Accepted
+[Fri Aug 15 14:51:57 2025] 127.0.0.1:55374 [500]: GET /exhibits.php?action=get_categories
+[Fri Aug 15 14:51:57 2025] 127.0.0.1:55374 Closing
+[Fri Aug 15 14:51:57 2025] 127.0.0.1:55378 Accepted
+[Fri Aug 15 14:51:57 2025] 127.0.0.1:55376 [500]: GET /exhibits.php?action=get_exhibits
+[Fri Aug 15 14:51:57 2025] 127.0.0.1:55376 Closing
+[Fri Aug 15 14:51:57 2025] 127.0.0.1:55380 Accepted
+[Fri Aug 15 14:51:57 2025] 127.0.0.1:55378 [500]: GET /exhibits.php?action=get_categories
+[Fri Aug 15 14:51:57 2025] 127.0.0.1:55378 Closing
+[Fri Aug 15 14:51:57 2025] 127.0.0.1:55380 [500]: GET /exhibits.php?action=get_exhibits
+[Fri Aug 15 14:51:57 2025] 127.0.0.1:55380 Closing
+[Fri Aug 15 14:52:12 2025] 127.0.0.1:55399 Accepted
+[Fri Aug 15 14:52:12 2025] 127.0.0.1:55401 Accepted
+[Fri Aug 15 14:52:12 2025] 127.0.0.1:55399 [500]: GET /exhibits.php?action=get_categories
+[Fri Aug 15 14:52:12 2025] 127.0.0.1:55399 Closing
+[Fri Aug 15 14:52:12 2025] 127.0.0.1:55401 [500]: GET /exhibits.php?action=get_exhibits
+[Fri Aug 15 14:52:12 2025] 127.0.0.1:55401 Closing
+[Fri Aug 15 14:52:12 2025] 127.0.0.1:55403 Accepted
+[Fri Aug 15 14:52:12 2025] 127.0.0.1:55403 [500]: GET /exhibits.php?action=get_categories
+[Fri Aug 15 14:52:12 2025] 127.0.0.1:55403 Closing
+[Fri Aug 15 14:52:12 2025] 127.0.0.1:55405 Accepted
+[Fri Aug 15 14:52:12 2025] 127.0.0.1:55405 [500]: GET /exhibits.php?action=get_exhibits
+[Fri Aug 15 14:52:12 2025] 127.0.0.1:55405 Closing
+[Fri Aug 15 14:57:27 2025] 127.0.0.1:55500 Accepted
+[Fri Aug 15 14:57:27 2025] 127.0.0.1:55503 Accepted
+[Fri Aug 15 14:57:27 2025] 127.0.0.1:55500 [500]: GET /exhibits.php?action=get_categories
+[Fri Aug 15 14:57:27 2025] 127.0.0.1:55500 Closing
+[Fri Aug 15 14:57:27 2025] 127.0.0.1:55505 Accepted
+[Fri Aug 15 14:57:27 2025] 127.0.0.1:55503 [500]: GET /exhibits.php?action=get_exhibits
+[Fri Aug 15 14:57:27 2025] 127.0.0.1:55503 Closing
+[Fri Aug 15 14:57:27 2025] 127.0.0.1:55506 Accepted
+[Fri Aug 15 14:57:27 2025] 127.0.0.1:55505 [500]: GET /exhibits.php?action=get_categories
+[Fri Aug 15 14:57:27 2025] 127.0.0.1:55505 Closing
+[Fri Aug 15 14:57:27 2025] 127.0.0.1:55506 [500]: GET /exhibits.php?action=get_exhibits
+[Fri Aug 15 14:57:27 2025] 127.0.0.1:55506 Closing
+[Fri Aug 15 15:05:05 2025] 127.0.0.1:55574 Accepted
+[Fri Aug 15 15:05:05 2025] 127.0.0.1:55574 [500]: GET /exhibits.php?action=get_exhibits&category=place-based
+[Fri Aug 15 15:05:05 2025] 127.0.0.1:55574 Closing
+[Fri Aug 15 15:05:09 2025] 127.0.0.1:55576 Accepted
+[Fri Aug 15 15:05:09 2025] 127.0.0.1:55576 [500]: GET /exhibits.php?action=get_exhibits&category=virtual
+[Fri Aug 15 15:05:09 2025] 127.0.0.1:55576 Closing
+[Fri Aug 15 15:05:12 2025] 127.0.0.1:55578 Accepted
+[Fri Aug 15 15:05:12 2025] 127.0.0.1:55578 [500]: GET /exhibits.php?action=get_exhibits
+[Fri Aug 15 15:05:12 2025] 127.0.0.1:55578 Closing
+[Fri Aug 15 15:06:14 2025] 127.0.0.1:55586 Accepted
+[Fri Aug 15 15:06:14 2025] 127.0.0.1:55586 [200]: GET /comments.php/renewable-revolution
+[Fri Aug 15 15:06:14 2025] 127.0.0.1:55586 Closing
+[Fri Aug 15 15:06:14 2025] 127.0.0.1:55588 Accepted
+[Fri Aug 15 15:06:14 2025] 127.0.0.1:55588 [200]: GET /comments.php/renewable-revolution
+[Fri Aug 15 15:06:14 2025] 127.0.0.1:55588 Closing
+[Fri Aug 15 15:06:19 2025] 127.0.0.1:55590 Accepted
+[Fri Aug 15 15:06:19 2025] 127.0.0.1:55590 [500]: GET /exhibits.php?action=get_categories
+[Fri Aug 15 15:06:19 2025] 127.0.0.1:55590 Closing
+[Fri Aug 15 15:06:19 2025] 127.0.0.1:55592 Accepted
+[Fri Aug 15 15:06:19 2025] 127.0.0.1:55592 [500]: GET /exhibits.php?action=get_exhibits
+[Fri Aug 15 15:06:19 2025] 127.0.0.1:55592 Closing
+[Fri Aug 15 15:06:19 2025] 127.0.0.1:55594 Accepted
+[Fri Aug 15 15:06:19 2025] 127.0.0.1:55596 Accepted
+[Fri Aug 15 15:06:19 2025] 127.0.0.1:55594 [500]: GET /exhibits.php?action=get_categories
+[Fri Aug 15 15:06:19 2025] 127.0.0.1:55594 Closing
+[Fri Aug 15 15:06:19 2025] 127.0.0.1:55596 [500]: GET /exhibits.php?action=get_exhibits
+[Fri Aug 15 15:06:19 2025] 127.0.0.1:55596 Closing
+[Fri Aug 15 15:08:07 2025] 127.0.0.1:55660 Accepted
+[Fri Aug 15 15:08:07 2025] 127.0.0.1:55660 [500]: GET /exhibits.php?action=get_categories
+[Fri Aug 15 15:08:07 2025] 127.0.0.1:55660 Closing
+[Fri Aug 15 15:08:07 2025] 127.0.0.1:55662 Accepted
+[Fri Aug 15 15:08:07 2025] 127.0.0.1:55664 Accepted
+[Fri Aug 15 15:08:07 2025] 127.0.0.1:55662 [500]: GET /exhibits.php?action=get_exhibits
+[Fri Aug 15 15:08:07 2025] 127.0.0.1:55662 Closing
+[Fri Aug 15 15:08:07 2025] 127.0.0.1:55664 [500]: GET /exhibits.php?action=get_categories
+[Fri Aug 15 15:08:07 2025] 127.0.0.1:55664 Closing
+[Fri Aug 15 15:08:07 2025] 127.0.0.1:55666 Accepted
+[Fri Aug 15 15:08:07 2025] 127.0.0.1:55666 [500]: GET /exhibits.php?action=get_exhibits
+[Fri Aug 15 15:08:07 2025] 127.0.0.1:55666 Closing
+[Fri Aug 15 15:14:17 2025] 127.0.0.1:55740 Accepted
+[Fri Aug 15 15:14:17 2025] 127.0.0.1:55741 Accepted
+[Fri Aug 15 15:14:17 2025] 127.0.0.1:55740 [500]: GET /exhibits.php?action=get_categories
+[Fri Aug 15 15:14:17 2025] 127.0.0.1:55740 Closing
+[Fri Aug 15 15:14:17 2025] 127.0.0.1:55741 [500]: GET /exhibits.php?action=get_exhibits
+[Fri Aug 15 15:14:17 2025] 127.0.0.1:55741 Closing
+[Fri Aug 15 15:14:17 2025] 127.0.0.1:55743 Accepted
+[Fri Aug 15 15:14:17 2025] 127.0.0.1:55745 Accepted
+[Fri Aug 15 15:14:17 2025] 127.0.0.1:55743 [500]: GET /exhibits.php?action=get_exhibits
+[Fri Aug 15 15:14:17 2025] 127.0.0.1:55743 Closing
+[Fri Aug 15 15:14:17 2025] 127.0.0.1:55745 [500]: GET /exhibits.php?action=get_categories
+[Fri Aug 15 15:14:17 2025] 127.0.0.1:55745 Closing
+[Fri Aug 15 15:17:11 2025] 127.0.0.1:55889 Accepted
+[Fri Aug 15 15:17:11 2025] 127.0.0.1:55890 Accepted
+[Fri Aug 15 15:17:11 2025] 127.0.0.1:55889 [500]: GET /exhibits.php?action=get_categories
+[Fri Aug 15 15:17:11 2025] 127.0.0.1:55889 Closing
+[Fri Aug 15 15:17:11 2025] 127.0.0.1:55890 [500]: GET /exhibits.php?action=get_exhibits
+[Fri Aug 15 15:17:11 2025] 127.0.0.1:55890 Closing

@@ -1,0 +1,66 @@
+name: Exhibits Admin
+version: 1.0.0
+description: "Comprehensive admin interface for managing Energy Museum exhibits with zero technical knowledge required"
+icon: bolt
+author:
+  name: The Energy Museum
+  email: admin@theenergymuseum.com
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin Status
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+
+    database_host:
+      type: text
+      label: Database Host
+      default: localhost
+      
+    database_name:
+      type: text
+      label: Database Name
+      default: u747221136_energy_museum
+      
+    database_user:
+      type: text
+      label: Database User
+      default: u747221136_justinjramalho
+      
+    database_password:
+      type: password
+      label: Database Password
+
+    permissions:
+      type: section
+      title: Access Permissions
+      
+    admin_only:
+      type: toggle
+      label: Admin Only Access
+      default: 1
+      help: Only users with admin.super permissions can access the exhibits manager
+      
+    allow_exhibit_creation:
+      type: toggle
+      label: Allow New Exhibit Creation
+      default: 1
+      
+    allow_exhibit_deletion:
+      type: toggle
+      label: Allow Exhibit Deletion
+      default: 1
+      
+    require_approval:
+      type: toggle
+      label: Require Approval for Changes
+      default: 0
+      help: When enabled, changes must be approved before appearing on the website

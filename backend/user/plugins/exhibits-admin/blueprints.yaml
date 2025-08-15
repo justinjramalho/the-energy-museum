@@ -1,0 +1,161 @@
+name: Exhibits Admin
+version: 1.0.0
+description: "Comprehensive admin interface for managing Energy Museum exhibits"
+icon: bolt
+author:
+  name: The Energy Museum
+  email: admin@theenergymuseum.com
+homepage: https://theenergymuseum.com
+demo: 
+keywords: admin, exhibits, energy, museum, cms
+bugs: 
+readme: 
+license: MIT
+
+dependencies:
+  - admin
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    database:
+      type: section
+      title: Database Configuration
+      underline: true
+
+    database_host:
+      type: text
+      label: Database Host
+      default: localhost
+      help: Database server hostname
+
+    database_name:
+      type: text
+      label: Database Name
+      default: u747221136_energy_museum
+      help: Name of the database containing exhibits
+
+    database_user:
+      type: text
+      label: Database Username
+      default: u747221136_justinjramalho
+      help: Database user with read/write permissions
+
+    database_password:
+      type: password
+      label: Database Password
+      help: Password for database user
+
+    permissions:
+      type: section
+      title: Access Control
+      underline: true
+
+    admin_only:
+      type: toggle
+      label: Admin Only Access
+      default: 1
+      help: Only users with admin.super permissions can access
+      options:
+        1: Admin Only
+        0: All Users
+
+    allow_creation:
+      type: toggle
+      label: Allow Exhibit Creation
+      default: 1
+      help: Allow creating new exhibits
+      options:
+        1: Enabled
+        0: Disabled
+
+    allow_deletion:
+      type: toggle
+      label: Allow Exhibit Deletion
+      default: 1
+      help: Allow deleting existing exhibits
+      options:
+        1: Enabled
+        0: Disabled
+
+    require_approval:
+      type: toggle
+      label: Require Change Approval
+      default: 0
+      help: Changes must be approved before going live
+      options:
+        1: Required
+        0: Not Required
+
+    features:
+      type: section
+      title: Feature Settings
+      underline: true
+
+    enable_stats_tracking:
+      type: toggle
+      label: Enable Statistics Tracking
+      default: 1
+      help: Track visitor and comment statistics
+      options:
+        1: Enabled
+        0: Disabled
+
+    enable_drag_reorder:
+      type: toggle
+      label: Enable Drag & Drop Reordering
+      default: 1
+      help: Allow reordering exhibits by dragging
+      options:
+        1: Enabled
+        0: Disabled
+
+    max_exhibits:
+      type: number
+      label: Maximum Exhibits
+      default: 50
+      help: Maximum number of exhibits allowed (0 = unlimited)
+      validate:
+        min: 0
+        max: 1000
+
+    default_gradient:
+      type: text
+      label: Default Gradient
+      default: "linear-gradient(135deg, #00d4ff, #0099cc)"
+      help: Default background gradient for new exhibits
+
+    backup:
+      type: section
+      title: Backup & Export
+      underline: true
+
+    enable_auto_backup:
+      type: toggle
+      label: Enable Auto Backup
+      default: 1
+      help: Automatically backup exhibits before changes
+      options:
+        1: Enabled
+        0: Disabled
+
+    backup_frequency:
+      type: select
+      label: Backup Frequency
+      default: daily
+      options:
+        hourly: Hourly
+        daily: Daily
+        weekly: Weekly
+        monthly: Monthly

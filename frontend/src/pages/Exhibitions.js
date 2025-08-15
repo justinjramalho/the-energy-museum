@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { apiService } from '../services/api';
 
 const PageContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  
+  // Mobile optimization
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.75rem;
+  }
 `;
 
 const PageHeader = styled.div`
@@ -22,6 +32,15 @@ const PageTitle = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
+  
+  // Mobile responsiveness
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const PageSubtitle = styled.p`
@@ -38,6 +57,17 @@ const FilterSection = styled.div`
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+  
+  // Mobile optimization for filters
+  @media (max-width: 768px) {
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 0.5rem;
+    justify-content: center;
+  }
 `;
 
 const FilterButton = styled.button`
@@ -49,10 +79,37 @@ const FilterButton = styled.button`
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  
+  // Accessibility improvements
+  &:focus {
+    outline: 2px solid #00d4ff;
+    outline-offset: 2px;
+  }
+  
+  // Mobile optimization
+  @media (max-width: 768px) {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
 
   &:hover {
     background: ${props => props.$active ? 'linear-gradient(135deg, #00a8cc, #007799)' : 'rgba(0, 212, 255, 0.1)'};
     transform: translateY(-2px);
+  }
+  
+  // Reduce motion for accessibility
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+    &:hover {
+      transform: none;
+    }
   }
 `;
 
@@ -61,6 +118,18 @@ const ExhibitionsGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
   margin-bottom: 4rem;
+  
+  // Mobile optimization for grid
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 const ExhibitionCard = styled.div`
@@ -166,8 +235,79 @@ const InteractionStats = styled.div`
   }
 `;
 
+// Error handling components
+const ErrorContainer = styled.div`
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(0, 212, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 12px;
+  margin: 2rem 0;
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+`;
+
+const ErrorIcon = styled.div`
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+`;
+
+const ErrorTitle = styled.h3`
+  color: #00d4ff;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+`;
+
+const ErrorMessage = styled.p`
+  color: #b0b7c3;
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+`;
+
+const ErrorSubtext = styled.p`
+  color: #8a9ba8;
+  margin: 0;
+  font-size: 0.85rem;
+  font-style: italic;
+`;
+
+// Loading components
+const LoadingContainer = styled.div`
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #b0b7c3;
+  
+  @media (max-width: 480px) {
+    padding: 3rem 1rem;
+  }
+`;
+
+const LoadingIcon = styled.div`
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+`;
+
+const LoadingTitle = styled.h3`
+  margin: 0 0 0.5rem 0;
+  color: #e0e6ed;
+`;
+
+const LoadingSubtext = styled.p`
+  margin: 0;
+  font-size: 0.9rem;
+`;
+
 // Exhibition data structured for educational learning approaches
-const exhibitionsData = [
+export const exhibitionsData = [
   {
     id: 'renewable-revolution',
     title: 'Renewable Revolution',
@@ -254,7 +394,8 @@ const exhibitionsData = [
   }
 ];
 
-const categories = [
+// Fallback categories if API fails
+const fallbackCategories = [
   { id: 'all', label: 'All Learning Experiences' },
   { id: 'place-based', label: 'Place-Based' },
   { id: 'virtual', label: 'Virtual' },
@@ -265,27 +406,87 @@ const categories = [
 
 function Exhibitions() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [exhibitions, setExhibitions] = useState(exhibitionsData);
+  const [exhibitions, setExhibitions] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Load categories from database
   useEffect(() => {
-    // Filter exhibitions based on selected learning approach
-    if (selectedCategory === 'all') {
-      setExhibitions(exhibitionsData);
-    } else {
-      setExhibitions(exhibitionsData.filter(exhibition => 
-        exhibition.learningApproach && 
-        exhibition.learningApproach.includes(selectedCategory)
-      ));
-    }
+    const loadCategories = async () => {
+      try {
+        const response = await apiService.getExhibitCategories();
+        if (response.success) {
+          // Don't add 'All Learning Experiences' - it's already in the database
+          setCategories(response.categories);
+        } else {
+          // If API response is not successful, use fallback
+          setCategories(fallbackCategories);
+        }
+      } catch (error) {
+        console.error('Error loading categories:', error);
+        // Fall back to hardcoded categories if API fails
+        setCategories(fallbackCategories);
+      }
+    };
+    loadCategories();
+  }, []);
+
+  // Load exhibitions with filtering
+  useEffect(() => {
+    const loadExhibitions = async () => {
+      setLoading(true);
+      setError(null);
+      
+      try {
+        const response = await apiService.getExhibits(selectedCategory);
+        
+        // Handle successful response
+        if (response && response.success && response.exhibits) {
+          setExhibitions(response.exhibits);
+          console.log(`✅ Loaded ${response.exhibits.length} exhibits for category: ${selectedCategory}`);
+        } else if (response && response.success === false) {
+          // This is expected in development mode
+          setError(response.error || 'Using fallback data');
+          // Fall back to hardcoded data
+          const filteredData = selectedCategory === 'all' 
+            ? exhibitionsData
+            : exhibitionsData.filter(exhibition => 
+                exhibition.learningApproach && 
+                exhibition.learningApproach.includes(selectedCategory)
+              );
+          setExhibitions(filteredData);
+          console.log(`🔧 Using fallback data: ${filteredData.length} exhibits for category: ${selectedCategory}`);
+        } else {
+          throw new Error('Invalid response format from API');
+        }
+      } catch (error) {
+        console.error('❌ Error loading exhibitions:', error);
+        setError(error.message);
+        // Fall back to hardcoded data if API fails
+        const filteredData = selectedCategory === 'all' 
+          ? exhibitionsData
+          : exhibitionsData.filter(exhibition => 
+              exhibition.learningApproach && 
+              exhibition.learningApproach.includes(selectedCategory)
+            );
+        setExhibitions(filteredData);
+        console.log(`🔄 Fallback to local data: ${filteredData.length} exhibits`);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    loadExhibitions();
   }, [selectedCategory]);
 
   return (
-    <PageContainer>
+    <PageContainer role="main" aria-label="Learning Experiences">
       <PageHeader>
         <PageTitle>Experiences</PageTitle>
         <PageSubtitle>
@@ -294,19 +495,39 @@ function Exhibitions() {
         </PageSubtitle>
       </PageHeader>
 
-      <FilterSection>
+      <FilterSection role="group" aria-label="Filter exhibitions by learning approach">
         {categories.map(category => (
           <FilterButton
             key={category.id}
             $active={selectedCategory === category.id}
             onClick={() => setSelectedCategory(category.id)}
+            aria-pressed={selectedCategory === category.id}
+            aria-label={`Filter by ${category.label}${selectedCategory === category.id ? ' (currently selected)' : ''}`}
           >
             {category.label}
           </FilterButton>
         ))}
       </FilterSection>
 
-      <ExhibitionsGrid>
+      {error && (
+        <ErrorContainer>
+          <ErrorIcon>⚠️</ErrorIcon>
+          <ErrorTitle>Notice</ErrorTitle>
+          <ErrorMessage>{error}</ErrorMessage>
+          <ErrorSubtext>
+            Using locally stored data. All functionality remains available.
+          </ErrorSubtext>
+        </ErrorContainer>
+      )}
+
+      {loading ? (
+        <LoadingContainer>
+          <LoadingIcon>⚡</LoadingIcon>
+          <LoadingTitle>Loading Exhibits...</LoadingTitle>
+          <LoadingSubtext>Fetching the latest learning experiences</LoadingSubtext>
+        </LoadingContainer>
+      ) : (
+        <ExhibitionsGrid>
         {exhibitions.map(exhibition => (
           <ExhibitionCard key={exhibition.id}>
             <ExhibitionImage $gradient={exhibition.gradient}>
@@ -335,7 +556,8 @@ function Exhibitions() {
             </ExhibitionContent>
           </ExhibitionCard>
         ))}
-      </ExhibitionsGrid>
+        </ExhibitionsGrid>
+      )}
     </PageContainer>
   );
 }
