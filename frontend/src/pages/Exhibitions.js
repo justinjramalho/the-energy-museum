@@ -166,14 +166,14 @@ const InteractionStats = styled.div`
   }
 `;
 
-// Exhibition data structured for digital storytelling experiences
+// Exhibition data structured for educational learning approaches
 const exhibitionsData = [
   {
     id: 'renewable-revolution',
     title: 'Renewable Revolution',
     description: 'Journey through an immersive historical narrative exploring humanity\'s relationship with renewable energy, from ancient windmills to futuristic solar arrays.',
-    category: 'renewable',
-    tags: ['Historical Journey', 'Interactive Timeline', 'Wind', 'Solar'],
+    tags: ['Historical Journey', 'Interactive Timeline', 'Real-World Application', 'Wind Energy', 'Solar Technology'],
+    learningApproach: ['narrative-driven', 'virtual', 'place-based'],
     icon: '🌞',
     gradient: 'linear-gradient(135deg, #FFD700, #FFA500)',
     visitors: 1250,
@@ -186,8 +186,8 @@ const exhibitionsData = [
     id: 'physics-of-power',
     title: 'The Physics of Power',
     description: 'Embark on a mind-bending interactive journey where abstract physics becomes tangible reality. Manipulate energy fields and witness quantum phenomena in action.',
-    category: 'science',
-    tags: ['Interactive Discovery', 'Quantum Physics', 'Energy Laws', 'Simulation'],
+    tags: ['Scientific Problem', 'Virtual Reality', 'Innovation Challenge', 'Quantum Physics', 'Energy Laws'],
+    learningApproach: ['problem-based', 'virtual'],
     icon: '⚡',
     gradient: 'linear-gradient(135deg, #00d4ff, #0099cc)',
     visitors: 987,
@@ -200,8 +200,8 @@ const exhibitionsData = [
     id: 'energy-society',
     title: 'Energy and Society',
     description: 'Follow the dramatic narrative of how energy transformed human civilization, from steam engines to smart cities, through the eyes of historical figures.',
-    category: 'society',
-    tags: ['Social Impact', 'Historical Drama', 'Urban Planning', 'Future Cities'],
+    tags: ['Historical Drama', 'Community Investigation', 'Real-World Application', 'Social Impact', 'Urban Planning'],
+    learningApproach: ['narrative-driven', 'place-based'],
     icon: '🏘️',
     gradient: 'linear-gradient(135deg, #32CD32, #228B22)',
     visitors: 1450,
@@ -214,8 +214,8 @@ const exhibitionsData = [
     id: 'climate-solutions',
     title: 'Climate Solutions',
     description: 'Experience a future-forward simulation where you collaborate with scientists in 2050 to witness breakthrough technologies that solved the climate crisis.',
-    category: 'climate',
-    tags: ['Future Simulation', 'Climate Action', 'Innovation', 'Global Collaboration'],
+    tags: ['Challenge-Based', 'Online Simulation', 'Research Investigation', 'NSF Funded', 'Climate Action'],
+    learningApproach: ['problem-based', 'virtual', 'grant-supported'],
     icon: '🌍',
     gradient: 'linear-gradient(135deg, #4169E1, #1E90FF)',
     visitors: 2100,
@@ -228,8 +228,8 @@ const exhibitionsData = [
     id: 'battery-science',
     title: 'The Science of Energy Storage',
     description: 'Dive deep into the molecular world of batteries through a detective story, solving the mystery of how energy gets trapped and released.',
-    category: 'technology',
-    tags: ['Scientific Mystery', 'Molecular Journey', 'Battery Tech', 'Innovation'],
+    tags: ['Scientific Mystery', 'Research Investigation', 'Virtual Reality', 'STEM Grant', 'Battery Technology'],
+    learningApproach: ['narrative-driven', 'problem-based', 'virtual', 'grant-supported'],
     icon: '🔋',
     gradient: 'linear-gradient(135deg, #FF6347, #FF4500)',
     visitors: 876,
@@ -242,8 +242,8 @@ const exhibitionsData = [
     id: 'smart-homes',
     title: 'Smart Homes & Energy Efficiency',
     description: 'Experience a day in the life of an AI-powered smart home, learning how intelligent systems optimize energy use through interactive household scenarios.',
-    category: 'technology',
-    tags: ['Interactive Simulation', 'Smart Technology', 'Energy Efficiency', 'IoT'],
+    tags: ['Real-World Application', 'Interactive Timeline', 'Engineering Design', 'Title I', 'Smart Technology'],
+    learningApproach: ['place-based', 'virtual', 'problem-based', 'grant-supported'],
     icon: '🏠',
     gradient: 'linear-gradient(135deg, #9370DB, #8A2BE2)',
     visitors: 1320,
@@ -255,12 +255,12 @@ const exhibitionsData = [
 ];
 
 const categories = [
-  { id: 'all', label: 'All Story Experiences' },
-  { id: 'renewable', label: 'Renewable Energy' },
-  { id: 'science', label: 'Interactive Science' },
-  { id: 'technology', label: 'Technology Stories' },
-  { id: 'society', label: 'Historical Narratives' },
-  { id: 'climate', label: 'Future Simulations' }
+  { id: 'all', label: 'All Learning Experiences' },
+  { id: 'place-based', label: 'Place-Based' },
+  { id: 'virtual', label: 'Virtual' },
+  { id: 'problem-based', label: 'Problem-Based' },
+  { id: 'narrative-driven', label: 'Narrative-Driven' },
+  { id: 'grant-supported', label: 'Grant Supported' }
 ];
 
 function Exhibitions() {
@@ -273,11 +273,14 @@ function Exhibitions() {
   }, []);
 
   useEffect(() => {
-    // Filter exhibitions based on selected category
+    // Filter exhibitions based on selected learning approach
     if (selectedCategory === 'all') {
       setExhibitions(exhibitionsData);
     } else {
-      setExhibitions(exhibitionsData.filter(exhibition => exhibition.category === selectedCategory));
+      setExhibitions(exhibitionsData.filter(exhibition => 
+        exhibition.learningApproach && 
+        exhibition.learningApproach.includes(selectedCategory)
+      ));
     }
   }, [selectedCategory]);
 
@@ -286,8 +289,8 @@ function Exhibitions() {
       <PageHeader>
         <PageTitle>Experiences</PageTitle>
         <PageSubtitle>
-          Explore our immersive collection of energy-focused exhibitions designed to educate, 
-          inspire, and engage visitors of all backgrounds through interactive storytelling.
+          Explore our immersive collection of energy-focused exhibits designed for diverse 
+          learning approaches, from place-based field experiences to virtual simulations.
         </PageSubtitle>
       </PageHeader>
 

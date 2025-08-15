@@ -224,27 +224,7 @@ const ExhibitionTeasersSection = styled.section`
   padding: 4rem 2rem;
 `;
 
-const TeasersTitle = styled.h2`
-  text-align: center;
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #00d4ff, #ffffff);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-
-const TeasersSubtitle = styled.p`
-  text-align: center;
-  font-size: 1.3rem;
-  color: #b0b7c3;
-  margin-bottom: 4rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.7;
-`;
+// Removed unused TeasersTitle and TeasersSubtitle styled components (commented out in JSX)
 
 // Featured exhibitions data with storytelling focus
 const featuredExhibitions = [
@@ -307,8 +287,8 @@ function Home() {
             learning about energy engaging, interactive, and inspiring.
           </HeroDescription>
           <CTAContainer>
-            <PrimaryButton to="/experiences">
-              🎭 Explore Experiences
+            <PrimaryButton to="/about">
+              👥 About Us
             </PrimaryButton>
             <SecondaryButton to="/contact">
               🤝 Contact Us
@@ -318,11 +298,11 @@ function Home() {
       </HeroSection>
 
       <ExhibitionTeasersSection>
-        <TeasersTitle>Featured Digital Stories</TeasersTitle>
+        {/* <TeasersTitle>Featured Digital Stories</TeasersTitle>
         <TeasersSubtitle>
           Immerse yourself in carefully crafted narrative experiences that transform 
           complex energy concepts into engaging, interactive stories that inspire and educate.
-        </TeasersSubtitle>
+        </TeasersSubtitle> */}
         
         {featuredExhibitions.map((exhibition, index) => (
           <div key={exhibition.id} ref={teaserAnimations[index].ref}>
@@ -337,45 +317,39 @@ function Home() {
       </ExhibitionTeasersSection>
 
       <FeaturesSection>
-        <SectionTitle>Immersive Learning Experience</SectionTitle>
+        <SectionTitle>Professional STEM Education Services</SectionTitle>
         <SectionSubtitle>
-          Discover energy science through interactive digital exhibitions designed for all audiences
+          Transforming energy education through expert-designed field experiences, professional development, and community programs tailored to your needs
         </SectionSubtitle>
         
         <FeaturesGrid>
           <FeatureCard delay="0s">
-            <FeatureIcon>🏛️</FeatureIcon>
-            <FeatureTitle>Digital Exhibitions</FeatureTitle>
+            <FeatureIcon>🔬</FeatureIcon>
+            <FeatureTitle>Field Experiences</FeatureTitle>
             <FeatureDescription>
-              Explore curated collections showcasing renewable energy, physics principles, 
-              and climate solutions through immersive 3D visualizations and interactive content.
+              Immerse students in hands-on engineering and design challenges with authentic 
+              energy research experiences. Our hyperlocal place-based learning programs transform 
+              field studies into engaging NGSS-aligned educational adventures.
             </FeatureDescription>
           </FeatureCard>
 
           <FeatureCard delay="0.5s">
-            <FeatureIcon>🎨</FeatureIcon>
-            <FeatureTitle>Interactive Experiences</FeatureTitle>
+            <FeatureIcon>👩‍🏫</FeatureIcon>
+            <FeatureTitle>Professional Development</FeatureTitle>
             <FeatureDescription>
-              Engage with real-time simulations, manipulate energy systems, and see scientific 
-              principles in action through our cutting-edge interactive experiences.
+              Empower educators with cutting-edge OpenSciEd integration training and 
+              NGSS-aligned curriculum development. Our expert-led workshops range from 
+              intensive 1-hour sessions to comprehensive 4-day professional learning programs.
             </FeatureDescription>
           </FeatureCard>
 
           <FeatureCard delay="1s">
-            <FeatureIcon>💬</FeatureIcon>
-            <FeatureTitle>Community & Experts</FeatureTitle>
+            <FeatureIcon>👨‍👩‍👧‍👦</FeatureIcon>
+            <FeatureTitle>Community Programs</FeatureTitle>
             <FeatureDescription>
-              Join discussions with fellow visitors, access expert insights, and request 
-              personalized consultations from energy professionals and researchers.
-            </FeatureDescription>
-          </FeatureCard>
-
-          <FeatureCard delay="1.5s">
-            <FeatureIcon>📚</FeatureIcon>
-            <FeatureTitle>Educational Resources</FeatureTitle>
-            <FeatureDescription>
-              Access comprehensive learning materials, teacher guides, research papers, 
-              and industry reports to deepen your understanding of energy science.
+              Ignite community-wide energy literacy through engaging Family & Friends STEM Nights, 
+              grant writing and implementation support, and corporate sustainability training 
+              programs designed to build lasting partnerships.
             </FeatureDescription>
           </FeatureCard>
         </FeaturesGrid>

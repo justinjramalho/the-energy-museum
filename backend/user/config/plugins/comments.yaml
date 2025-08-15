@@ -1,0 +1,133 @@
+enabled: true
+
+# Enable comments on forum pages
+enable_on_routes:
+  - '/forum'
+  - '/forum/*'
+
+# Disable on certain routes  
+disable_on_routes:
+  - '/admin'
+  - '/admin/*'
+
+# Form configuration
+form:
+  name: forum_comments
+  fields:
+    - name: name
+      label: PLUGIN_COMMENTS.NAME_LABEL
+      placeholder: "Your name"
+      autocomplete: on
+      type: text
+      validate:
+        required: true
+
+    - name: role
+      label: "Title/Position (optional)"
+      placeholder: "e.g., Middle School Teacher, Science Coordinator"
+      type: text
+      validate:
+        required: false
+
+    - name: email
+      label: PLUGIN_COMMENTS.EMAIL_LABEL
+      placeholder: "your.email@example.com (optional)"
+      type: email
+      validate:
+        required: false
+
+    - name: text
+      label: PLUGIN_COMMENTS.MESSAGE_LABEL
+      placeholder: "Share your thoughts, experiences, or questions..."
+      type: textarea
+      validate:
+        required: true
+
+    - name: date
+      type: hidden
+      process:
+        fillWithCurrentDateTime: true
+
+    - name: title
+      type: hidden
+      evaluateDefault: grav.page.header.title
+
+    - name: lang
+      type: hidden
+      evaluateDefault: grav.language.getLanguage
+
+    - name: path
+      type: hidden
+      evaluateDefault: grav.uri.path
+
+    - name: category
+      type: hidden
+      evaluateDefault: grav.uri.param('category')
+
+    - name: topic_id
+      type: hidden
+      evaluateDefault: grav.uri.param('id')
+
+  buttons:
+    - type: submit
+      value: "Submit Reply"
+
+  process:
+    - email:
+        subject: "[Energy Museum Forum] New Comment: {{form.value.title|e}}"
+        body: "{% include 'forms/data.html.twig' %}"
+        to: 
+          - "admin@theenergymuseum.com"
+          - "moderator@theenergymuseum.com"
+    - addComment:
+        default_status: pending  # Require moderation
+    - message: "Thank you! Your comment has been submitted for moderation and will appear after review."
+    - reset: true
+
+# Comment settings
+comments:
+  cache_enable: true
+  enable_comments_display: true
+  comments_display_order: date_asc
+  
+  # Moderation settings
+  moderation:
+    enabled: true
+    queue_all_comments: true
+    auto_approve_authors: true
+    auto_approve_after_approval: false
+    
+  # Anti-spam settings  
+  anti_spam:
+    honeypot: true
+    use_recaptcha: false
+    min_chars: 10
+    max_chars: 5000
+    
+  # Notifications
+  email_notifications:
+    enabled: true
+    notify_admin: true
+    
+# Forum-specific settings
+forum:
+  categories:
+    - trainings
+    - funding
+    - services  
+    - programs
+    - support
+    - general
+    
+  features:
+    voting: true
+    pinning: true
+    threading: true
+    search: true
+    
+  moderation:
+    auto_pin_team_replies: true
+    team_members:
+      - "admin@theenergymuseum.com"
+      - "edward.cohen@theenergymuseum.com"
+      - "team@theenergymuseum.com"

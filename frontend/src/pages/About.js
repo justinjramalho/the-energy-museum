@@ -619,7 +619,7 @@ function About() {
           ref={teamAnimation.ref}
           shouldAnimate={teamAnimation.shouldAnimate}
         >
-          <TeamSection>
+          <TeamSection id="our-team">
             <SectionTitle>Our Team</SectionTitle>
             <p style={{ textAlign: 'center', color: '#b0b7c3', fontSize: '1.1rem', marginBottom: '3rem' }}>
               Our executive leadership team guides our mission to ensure educators and students have the 

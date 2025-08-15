@@ -224,23 +224,7 @@ const InteractionHint = styled.div`
   border: 2px solid rgba(255, 255, 255, 0.2);
 `;
 
-const MetaInfo = styled.div`
-  display: flex;
-  gap: 2rem;
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #8892a6;
-  
-  @media (max-width: 768px) {
-    justify-content: center;
-  }
-`;
-
-const MetaItem = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-`;
+// Removed unused MetaInfo and MetaItem styled components
 
 function ExhibitionTeaser({ 
   exhibition, 
@@ -281,25 +265,10 @@ function ExhibitionTeaser({
           </StoryElement>
         </StoryElements>
         
-        <ExploreButton to={`/experiences/${exhibition.id}`}>
+        <ExploreButton to={`/experiences/${exhibition.id}`} onClick={() => window.scrollTo(0, 0)}>
           Begin Your Journey
           <span>→</span>
         </ExploreButton>
-        
-        <MetaInfo>
-          <MetaItem>
-            <span>👥</span>
-            {exhibition.visitors} explorers
-          </MetaItem>
-          <MetaItem>
-            <span>⭐</span>
-            {exhibition.rating}/5 stars
-          </MetaItem>
-          <MetaItem>
-            <span>💬</span>
-            {exhibition.comments} stories shared
-          </MetaItem>
-        </MetaInfo>
       </ContentSection>
       
       <VisualSection $reverse={reverse}>

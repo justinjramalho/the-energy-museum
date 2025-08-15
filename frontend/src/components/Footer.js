@@ -164,21 +164,36 @@ function Footer() {
           </FooterSection>
 
           <FooterSection>
-            <h3>Experiences</h3>
-            <Link to="/experiences">All Experiences</Link>
-            <a href="/experiences/renewable-revolution">Renewable Revolution</a>
-            <a href="/experiences/physics-of-power">Physics of Power</a>
-            <a href="/experiences/energy-society">Energy and Society</a>
-            <a href="/experiences/climate-solutions">Climate Solutions</a>
+            <h3>Explore</h3>
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link>
+            <Link to="/about" onClick={() => window.scrollTo(0, 0)}>About Us</Link>
+            <Link to="/about" onClick={() => {
+              setTimeout(() => {
+                const element = document.getElementById('our-team');
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+              }, 100);
+            }}>Our Team</Link>
+            <Link to="/services" onClick={() => window.scrollTo(0, 0)}>Our Services</Link>
+            <Link to="/experiences" onClick={() => window.scrollTo(0, 0)}>Our Experiences</Link>
           </FooterSection>
 
           <FooterSection>
             <h3>Support & Services</h3>
-            <Link to="/contact">Contact Us</Link>
-            <a href="/contact#education">Educational Support</a>
-            <a href="/contact#business">Business Consulting</a>
-            <a href="/contact#research">Research Collaboration</a>
-            <a href="/contact#community">Community Forums</a>
+            <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>Contact Us</Link>
+            <Link to="/services" onClick={() => {
+              setTimeout(() => {
+                const element = document.getElementById('pricing');
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+              }, 100);
+            }}>Pricing</Link>
+            <Link to="/services" onClick={() => {
+              setTimeout(() => {
+                const element = document.getElementById('how-it-works');
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+              }, 100);
+            }}>How It Works</Link>
+            <Link to="/forum" onClick={() => window.scrollTo(0, 0)}>Community Forum</Link>
+            <Link to="/donate" onClick={() => window.scrollTo(0, 0)}>Donate</Link>
           </FooterSection>
 
           <FooterSection>
@@ -197,7 +212,7 @@ function Footer() {
 
         <FooterBottom>
           <p>
-            © 2024 The Energy Museum. All rights reserved. | 
+            © 2025 The Energy Museum, Inc. All rights reserved. | 
             <a href="/privacy"> Privacy Policy</a> | 
             <a href="/terms"> Terms of Service</a>
           </p>

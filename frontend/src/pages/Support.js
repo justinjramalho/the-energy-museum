@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { apiService } from '../services/api';
 import { useApiSubmit } from '../hooks/useApi';
 import { FiMail, FiClock, FiMessageCircle } from 'react-icons/fi';
@@ -431,7 +432,7 @@ function Support() {
         <ContactCard>
           <h3><FiMessageCircle style={{ marginRight: '0.5rem', verticalAlign: 'middle' }} />Community Support</h3>
           <p>Join our discussion forums for community-driven support and networking opportunities.</p>
-          <a href="#forums">Visit Community Forums</a>
+          <Link to="/forum">Visit Community Forums</Link>
         </ContactCard>
       </ContactInfo>
     </PageContainer>

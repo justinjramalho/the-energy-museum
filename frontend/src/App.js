@@ -14,6 +14,8 @@ import Exhibitions from './pages/Exhibitions';
 import ExhibitionDetail from './pages/ExhibitionDetail';
 import Support from './pages/Support';
 import Donate from './pages/Donate';
+import Forum from './pages/Forum';
+import ForumTopic from './components/ForumTopic';
 
 // Global Styles
 const GlobalStyle = createGlobalStyle`
@@ -85,6 +87,8 @@ function App() {
                     <Route path="/experiences/:id" element={<ExhibitionDetail />} />
                     <Route path="/contact" element={<Support />} />
                     <Route path="/donate" element={<Donate />} />
+                    <Route path="/forum" element={<Forum />} />
+                    <Route path="/forum/topic/:topicId" element={<ForumTopic />} />
                     <Route path="*" element={<Home />} />
                   </Routes>
         </MainContent>

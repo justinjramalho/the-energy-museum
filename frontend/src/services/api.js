@@ -130,6 +130,70 @@ export const apiService = {
       console.error('Error subscribing to newsletter:', error);
       throw error;
     }
+  },
+
+  // Forum API methods
+  getForumCategories: async () => {
+    try {
+      const response = await apiServer.get('/forum.php/categories');
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching forum categories:', error);
+      throw error;
+    }
+  },
+
+  getForumTopics: async (categoryId = null) => {
+    try {
+      const url = categoryId ? `/forum.php/topics?category=${categoryId}` : '/forum.php/topics';
+      const response = await apiServer.get(url);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching forum topics:', error);
+      throw error;
+    }
+  },
+
+  getForumTopic: async (topicId) => {
+    try {
+      const response = await apiServer.get(`/forum.php/topic/${topicId}`);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching forum topic:', error);
+      throw error;
+    }
+  },
+
+  createForumTopic: async (topicData) => {
+    try {
+      // Use Grav integration endpoint for proper CMS integration
+      const response = await apiServer.post('/grav-integration.php/submit-topic', topicData);
+      return response.data;
+    } catch (error) {
+      console.error('Error creating forum topic:', error);
+      throw error;
+    }
+  },
+
+  createForumReply: async (replyData) => {
+    try {
+      // Use Grav integration endpoint for proper CMS integration
+      const response = await apiServer.post('/grav-integration.php/submit-reply', replyData);
+      return response.data;
+    } catch (error) {
+      console.error('Error creating forum reply:', error);
+      throw error;
+    }
+  },
+
+  submitForumVote: async (voteData) => {
+    try {
+      const response = await apiServer.post('/forum.php/vote', voteData);
+      return response.data;
+    } catch (error) {
+      console.error('Error submitting vote:', error);
+      throw error;
+    }
   }
 };
 

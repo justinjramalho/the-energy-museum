@@ -577,7 +577,7 @@ function Services() {
           ref={pricingAnimation.ref}
           shouldAnimate={pricingAnimation.shouldAnimate}
         >
-          <SectionTitle>Pricing</SectionTitle>
+          <SectionTitle id="pricing">Pricing</SectionTitle>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <p style={{ color: '#e0e6ed', fontSize: '1.2rem', lineHeight: '1.8', maxWidth: '800px', margin: '0 auto' }}>
               Transparent, value-driven pricing that makes world-class energy education 
@@ -712,7 +712,7 @@ function Services() {
           ref={howItWorksAnimation.ref}
           shouldAnimate={howItWorksAnimation.shouldAnimate}
         >
-          <SectionTitle>How It Works</SectionTitle>
+          <SectionTitle id="how-it-works">How It Works</SectionTitle>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <p style={{ color: '#e0e6ed', fontSize: '1.2rem', lineHeight: '1.8', maxWidth: '800px', margin: '0 auto' }}>
               Our streamlined process ensures your experience exceeds expectations from initial 
