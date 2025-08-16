@@ -440,7 +440,7 @@ function ForumTopic() {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleVote = (type) => {
+  const handleVote = async (type) => {
     const newVote = userVote === type ? null : type;
     setUserVote(newVote);
     
@@ -451,11 +451,31 @@ function ForumTopic() {
       localStorage.removeItem(`forum_vote_topic_${topicId}`);
     }
     
-    // TODO: Send vote to API
-    // apiService.submitForumVote({ topicId, vote: newVote });
+    // Send vote to API
+    try {
+      const response = await fetch('https://theenergymuseum.com/api/forum.php/vote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'topic',
+          topicId: topicId,
+          vote: newVote
+        })
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        // Optionally update topic score in real-time
+        console.log('Vote recorded:', data);
+      }
+    } catch (error) {
+      console.error('Error submitting vote:', error);
+    }
   };
 
-  const handleReplyVote = (replyId, type) => {
+  const handleReplyVote = async (replyId, type) => {
     const newVotes = {
       ...replyVotes,
       [replyId]: replyVotes[replyId] === type ? null : type
@@ -465,8 +485,27 @@ function ForumTopic() {
     // Save to localStorage
     localStorage.setItem(`forum_votes_replies_${topicId}`, JSON.stringify(newVotes));
     
-    // TODO: Send vote to API
-    // apiService.submitForumVote({ replyId, vote: newVotes[replyId] });
+    // Send vote to API
+    try {
+      const response = await fetch('https://theenergymuseum.com/api/forum.php/vote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'reply',
+          replyId: replyId,
+          vote: newVotes[replyId]
+        })
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        console.log('Reply vote recorded:', data);
+      }
+    } catch (error) {
+      console.error('Error submitting reply vote:', error);
+    }
   };
 
   const handleFlag = async (itemId, itemType = 'topic') => {

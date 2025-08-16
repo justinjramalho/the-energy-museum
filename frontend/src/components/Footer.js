@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FiLinkedin, FiYoutube, FiInstagram } from 'react-icons/fi';
@@ -130,10 +130,44 @@ const NewsletterForm = styled.form`
 `;
 
 function Footer() {
-  const handleNewsletterSubmit = (e) => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState('');
+
+  const handleNewsletterSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Implement newsletter subscription
-    console.log('Newsletter subscription submitted');
+    
+    if (!email.trim()) {
+      setMessage('Please enter a valid email address');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setMessage('');
+    
+    try {
+      const response = await fetch('https://theenergymuseum.com/api/newsletter.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: email.trim() })
+      });
+
+      const data = await response.json();
+      
+      if (data.success) {
+        setMessage(data.message);
+        setEmail(''); // Clear the form
+      } else {
+        setMessage(data.message || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      setMessage('Unable to subscribe. Please check your connection and try again.');
+      console.error('Newsletter subscription error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -203,10 +237,24 @@ function Footer() {
               <input 
                 type="email" 
                 placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required 
+                disabled={isSubmitting}
               />
-              <button type="submit">Subscribe</button>
+              <button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+              </button>
             </NewsletterForm>
+            {message && (
+              <p style={{ 
+                color: message.includes('Thank you') ? '#00d4ff' : '#ff6b6b', 
+                fontSize: '0.9rem', 
+                marginTop: '0.5rem' 
+              }}>
+                {message}
+              </p>
+            )}
           </FooterSection>
         </FooterGrid>
 

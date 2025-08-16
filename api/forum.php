@@ -256,10 +256,82 @@ function handleCreateReply($input) {
 }
 
 function handleVote($input) {
-    // Simple vote handling (in production, track user votes properly)
+    // Validate input
+    $required = ['type', 'vote']; // type: 'topic' or 'reply', vote: 'up' or 'down' or null
+    
+    if (isset($input['topicId'])) {
+        $required[] = 'topicId';
+    } elseif (isset($input['replyId'])) {
+        $required[] = 'replyId';
+    } else {
+        http_response_code(400);
+        echo json_encode(['error' => 'Either topicId or replyId is required']);
+        return;
+    }
+    
+    foreach ($required as $field) {
+        if (!isset($input[$field])) {
+            http_response_code(400);
+            echo json_encode(['error' => "Field '$field' is required"]);
+            return;
+        }
+    }
+    
+    // Get user identifier (IP + user agent for simple tracking)
+    $userKey = md5($_SERVER['REMOTE_ADDR'] . ($_SERVER['HTTP_USER_AGENT'] ?? ''));
+    
+    // Load or create votes file
+    $votesFile = __DIR__ . '/data/votes.json';
+    $votes = [];
+    if (file_exists($votesFile)) {
+        $votes = json_decode(file_get_contents($votesFile), true) ?: [];
+    }
+    
+    // Create vote key
+    $voteKey = $input['type'] . '_' . ($input['topicId'] ?? $input['replyId']);
+    
+    // Initialize vote data for this item if not exists
+    if (!isset($votes[$voteKey])) {
+        $votes[$voteKey] = [
+            'upvotes' => 0,
+            'downvotes' => 0,
+            'users' => []
+        ];
+    }
+    
+    // Remove any existing vote from this user
+    if (isset($votes[$voteKey]['users'][$userKey])) {
+        $previousVote = $votes[$voteKey]['users'][$userKey];
+        if ($previousVote === 'up') {
+            $votes[$voteKey]['upvotes']--;
+        } elseif ($previousVote === 'down') {
+            $votes[$voteKey]['downvotes']--;
+        }
+        unset($votes[$voteKey]['users'][$userKey]);
+    }
+    
+    // Add new vote if not null
+    if ($input['vote'] === 'up') {
+        $votes[$voteKey]['upvotes']++;
+        $votes[$voteKey]['users'][$userKey] = 'up';
+    } elseif ($input['vote'] === 'down') {
+        $votes[$voteKey]['downvotes']++;
+        $votes[$voteKey]['users'][$userKey] = 'down';
+    }
+    
+    // Calculate net score
+    $netScore = $votes[$voteKey]['upvotes'] - $votes[$voteKey]['downvotes'];
+    
+    // Save votes
+    file_put_contents($votesFile, json_encode($votes, JSON_PRETTY_PRINT));
+    
     echo json_encode([
-        'success' => true, 
-        'message' => 'Vote recorded'
+        'success' => true,
+        'message' => 'Vote recorded',
+        'score' => $netScore,
+        'upvotes' => $votes[$voteKey]['upvotes'],
+        'downvotes' => $votes[$voteKey]['downvotes'],
+        'userVote' => $input['vote']
     ]);
 }
 ?>
