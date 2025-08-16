@@ -1,27 +1,23 @@
-# Grav CMS .htaccess file for backend subdirectory
+# Grav CMS .htaccess for /grav subdirectory
 
 RewriteEngine On
 
-# Set RewriteBase for backend subdirectory
-RewriteBase /backend/
+# Set RewriteBase for grav subdirectory
+RewriteBase /grav/
 
 # Handle Authorization Header
 RewriteCond %{HTTP:Authorization} .
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-# Admin route handling - NO redirects to prevent loops
-RewriteRule ^admin/(.*)$ index.php [L,QSA,E=GRAV_ADMIN:1]
-
-# Grav frontend route 
-RewriteRule ^grav/(.*)$ index.php [L,QSA]
-RewriteRule ^grav$ index.php [L,QSA]
+# Admin route handling - NO external redirects
+RewriteRule ^admin/?(.*)$ index.php [L,QSA,E=GRAV_ADMIN:1]
 
 # Redirect Trailing Slashes If Not A Folder
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} (.+)/$
 RewriteRule ^ %1 [L,R=301]
 
-# Send All Other Requests To Front Controller
+# Send Requests To Front Controller
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [L,QSA]

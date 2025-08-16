@@ -1,8 +1,11 @@
 absolute_urls: false
-custom_base_url: 'https://theenergymuseum.com/backend'
+custom_base_url: ''
 
 home:
   alias: '/home'
+
+routes:
+  '/grav': '/home'
 
 pages:
   theme: quark
