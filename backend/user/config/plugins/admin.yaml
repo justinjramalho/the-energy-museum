@@ -1,0 +1,84 @@
+enabled: true
+route: '/admin'
+cache_enabled: false
+theme: grav
+logo_text: 'The Energy Museum'
+body_classes: ''
+content_padding: true
+twofa_enabled: false
+sidebar:
+  activate: tab
+  hover_delay: 100
+  size: auto
+dashboard:
+  days_of_stats: 7
+widgets_display:
+  dashboard-maintenance: true
+  dashboard-statistics: true
+  dashboard-notifications: true
+  dashboard-feed: true
+  dashboard-pages: true
+pages:
+  show_parents: both
+  show_modular: true
+session:
+  timeout: 1800
+edit_mode: normal
+frontend_preview_target: inline
+show_github_msg: false
+admin_icons: line-awesome
+enable_auto_updates_check: false
+notifications:
+  feed: false
+  dashboard: true
+  plugins: true
+  themes: true
+popularity:
+  enabled: true
+  ignore: ['/test*','/modular']
+  history:
+    daily: 30
+    monthly: 12
+    visitors: 20
+whitelabel:
+  quicktray_recompile: false
+  codemirror_theme: paper
+  codemirror_fontsize: md
+  codemirror_md_font: sans
+  logo_custom: ''
+  logo_login: ''
+  color_scheme:
+    accents:
+      primary-accent: button
+      secondary-accent: notice
+      tertiary-accent: critical
+    colors:
+      logo-bg: '#1e40af'
+      logo-link: '#FFFFFF'
+      nav-bg: '#1e3a8a'
+      nav-text: '#B7B9BD'
+      nav-link: '#ffffff'
+      nav-selected-bg: '#1d4ed8'
+      nav-selected-link: '#ffffff'
+      nav-hover-bg: '#2563eb'
+      nav-hover-link: '#ffffff'
+      toolbar-bg: '#ffffff'
+      toolbar-text: '#1e40af'
+      page-bg: '#F6F6F6'
+      page-text: '#1f2937'
+      page-link: '#1e40af'
+      content-bg: '#ffffff'
+      content-text: '#1f2937'
+      content-link: '#1e40af'
+      content-link2: '#dc2626'
+      content-header: '#1f2937'
+      content-tabs-bg: '#e5e7eb'
+      content-tabs-text: '#374151'
+      button-bg: '#1e40af'
+      button-text: '#ffffff'
+      notice-bg: '#10b981'
+      notice-text: '#ffffff'
+      update-bg: '#7c3aed'
+      update-text: '#ffffff'
+      critical-bg: '#dc2626'
+      critical-text: '#ffffff'

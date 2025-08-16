@@ -7,6 +7,10 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# No redirects - use direct routes:
+# /backend/admin for admin access
+# /backend/grav for Grav frontend
+
 # Handle Backend/Admin Routes
 RewriteCond %{REQUEST_URI} ^/backend/
 RewriteRule ^backend/(.*)$ backend/$1 [L]
@@ -19,10 +23,6 @@ RewriteRule ^api/(.*)$ api/$1 [L]
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteCond %{REQUEST_URI} \.(php)$
 RewriteRule ^(.*)$ $1 [L]
-
-# Redirect old /grav/ routes to /backend/
-RewriteRule ^grav/(.*)$ /backend/$1 [R=301,L]
-RewriteRule ^grav/?$ /backend/admin [R=301,L]
 
 # Handle React Router (Frontend)
 # Send all other requests to index.html for React routing
@@ -39,6 +39,7 @@ RewriteRule . /index.html [L]
     AddType application/javascript .js
     AddType application/json .json
     AddType image/svg+xml .svg
+    AddType text/html .html
 </IfModule>
 
 # Enable compression
@@ -64,4 +65,11 @@ RewriteRule . /index.html [L]
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/gif "access plus 1 year"
     ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
 </IfModule>

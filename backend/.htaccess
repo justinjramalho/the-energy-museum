@@ -1,41 +1,51 @@
-# Grav CMS .htaccess file
+# Grav CMS .htaccess file for subdirectory installation
 
 RewriteEngine On
+
+# Set RewriteBase for subdirectory
+RewriteBase /backend/
 
 # Handle Authorization Header
 RewriteCond %{HTTP:Authorization} .
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-# Redirect Trailing Slashes If Not A Folder
+# Prevent redirect loops for admin
+RewriteCond %{ENV:REDIRECT_STATUS} !^$
+RewriteRule ^admin - [L]
+
+# Handle admin route specifically
+RewriteRule ^admin$ admin/ [R=301,L]
+RewriteRule ^admin/(.*)$ index.php [L,QSA]
+
+# Redirect Trailing Slashes If Not A Folder (except admin)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} (.+)/$
+RewriteCond %{REQUEST_URI} !^/backend/admin/
 RewriteRule ^ %1 [L,R=301]
 
 # Send Requests To Front Controller
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.php [L]
+RewriteCond %{REQUEST_URI} !^/backend/admin/
+RewriteRule ^ index.php [L,QSA]
 
-# Admin asset handling
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} ^/backend/user/plugins/admin/
-RewriteRule ^(.*)$ - [L]
-
-# Set proper MIME types for admin assets
+# Set proper MIME types
 <IfModule mod_mime.c>
     AddType text/css .css
     AddType application/javascript .js
     AddType application/json .json
+    AddType text/html .html
 </IfModule>
 
-# Enable compression for admin assets
+# Enable compression
 <IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/css application/javascript
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE text/html
 </IfModule>
 
-# Set cache headers for admin assets
-<IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresByType text/css "access plus 1 month"
-    ExpiresByType application/javascript "access plus 1 month"
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
 </IfModule>

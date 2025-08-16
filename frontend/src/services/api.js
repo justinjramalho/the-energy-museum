@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Base URLs for different services
 const BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://theenergymuseum.com' 
+  ? 'https://theenergymuseum.com/backend' 
   : 'http://localhost:8001'; // Grav CMS backend
 
 const API_SERVER_URL = process.env.NODE_ENV === 'production' 
