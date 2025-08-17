@@ -1,5 +1,7 @@
 <?php
-// Newsletter subscription API
+// Newsletter subscription API with Database Storage
+require_once __DIR__ . '/PIIDatabase.php';
+
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
@@ -46,60 +48,28 @@ try {
         exit;
     }
 
-    // Create data directory if it doesn't exist
-    $dataDir = __DIR__ . '/data';
-    if (!is_dir($dataDir)) {
-        mkdir($dataDir, 0755, true);
-    }
-
-    // Newsletter subscribers file
-    $subscribersFile = $dataDir . '/newsletter_subscribers.json';
+    // Initialize database
+    $database = new PIIDatabase();
     
-    // Load existing subscribers
-    $subscribers = [];
-    if (file_exists($subscribersFile)) {
-        $existingData = file_get_contents($subscribersFile);
-        $subscribers = json_decode($existingData, true) ?: [];
-    }
-
-    // Check if email already exists
-    foreach ($subscribers as $subscriber) {
-        if ($subscriber['email'] === $email) {
-            echo json_encode([
-                'success' => true,
-                'message' => 'You are already subscribed to our newsletter!'
-            ]);
-            exit;
-        }
-    }
-
-    // Add new subscriber
-    $newSubscriber = [
-        'email' => $email,
-        'subscribed_at' => date('Y-m-d H:i:s'),
-        'ip_address' => $_SERVER['REMOTE_ADDR'] ?? 'unknown',
-        'user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? 'unknown',
-        'status' => 'active'
-    ];
-
-    $subscribers[] = $newSubscriber;
-
-    // Save to file
-    if (file_put_contents($subscribersFile, json_encode($subscribers, JSON_PRETTY_PRINT))) {
-        // Log subscription
-        $logFile = $dataDir . '/newsletter_log.txt';
-        $logEntry = date('Y-m-d H:i:s') . " - New subscription: $email\n";
-        file_put_contents($logFile, $logEntry, FILE_APPEND | LOCK_EX);
-
+    // Add subscriber to database
+    $result = $database->addNewsletterSubscriber(
+        $email,
+        $_SERVER['REMOTE_ADDR'] ?? null,
+        $_SERVER['HTTP_USER_AGENT'] ?? null
+    );
+    
+    if ($result['success']) {
         echo json_encode([
             'success' => true,
-            'message' => 'Thank you for subscribing to The Energy Museum newsletter!'
+            'message' => isset($result['already_exists']) 
+                ? 'You are already subscribed to our newsletter!'
+                : 'Thank you for subscribing to The Energy Museum newsletter!'
         ]);
     } else {
         http_response_code(500);
         echo json_encode([
             'success' => false,
-            'message' => 'Unable to process subscription. Please try again later.'
+            'message' => $result['message']
         ]);
     }
 

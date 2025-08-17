@@ -1,0 +1,65 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set admin_route = base_url_relative ~ '/' ~ admin.route %}
+
+{% block titlebar %}
+    <div class="button-bar">
+        <a class="button" href="{{ admin_route }}">
+            <i class="fa fa-reply"></i> Back
+        </a>
+    </div>
+    <h1><i class="fa fa-fw fa-users"></i> PII Manager</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="admin-block">
+        <div class="admin-block-wrapper">
+            <div class="admin-block-header">
+                <h2><i class="fa fa-envelope"></i> PII Management System</h2>
+            </div>
+
+            <div class="admin-block-content">
+                <div class="notices">
+                    <div class="notice notice-blue">
+                        <i class="fa fa-info-circle"></i>
+                        <p><strong>PII Manager is Active!</strong></p>
+                        <p>Your database is configured and ready. Access the management interface at:</p>
+                        <ul>
+                            <li><a href="https://theenergymuseum.com/api/pii-admin.php?action=subscribers" target="_blank">View Newsletter Subscribers</a></li>
+                            <li><a href="https://theenergymuseum.com/api/pii-admin.php?action=consultations" target="_blank">View Consultation Requests</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="admin-list-wrapper">
+                    <h3>Quick Stats</h3>
+                    <div class="button-bar">
+                        <a class="button" href="https://theenergymuseum.com/api/pii-admin.php?action=export&type=subscribers" target="_blank">
+                            <i class="fa fa-download"></i> Export Subscribers
+                        </a>
+                        <a class="button" href="https://theenergymuseum.com/api/pii-admin.php?action=export&type=consultations" target="_blank">
+                            <i class="fa fa-download"></i> Export Consultations
+                        </a>
+                    </div>
+                    
+                    <p><strong>Newsletter & Consultation System:</strong></p>
+                    <ul>
+                        <li>✅ Database tables created successfully</li>
+                        <li>✅ Newsletter API active at <code>/api/newsletter.php</code></li>
+                        <li>✅ Consultation API active at <code>/api/consultation.php</code></li>
+                        <li>✅ Admin API active at <code>/api/pii-admin.php</code></li>
+                    </ul>
+
+                    <h3>Test the System</h3>
+                    <p>To test the functionality:</p>
+                    <ol>
+                        <li>Go to <a href="https://theenergymuseum.com/" target="_blank">your website</a></li>
+                        <li>Scroll to footer and test newsletter subscription</li>
+                        <li>Visit Support page and test consultation form</li>
+                        <li>Return here to view submitted data via the API links above</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

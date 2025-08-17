@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { apiService } from '../services/api';
-import { useApiSubmit } from '../hooks/useApi';
 import { FiMail, FiClock, FiMessageCircle } from 'react-icons/fi';
 
 const PageContainer = styled.div`
@@ -254,21 +252,45 @@ function Support() {
     window.scrollTo(0, 0);
   }, []);
 
-  const { submit: submitRequest, loading: isSubmitting, error } = useApiSubmit(
-    (data) => apiService.submitSupportRequest(data),
-    (response) => {
-      // Success callback
-      setFormData({
-        name: '',
-        email: '',
-        organization: '',
-        supportType: '',
-        message: ''
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
+
+  const submitRequest = async (data) => {
+    setIsSubmitting(true);
+    setError(null);
+    
+    try {
+      const response = await fetch('https://theenergymuseum.com/api/consultation.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
       });
-      setShowSuccess(true);
-      setTimeout(() => setShowSuccess(false), 8000);
+
+      const result = await response.json();
+      
+      if (result.success) {
+        setFormData({
+          name: '',
+          email: '',
+          organization: '',
+          supportType: '',
+          message: ''
+        });
+        setShowSuccess(true);
+        setTimeout(() => setShowSuccess(false), 8000);
+        return result;
+      } else {
+        throw new Error(result.message || 'Failed to submit consultation request');
+      }
+    } catch (err) {
+      setError(err);
+      throw err;
+    } finally {
+      setIsSubmitting(false);
     }
-  );
+  };
 
   const handleInputChange = (e) => {
     setFormData({

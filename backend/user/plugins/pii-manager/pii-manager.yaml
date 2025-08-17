@@ -1,0 +1,31 @@
+name: "PII Manager"
+slug: pii-manager
+type: plugin
+version: 1.0.0
+description: "Manage Newsletter Subscriptions and Consultation Requests"
+icon: users
+author:
+  name: "The Energy Museum"
+  email: "info@theenergymuseum.com"
+homepage: https://theenergymuseum.com
+keywords: [newsletter, consultation, pii, privacy]
+bugs: https://theenergymuseum.com/support
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.7.0' }
+  - { name: admin, version: '>=1.10.0' }
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: "Plugin Status"
+      highlight: 1
+      default: 0
+      options:
+        1: "Enabled"
+        0: "Disabled"
+      validate:
+        type: bool

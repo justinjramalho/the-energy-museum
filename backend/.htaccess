@@ -10,11 +10,7 @@ RewriteCond %{HTTP:Authorization} .
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
 # Admin route handling - NO redirects to prevent loops
-RewriteRule ^admin/(.*)$ index.php [L,QSA,E=GRAV_ADMIN:1]
-
-# Grav frontend route 
-RewriteRule ^grav/(.*)$ index.php [L,QSA]
-RewriteRule ^grav$ index.php [L,QSA]
+RewriteRule ^admin/?(.*)$ index.php [L,QSA,E=GRAV_ADMIN:1]
 
 # Redirect Trailing Slashes If Not A Folder
 RewriteCond %{REQUEST_FILENAME} !-d

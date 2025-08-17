@@ -1,7 +1,6 @@
 enabled: true
 route: '/admin'
 cache_enabled: false
-base: '/backend'
 theme: grav
 logo_text: 'The Energy Museum'
 body_classes: ''
