@@ -127,10 +127,19 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleLogoClick = () => {
+    // Ensure we scroll to top when logo is clicked
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <HeaderContainer>
       <NavContainer>
-        <Logo to="/">
+        <Logo to="/" onClick={handleLogoClick}>
           <span className="icon">⚡</span>
           The Energy Museum
         </Logo>

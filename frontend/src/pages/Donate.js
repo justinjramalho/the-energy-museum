@@ -45,6 +45,18 @@ const ComingSoon = styled.div`
   margin: 2rem 0;
 `;
 
+const TaxDeductibleBadge = styled.div`
+  display: inline-block;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 2rem 0 1rem 0;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+`;
+
 function Donate() {
   // Scroll to top when component mounts
   React.useEffect(() => {
@@ -59,6 +71,9 @@ function Donate() {
           Help us transform energy education and create a more sustainable future 
           through innovative STEM learning experiences for all ages.
         </HeroSubtitle>
+        <TaxDeductibleBadge>
+          ✅ Tax-Deductible Donations • 501(c)(3) Nonprofit
+        </TaxDeductibleBadge>
       </HeroSection>
 
       <ComingSoon>
@@ -71,9 +86,7 @@ function Donate() {
         <br />
         <p style={{ color: '#8892a6' }}>
           In the meantime, if you'd like to make a donation or learn about sponsorship opportunities, 
-          please <a href="/contact" style={{ color: '#00d4ff', marginLeft: '0.5rem' }}>
-            contact our team directly
-          </a>
+          please <a href="/contact" style={{ color: '#00d4ff' }}>contact our team directly</a>
         </p>
       </ComingSoon>
     </PageContainer>

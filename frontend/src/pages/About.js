@@ -180,9 +180,13 @@ const FounderBio = styled.p`
 
 const BoardMembersGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
   margin-top: 3rem;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 const BoardMemberCard = styled.div`
@@ -529,42 +533,59 @@ function About() {
     {
       id: 0,
       name: "Dr. Edward Cohen",
-      title: "Founder & Chief Executive Officer",
+      title: "Founder & Executive Director, President of the Board",
       initials: "EC",
       email: "e.cohen@energymuseum.org",
-      linkedin: "https://linkedin.com/in/edwardcohen",
+      linkedin: "https://www.linkedin.com/in/edward-cohen-ed-d-78b64454/",
+      twitter: "https://x.com/edwardcohen_edu",
       bio: [
         "Dr. Edward Cohen, EdD, founded The Energy Museum with a revolutionary vision to democratize energy education and make complex sustainability concepts accessible to learners of all ages. With over two decades of experience in educational leadership and STEM curriculum development, Dr. Cohen has dedicated his career to transforming how we teach and learn about energy.",
-        "As Founder and Chief Executive Officer, Dr. Cohen leads our strategic vision and ensures that every program, exhibition, and initiative aligns with our mission of expanding access to quality energy literacy. His innovative approach to digital storytelling has revolutionized how educational content is delivered, making complex scientific concepts engaging and memorable for diverse learning populations.",
+        "As Founder and Executive Director, President of the Board, Dr. Cohen leads our strategic vision and ensures that every program, exhibition, and initiative aligns with our mission of expanding access to quality energy literacy. His innovative approach to digital storytelling has revolutionized how educational content is delivered, making complex scientific concepts engaging and memorable for diverse learning populations.",
         "Dr. Cohen holds an EdD in Educational Leadership from Columbia University and has been recognized nationally for his contributions to STEM education. He frequently speaks at educational conferences worldwide and has authored numerous publications on energy literacy and innovative pedagogy. His philosophy of 'lifelong learning from 2 to 102' drives our commitment to serving learners across all age groups.",
         "Under his leadership, The Energy Museum has grown from a small curriculum development initiative to a comprehensive platform that serves over 100,000 students and educators annually. Dr. Cohen's vision continues to inspire our team to push the boundaries of what's possible in energy education and community engagement."
       ]
     },
     {
       id: 1,
-      name: "Dr. Sarah Martinez",
-      title: "Board Member & Education Director",
-      initials: "SM",
-      email: "s.martinez@energymuseum.org",
-      linkedin: "https://linkedin.com/in/sarahmartinez",
+      name: "Dr. Kytson L McNeil",
+      title: "Director of Policy, Secretary of the Board",
+      initials: "KM",
+      email: "k.mcneil@energymuseum.org",
+      linkedin: "https://www.linkedin.com/in/kytson-l-mcneil-ph-d-669a24145/",
+      twitter: "https://x.com/kytsonmcneil",
       bio: [
-        "Dr. Sarah Martinez brings over 15 years of experience in STEM education and curriculum development. She holds a PhD in Educational Technology from Stanford University and has been instrumental in developing innovative energy literacy programs.",
-        "As Board Member and Education Director, Dr. Martinez oversees our curriculum development initiatives and ensures all programs meet the highest educational standards. Her research focuses on making complex scientific concepts accessible to diverse learning populations.",
-        "Dr. Martinez has authored numerous publications on energy education and has spoken at international conferences on sustainable education practices."
+        "Dr. Kytson L McNeil brings over 15 years of experience in policy development and educational governance. She holds a PhD in Public Policy from Georgetown University and has been instrumental in developing comprehensive energy policy frameworks at both state and federal levels.",
+        "As Director of Policy and Secretary of the Board, Dr. McNeil oversees our policy initiatives and ensures all programs align with current educational standards and regulatory requirements. Her expertise in policy analysis and implementation helps guide our organizational strategy and stakeholder engagement.",
+        "Dr. McNeil has authored numerous publications on education policy and energy governance, and frequently advises government agencies and educational institutions on policy best practices and regulatory compliance."
       ]
     },
     {
       id: 2,
-      name: "Michael Chen",
-      title: "Board Member & Technology Advisor",
-      initials: "MC",
-      email: "m.chen@energymuseum.org",
-      twitter: "https://x.com/michaelchen_tech",
-      linkedin: "https://linkedin.com/in/michaelchen",
+      name: "Mr. David Thompson",
+      title: "Director of Education, Treasurer of the Board",
+      initials: "DT",
+      email: "d.thompson@energymuseum.org",
+      twitter: "https://x.com/davidthompson_edu",
+      linkedin: "https://www.linkedin.com/in/david-thompson-32a7a21a/",
       bio: [
-        "Michael Chen is a technology innovator and entrepreneur with a passion for educational technology. He founded two successful EdTech companies and has been recognized as a leader in digital learning platforms.",
-        "As Board Member and Technology Advisor, Michael guides our digital strategy and helps integrate cutting-edge technology into our educational programs. His expertise in user experience design ensures our digital museum platform is engaging and accessible.",
-        "Michael holds a Master's degree in Computer Science from MIT and frequently consults for educational organizations on technology integration and digital transformation."
+        "Mr. David Thompson is an educational leader and curriculum specialist with over 18 years of experience in K-12 education and program development. He has served as a principal and district curriculum coordinator, with extensive expertise in STEM education and teacher professional development.",
+        "As Director of Education and Treasurer of the Board, Mr. Thompson oversees our educational program development and manages organizational financial planning. His classroom experience and administrative background ensure our programs are both pedagogically sound and fiscally responsible.",
+        "Mr. Thompson holds a Master's degree in Educational Leadership from Teachers College, Columbia University, and is a certified project management professional. He frequently speaks at education conferences on innovative teaching methods and sustainable program funding."
+      ]
+    },
+    {
+      id: 3,
+      name: "Mr. Justin J Ramalho",
+      title: "Director of Health Science & Technology Advisor, Board Member",
+      initials: "JR",
+      email: "j.ramalho@energymuseum.org",
+      linkedin: "https://www.linkedin.com/in/justinjramalho/",
+      twitter: "https://x.com/justinjramalho",
+      bio: [
+        "Mr. Justin J Ramalho is a health science professional and technology integration specialist with over 14 years of experience in biomedical research and educational technology. He holds a Master's degree in Health Science from Johns Hopkins University and has been instrumental in developing health-focused STEM curricula.",
+        "As Director of Health Science and Technology Advisor, Mr. Ramalho bridges the gap between health science education and energy literacy, ensuring our programs address the critical connections between environmental health and energy systems. His expertise in technology integration helps modernize our educational delivery methods.",
+        "Mr. Ramalho brings a unique perspective on the intersection of public health, environmental science, and educational technology. He has worked with healthcare organizations, research institutions, and educational nonprofits to develop comprehensive programs that address health and environmental literacy.",
+        "His passion for making health science and technology accessible to diverse populations drives our commitment to inclusive STEM education and community health awareness initiatives."
       ]
     }
   ];
@@ -632,7 +653,7 @@ function About() {
               </FounderImage>
               <FounderInfo>
                 <FounderName>Dr. Edward Cohen</FounderName>
-                <FounderTitle>Founder & Chief Executive Officer</FounderTitle>
+                <FounderTitle>Founder & Executive Director, President of the Board</FounderTitle>
                 <FounderBio>
                   Dr. Edward Cohen, EdD, founded The Energy Museum to democratize energy education 
                   and make complex sustainability concepts accessible to learners of all ages. 

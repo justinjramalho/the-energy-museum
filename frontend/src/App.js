@@ -5,6 +5,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 // Components
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 // Pages
 import Home from './pages/Home';
@@ -76,6 +77,7 @@ function App() {
   return (
     <Router>
       <GlobalStyle />
+      <ScrollToTop />
       <AppContainer>
         <Header />
         <MainContent>
