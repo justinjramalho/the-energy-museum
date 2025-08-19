@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { usePagePerformance, useUserExperienceMetrics, useResponsiveMetrics } from '../hooks/usePagePerformance';
+import ErrorBoundary from '../components/ErrorBoundary';
+import SEOHead from '../components/SEOHead';
 import { FiLinkedin, FiMail } from 'react-icons/fi';
 import { RiTwitterXLine } from 'react-icons/ri';
 
@@ -18,6 +21,14 @@ const Section = styled.section`
   
   &:nth-child(even) {
     background: rgba(255, 255, 255, 0.02);
+  }
+  
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem 0.8rem;
   }
 `;
 
@@ -40,6 +51,25 @@ const SectionTitle = styled.h2`
     background: linear-gradient(90deg, #00d4ff, #0099cc);
     border-radius: 2px;
   }
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    
+    &::after {
+      width: 60px;
+      height: 2px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    
+    &::after {
+      width: 50px;
+    }
+  }
 `;
 
 const HeroSection = styled.section`
@@ -49,6 +79,14 @@ const HeroSection = styled.section`
   background-position: center;
   padding: 6rem 2rem 4rem;
   text-align: center;
+  
+  @media (max-width: 768px) {
+    padding: 3rem 1rem 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 2rem 0.8rem 1.5rem;
+  }
 `;
 
 const HeroTitle = styled.h1`
@@ -61,7 +99,13 @@ const HeroTitle = styled.h1`
   background-clip: text;
   
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
   }
 `;
 
@@ -71,6 +115,17 @@ const HeroSubtitle = styled.p`
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    max-width: 90%;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
 `;
 
 const MissionBox = styled.div`
@@ -123,6 +178,15 @@ const FounderSpotlight = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     text-align: center;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 16px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    border-radius: 12px;
   }
 `;
 
@@ -187,6 +251,16 @@ const BoardMembersGrid = styled.div`
   @media (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
   }
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    margin-top: 1.5rem;
+  }
 `;
 
 const BoardMemberCard = styled.div`
@@ -202,6 +276,20 @@ const BoardMemberCard = styled.div`
     transform: translateY(-3px);
     border-color: rgba(0, 212, 255, 0.4);
     background: rgba(255, 255, 255, 0.05);
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    border-radius: 10px;
+    
+    &:hover {
+      transform: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.2rem;
+    border-radius: 8px;
   }
 `;
 
@@ -382,6 +470,18 @@ const StatsGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin: 3rem 0;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
 `;
 
 const StatCard = styled.div`
@@ -417,6 +517,17 @@ const ValuesGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin: 3rem 0;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
 `;
 
 const ValueCard = styled.div`
@@ -467,6 +578,18 @@ const ServicesList = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   margin: 2rem 0;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin: 1rem 0;
+  }
 `;
 
 const ServiceItem = styled.div`
@@ -509,24 +632,59 @@ const AnimatedSection = styled.div`
   opacity: ${props => props.shouldAnimate ? 1 : 0};
   transform: translateY(${props => props.shouldAnimate ? '0' : '30px'});
   transition: all 0.8s ease;
+  will-change: opacity, transform;
+  
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 768px) {
+    transform: translateY(${props => props.shouldAnimate ? '0' : '20px'});
+    transition: all 0.6s ease;
+  }
 `;
 
 function About() {
   const [selectedMember, setSelectedMember] = React.useState(null);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   
-  const heroAnimation = useScrollAnimation({ threshold: 0.1 });
-  const missionAnimation = useScrollAnimation({ threshold: 0.3 });
-  const teamAnimation = useScrollAnimation({ threshold: 0.3 });
-  const historyAnimation = useScrollAnimation({ threshold: 0.3 });
-  const impactAnimation = useScrollAnimation({ threshold: 0.3 });
-  const valuesAnimation = useScrollAnimation({ threshold: 0.3 });
-  const servicesAnimation = useScrollAnimation({ threshold: 0.3 });
+  // Performance monitoring hooks
+  usePagePerformance();
+  useUserExperienceMetrics();
+  useResponsiveMetrics();
+  
+  const heroAnimation = useScrollAnimation({ threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  const missionAnimation = useScrollAnimation({ threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  const teamAnimation = useScrollAnimation({ threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  const historyAnimation = useScrollAnimation({ threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  const impactAnimation = useScrollAnimation({ threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  const valuesAnimation = useScrollAnimation({ threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  const servicesAnimation = useScrollAnimation({ threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
   // Scroll to top when component mounts
   React.useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, []); 
+  
+  // Modal accessibility: close on escape key
+  React.useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === 'Escape' && isModalOpen) {
+        closeModal();
+      }
+    };
+    
+    if (isModalOpen) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.removeEventListener('keydown', handleEscape);
+        document.body.style.overflow = 'unset';
+      };
+    }
+  }, [isModalOpen]);
 
   // Board members data (including founder)
   const boardMembers = [
@@ -601,14 +759,21 @@ function About() {
   };
 
   return (
-    <PageContainer>
+    <ErrorBoundary>
+      <SEOHead
+        title="About Us"
+        description="Learn about The Energy Museum's mission to democratize energy education through innovative STEM programming, hands-on learning experiences, and community engagement. Meet our leadership team."
+        keywords="energy education, STEM learning, nonprofit organization, educational leadership, sustainability education, energy literacy"
+        canonical="/about"
+      />
+      <PageContainer>
       {/* Hero Section */}
-      <HeroSection>
+      <HeroSection role="banner" aria-labelledby="hero-title">
         <AnimatedSection 
           ref={heroAnimation.ref}
           shouldAnimate={heroAnimation.shouldAnimate}
         >
-          <HeroTitle>About Us</HeroTitle>
+          <HeroTitle id="hero-title">About Us</HeroTitle>
           <HeroSubtitle>
             Empowering the next generation through innovative energy education, 
             hands-on STEM learning, and sustainable future thinking.
@@ -617,12 +782,12 @@ function About() {
       </HeroSection>
 
       {/* Mission Section */}
-      <Section>
+      <Section role="main" aria-labelledby="mission-title">
         <AnimatedSection 
           ref={missionAnimation.ref}
           shouldAnimate={missionAnimation.shouldAnimate}
         >
-          <SectionTitle>Our Mission</SectionTitle>
+          <SectionTitle id="mission-title">Our Mission</SectionTitle>
           <MissionBox>
             <MissionText>
               Our nonprofit's focus is on education, sustainability, and innovative pedagogy. 
@@ -635,13 +800,13 @@ function About() {
       </Section>
 
       {/* Team Section */}
-      <Section>
+      <Section role="region" aria-labelledby="team-title">
         <AnimatedSection 
           ref={teamAnimation.ref}
           shouldAnimate={teamAnimation.shouldAnimate}
         >
           <TeamSection id="our-team">
-            <SectionTitle>Our Team</SectionTitle>
+            <SectionTitle id="team-title">Our Team</SectionTitle>
             <p style={{ textAlign: 'center', color: '#b0b7c3', fontSize: '1.1rem', marginBottom: '3rem' }}>
               Our executive leadership team guides our mission to ensure educators and students have the 
               tools, resources, and inspiration to explore energy innovation and sustainability.
@@ -904,6 +1069,7 @@ function About() {
         </ModalContent>
       </Modal>
     </PageContainer>
+    </ErrorBoundary>
   );
 }
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { apiService } from '../services/api';
 import { useApiSubmit } from '../hooks/useApi';
+import { useUserExperienceMetrics } from '../hooks/usePagePerformance';
 
 const CommentSystemContainer = styled.div`
   background: rgba(255, 255, 255, 0.03);
@@ -9,6 +10,17 @@ const CommentSystemContainer = styled.div`
   border-radius: 16px;
   padding: 2rem;
   margin: 3rem 0;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 12px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
+    border-radius: 10px;
+  }
 `;
 
 const SectionTitle = styled.h3`
@@ -26,6 +38,16 @@ const CommentForm = styled.form`
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 2rem;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
+    border-radius: 8px;
+  }
 `;
 
 const FormGrid = styled.div`
@@ -36,6 +58,12 @@ const FormGrid = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 0.8rem;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -43,6 +71,22 @@ const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  
+  @media (max-width: 768px) {
+    gap: 0.4rem;
+  }
+`;
+
+const TextAreaFormGroup = styled(FormGroup)`
+  margin-bottom: 1.5rem;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    margin-bottom: 0.8rem;
+  }
 `;
 
 const Label = styled.label`
@@ -59,6 +103,8 @@ const Input = styled.input`
   color: #ffffff;
   font-size: 1rem;
   transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 
   &::placeholder {
     color: #8892a6;
@@ -69,6 +115,16 @@ const Input = styled.input`
     border-color: #00d4ff;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+    font-size: 0.9rem;
   }
 `;
 
@@ -83,6 +139,8 @@ const TextArea = styled.textarea`
   resize: vertical;
   font-family: inherit;
   transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 
   &::placeholder {
     color: #8892a6;
@@ -93,6 +151,18 @@ const TextArea = styled.textarea`
     border-color: #00d4ff;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+    min-height: 80px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    min-height: 70px;
   }
 `;
 
@@ -109,6 +179,8 @@ const SubmitButton = styled.button`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-top: 1.5rem;
+  align-self: flex-start;
 
   &:hover:not(:disabled) {
     background: linear-gradient(135deg, #00a8cc, #007799);
@@ -120,6 +192,20 @@ const SubmitButton = styled.button`
     opacity: 0.6;
     cursor: not-allowed;
     transform: none;
+  }
+  
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  @media (max-width: 480px) {
+    margin-top: 0.8rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 `;
 
@@ -221,6 +307,9 @@ function CommentSystem({ exhibitionId, exhibitionTitle }) {
     comment: ''
   });
   const [showSuccess, setShowSuccess] = useState(false);
+  
+  // Performance monitoring
+  useUserExperienceMetrics();
 
   const { submit: submitComment, loading: submitting, error } = useApiSubmit(
     (data) => apiService.submitComment(exhibitionId, data),
@@ -290,19 +379,19 @@ function CommentSystem({ exhibitionId, exhibitionTitle }) {
       </p>
 
       {/* Comment Form */}
-      <CommentForm onSubmit={handleSubmit}>
-        <h4 style={{ color: '#00d4ff', marginBottom: '1.5rem' }}>
+      <CommentForm onSubmit={handleSubmit} role="form" aria-labelledby="comment-form-title">
+        <h4 id="comment-form-title" style={{ color: '#00d4ff', marginBottom: '1.5rem' }}>
           Share Your Story
         </h4>
         
         {error && (
-          <ErrorMessage>
+          <ErrorMessage role="alert" aria-live="polite">
             Error submitting comment: {error.message}
           </ErrorMessage>
         )}
         
         {showSuccess && (
-          <SuccessMessage>
+          <SuccessMessage role="alert" aria-live="polite">
             Thank you for sharing! Your story has been added to the conversation.
           </SuccessMessage>
         )}
@@ -318,6 +407,8 @@ function CommentSystem({ exhibitionId, exhibitionTitle }) {
               onChange={handleInputChange}
               placeholder="Enter your name"
               required
+              aria-describedby="name-required"
+              aria-invalid={!formData.name.trim() && formData.name !== '' ? 'true' : 'false'}
             />
           </FormGroup>
           
@@ -330,11 +421,12 @@ function CommentSystem({ exhibitionId, exhibitionTitle }) {
               value={formData.email}
               onChange={handleInputChange}
               placeholder="your.email@example.com"
+              aria-describedby="email-optional"
             />
           </FormGroup>
         </FormGrid>
 
-        <FormGroup>
+        <TextAreaFormGroup>
           <Label htmlFor="comment">Your Story or Reflection *</Label>
           <TextArea
             id="comment"
@@ -343,12 +435,18 @@ function CommentSystem({ exhibitionId, exhibitionTitle }) {
             onChange={handleInputChange}
             placeholder="What did you discover in this exhibition? How did it make you think about energy differently? Share your insights..."
             required
+            aria-describedby="comment-required"
+            aria-invalid={!formData.comment.trim() && formData.comment !== '' ? 'true' : 'false'}
           />
-        </FormGroup>
+        </TextAreaFormGroup>
 
-        <SubmitButton type="submit" disabled={submitting || !formData.name.trim() || !formData.comment.trim()}>
+        <SubmitButton 
+          type="submit" 
+          disabled={submitting || !formData.name.trim() || !formData.comment.trim()}
+          aria-describedby="submit-requirements"
+        >
           {submitting ? 'Sharing...' : 'Share Your Story'}
-          <span>📝</span>
+          <span aria-hidden="true">📝</span>
         </SubmitButton>
       </CommentForm>
 

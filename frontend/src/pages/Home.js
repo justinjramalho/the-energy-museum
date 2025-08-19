@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import ExhibitionTeaser from '../components/ExhibitionTeaser';
 import { useAlternatingScrollAnimation } from '../hooks/useScrollAnimation';
+import { usePagePerformance, useUserExperienceMetrics, useResponsiveMetrics } from '../hooks/usePagePerformance';
+import ErrorBoundary from '../components/ErrorBoundary';
+import SEOHead from '../components/SEOHead';
 
 const float = keyframes`
   0%, 100% { transform: translateY(0px); }
@@ -38,6 +41,16 @@ const HeroSection = styled.section`
     bottom: 0;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(0,212,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
     opacity: 0.3;
+  }
+  
+  @media (max-width: 768px) {
+    min-height: 70vh;
+    padding: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    min-height: 60vh;
+    padding: 1rem;
   }
 `;
 
@@ -125,6 +138,14 @@ const FeaturesSection = styled.section`
   padding: 5rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    padding: 3rem 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 2rem 1rem;
+  }
 `;
 
 const SectionTitle = styled.h2`
@@ -135,6 +156,16 @@ const SectionTitle = styled.h2`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+  }
 `;
 
 const SectionSubtitle = styled.p`
@@ -145,6 +176,20 @@ const SectionSubtitle = styled.p`
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.6;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 90%;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
 `;
 
 const FeaturesGrid = styled.div`
@@ -152,6 +197,19 @@ const FeaturesGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2.5rem;
   margin-bottom: 4rem;
+  justify-items: center;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 400px;
+    margin: 0 auto 4rem auto;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 1.5rem;
+    max-width: 350px;
+  }
 `;
 
 const FeatureCard = styled.div`
@@ -163,12 +221,28 @@ const FeatureCard = styled.div`
   transition: all 0.3s ease;
   animation: ${float} 6s ease-in-out infinite;
   animation-delay: ${props => props.delay || '0s'};
+  width: 100%;
+  max-width: 400px;
 
   &:hover {
     transform: translateY(-10px);
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(0, 212, 255, 0.4);
     box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    padding: 2rem;
+    border-radius: 12px;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+    border-radius: 10px;
   }
 `;
 
@@ -238,9 +312,9 @@ const featuredExhibitions = [
     audience: 'All Ages',
     icon: '🌞',
     gradient: 'linear-gradient(135deg, #FFD700, #FFA500)',
-    visitors: 1250,
+    visitors: 125,
     rating: 4.8,
-    comments: 89
+    comments: 8
   },
   {
     id: 'climate-solutions',
@@ -252,9 +326,9 @@ const featuredExhibitions = [
     audience: 'Teen & Adult',
     icon: '🌍',
     gradient: 'linear-gradient(135deg, #4169E1, #1E90FF)',
-    visitors: 2100,
+    visitors: 210,
     rating: 4.9,
-    comments: 287
+    comments: 28
   },
   {
     id: 'physics-of-power',
@@ -266,20 +340,38 @@ const featuredExhibitions = [
     audience: 'Students & Adults',
     icon: '⚡',
     gradient: 'linear-gradient(135deg, #00d4ff, #0099cc)',
-    visitors: 987,
+    visitors: 98,
     rating: 4.7,
-    comments: 156
+    comments: 15
   }
 ];
 
 function Home() {
+  // Performance monitoring hooks
+  usePagePerformance();
+  useUserExperienceMetrics();
+  useResponsiveMetrics();
+  
   // Use alternating scroll animations for exhibition teasers
   const teaserAnimations = useAlternatingScrollAnimation(featuredExhibitions.length, 600);
+  
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
-    <PageContainer>
-      <HeroSection>
+    <ErrorBoundary>
+      <SEOHead
+        title="Home"
+        description="Discover the power of energy through digital storytelling at The Energy Museum. Explore immersive exhibitions, professional STEM education services, and interactive learning experiences."
+        keywords="energy museum, digital storytelling, STEM education, interactive exhibitions, energy science, renewable energy, professional development"
+        canonical="/"
+      />
+      <PageContainer>
+      <HeroSection role="banner" aria-labelledby="hero-title">
         <HeroContent>
-          <HeroTitle>The Energy Museum</HeroTitle>
+          <HeroTitle id="hero-title">The Energy Museum</HeroTitle>
           <HeroSubtitle>Discover the Power of Energy Through Digital Storytelling</HeroSubtitle>
           <HeroDescription>
             Step into a world where science meets art, where complex energy concepts come alive 
@@ -316,8 +408,8 @@ function Home() {
         ))}
       </ExhibitionTeasersSection>
 
-      <FeaturesSection>
-        <SectionTitle>Professional STEM Education Services</SectionTitle>
+      <FeaturesSection role="main" aria-labelledby="services-title">
+        <SectionTitle id="services-title">Professional STEM Education Services</SectionTitle>
         <SectionSubtitle>
           Transforming energy education through expert-designed field experiences, professional development, and community programs tailored to your needs
         </SectionSubtitle>
@@ -377,6 +469,7 @@ function Home() {
         </StatsSection>
       </FeaturesSection>
     </PageContainer>
+    </ErrorBoundary>
   );
 }
 

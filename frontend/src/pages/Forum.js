@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { Link, useSearchParams } from 'react-router-dom';
 import { FiSearch, FiMessageCircle, FiUsers, FiClock, FiStar, FiEdit, FiThumbsUp } from 'react-icons/fi';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { usePagePerformance, useUserExperienceMetrics, useResponsiveMetrics } from '../hooks/usePagePerformance';
+import ErrorBoundary from '../components/ErrorBoundary';
+import SEOHead from '../components/SEOHead';
 import AskQuestionModal from '../components/AskQuestionModal';
 import { apiService } from '../services/api';
 
@@ -11,15 +14,35 @@ const PageContainer = styled.div`
   margin: 0 auto;
   padding: 2rem;
   color: #ccd6f6;
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.8rem;
+  }
 `;
 
 const HeroSection = styled.section`
   text-align: center;
-  padding: 3rem 0 4rem;
+  padding: 3rem 2rem 4rem;
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 255, 255, 0.05));
   border-radius: 20px;
   margin-bottom: 3rem;
   border: 1px solid rgba(0, 212, 255, 0.2);
+  
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem 3rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem 1rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 const HeroTitle = styled.h1`
@@ -29,7 +52,13 @@ const HeroTitle = styled.h1`
   text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
   
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
   }
 `;
 
@@ -39,12 +68,37 @@ const HeroSubtitle = styled.p`
   max-width: 600px;
   margin: 0 auto 2rem;
   line-height: 1.7;
+  padding: 0 1rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    max-width: 90%;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+    padding: 0;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 auto 1rem;
+  }
 `;
 
 const SearchContainer = styled.div`
   position: relative;
   max-width: 500px;
   margin: 0 auto;
+  padding: 0 1rem;
+  
+  @media (max-width: 768px) {
+    max-width: 90%;
+    padding: 0;
+  }
+  
+  @media (max-width: 480px) {
+    max-width: 100%;
+  }
 `;
 
 const SearchInput = styled.input`
@@ -88,7 +142,12 @@ const FilterContainer = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 0.8rem;
   }
 `;
 
@@ -100,6 +159,13 @@ const FilterLeft = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 0.8rem;
   }
 `;
 
@@ -160,6 +226,27 @@ const FilterSelect = styled.select`
   option {
     background: #1a2332;
     color: #ccd6f6;
+  }
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+    padding: 0.7rem 0.8rem;
+  }
+`;
+
+const DiscussionCount = styled.div`
+  color: #8892a6;
+  font-size: 0.9rem;
+  
+  @media (max-width: 768px) {
+    text-align: center;
+    width: 100%;
   }
 `;
 
@@ -548,11 +635,35 @@ function Forum() {
   const [filteredDiscussions, setFilteredDiscussions] = useState(forumDiscussions);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmittingQuestion, setIsSubmittingQuestion] = useState(false);
-  const heroAnimation = useScrollAnimation();
+  
+  // Performance monitoring hooks
+  usePagePerformance();
+  useUserExperienceMetrics();
+  useResponsiveMetrics();
+  
+  const heroAnimation = useScrollAnimation({ threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
+  // Modal accessibility: close on escape key and manage body scroll
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === 'Escape' && isModalOpen) {
+        setIsModalOpen(false);
+      }
+    };
+    
+    if (isModalOpen) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.removeEventListener('keydown', handleEscape);
+        document.body.style.overflow = 'unset';
+      };
+    }
+  }, [isModalOpen]);
 
   useEffect(() => {
     let filtered = forumDiscussions;
@@ -630,14 +741,21 @@ function Forum() {
   };
 
   return (
-    <PageContainer>
-      <HeroSection ref={heroAnimation.ref}>
+    <ErrorBoundary>
+      <SEOHead
+        title="Community Forums"
+        description="Connect with energy education professionals, share experiences, and get expert support from The Energy Museum community. Join discussions on STEM education, funding, and best practices."
+        keywords="energy education forums, STEM education community, teacher collaboration, education discussion, energy literacy"
+        canonical="/forum"
+      />
+      <PageContainer>
+      <HeroSection ref={heroAnimation.ref} role="banner" aria-labelledby="forum-title">
         <div style={{
           opacity: heroAnimation.shouldAnimate ? 1 : 0,
           transform: heroAnimation.shouldAnimate ? 'translateY(0)' : 'translateY(30px)',
           transition: 'all 0.8s ease'
         }}>
-          <HeroTitle>Community Forums</HeroTitle>
+          <HeroTitle id="forum-title">Community Forums</HeroTitle>
           <HeroSubtitle>
             Connect with educators, share experiences, and get expert support from The Energy Museum community. 
             Your questions and insights help us all grow together.
@@ -650,6 +768,7 @@ function Forum() {
               placeholder="Search topics, categories, or questions..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
+              aria-label="Search forum discussions"
             />
           </SearchContainer>
         </div>
@@ -678,7 +797,7 @@ function Forum() {
         </StatsGrid>
       </StatsSection>
 
-      <FilterContainer>
+      <FilterContainer role="region" aria-label="Discussion filters and controls">
         <FilterLeft>
           <FilterSelect
             value={selectedCategory}
@@ -692,6 +811,7 @@ function Forum() {
                 setSearchParams({ category: newCategory });
               }
             }}
+            aria-label="Filter discussions by category"
           >
             {categories.map((category) => (
               <option key={category.value} value={category.value}>
@@ -703,15 +823,16 @@ function Forum() {
           <FilterSelect
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
+            aria-label="Sort discussions by"
           >
             <option value="recent">Most Recent</option>
             <option value="votes">Most Helpful</option>
             <option value="replies">Most Discussed</option>
           </FilterSelect>
           
-          <div style={{ color: '#8892a6', fontSize: '0.9rem' }}>
+          <DiscussionCount>
             {filteredDiscussions.length} discussion{filteredDiscussions.length !== 1 ? 's' : ''}
-          </div>
+          </DiscussionCount>
         </FilterLeft>
 
         <FilterRight>
@@ -814,6 +935,7 @@ function Forum() {
         onSubmit={handleQuestionSubmit}
       />
     </PageContainer>
+    </ErrorBoundary>
   );
 }
 

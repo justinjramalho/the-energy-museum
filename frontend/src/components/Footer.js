@@ -88,6 +88,41 @@ const FooterBottom = styled.div`
   }
 `;
 
+const FooterCredit = styled.div`
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  
+  a {
+    color: #6b7280;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: #00d4ff;
+    }
+    
+    &:focus {
+      outline: 2px solid #00d4ff;
+      outline-offset: 2px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    padding-top: 0.4rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+    margin-top: 0.4rem;
+  }
+`;
+
 const NewsletterForm = styled.form`
   display: flex;
   gap: 0.5rem;
@@ -265,6 +300,20 @@ function Footer() {
             <a href="/terms"> Terms of Service</a>
           </p>
         </FooterBottom>
+        
+        <FooterCredit>
+          <p>
+            Crafted with ⚡ by{' '}
+            <a 
+              href="https://www.justinjramalho.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Visit Justin J Ramalho's website"
+            >
+              justinjramalho
+            </a>
+          </p>
+        </FooterCredit>
       </FooterContent>
     </FooterContainer>
   );

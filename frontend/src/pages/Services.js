@@ -2,12 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import ErrorBoundary from '../components/ErrorBoundary';
+import SEOHead from '../components/SEOHead';
 
 const PageContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   color: #ccd6f6;
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+  }
 `;
 
 const HeroSection = styled.section`
@@ -17,6 +27,18 @@ const HeroSection = styled.section`
   border-radius: 20px;
   margin-bottom: 4rem;
   border: 1px solid rgba(0, 212, 255, 0.2);
+  
+  @media (max-width: 768px) {
+    padding: 2rem 0 3rem;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem 0 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+  }
 `;
 
 const HeroTitle = styled.h1`
@@ -26,7 +48,13 @@ const HeroTitle = styled.h1`
   text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
   
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
   }
 `;
 
@@ -36,6 +64,18 @@ const HeroSubtitle = styled.p`
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.7;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+  }
 `;
 
 const Section = styled.section`
@@ -44,12 +84,27 @@ const Section = styled.section`
   &:last-child {
     border-bottom: none;
   }
+  
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem 0;
+  }
 `;
 
 const AnimatedSection = styled.div`
   opacity: ${props => props.shouldAnimate ? 1 : 0};
   transform: translateY(${props => props.shouldAnimate ? '0' : '30px'});
   transition: all 0.8s ease;
+  will-change: opacity, transform;
+  
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
 `;
 
 const SectionTitle = styled.h2`
@@ -69,6 +124,21 @@ const SectionTitle = styled.h2`
     margin: 1rem auto 0;
     border-radius: 2px;
   }
+  
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    
+    &::after {
+      width: 60px;
+      height: 3px;
+    }
+  }
 `;
 
 const ServiceGrid = styled.div`
@@ -76,6 +146,17 @@ const ServiceGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin: 3rem 0;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
 `;
 
 const ServiceCard = styled.div`
@@ -89,6 +170,21 @@ const ServiceCard = styled.div`
     transform: translateY(-5px);
     border-color: rgba(0, 212, 255, 0.5);
     box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    padding: 2rem;
+    border-radius: 12px;
+    
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+    border-radius: 10px;
   }
 `;
 
@@ -219,6 +315,17 @@ const StepsContainer = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin: 3rem 0;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
 `;
 
 const StepCard = styled.div`
@@ -262,6 +369,18 @@ const CTASection = styled.div`
   padding: 4rem;
   text-align: center;
   margin: 4rem 0;
+  
+  @media (max-width: 768px) {
+    padding: 2.5rem;
+    margin: 2rem 0;
+    border-radius: 16px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 2rem;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+  }
 `;
 
 const CTATitle = styled.h2`
@@ -322,13 +441,14 @@ const HighlightBox = styled.div`
 `;
 
 function Services() {
-  const heroAnimation = useScrollAnimation({ threshold: 0.1 });
-  const fieldAnimation = useScrollAnimation({ threshold: 0.3 });
-  const pdAnimation = useScrollAnimation({ threshold: 0.3 });
-  const communityAnimation = useScrollAnimation({ threshold: 0.3 });
-  const pricingAnimation = useScrollAnimation({ threshold: 0.3 });
-  const howItWorksAnimation = useScrollAnimation({ threshold: 0.3 });
-  const ctaAnimation = useScrollAnimation({ threshold: 0.3 });
+  // Optimized thresholds for mobile devices
+  const heroAnimation = useScrollAnimation({ threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  const fieldAnimation = useScrollAnimation({ threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  const pdAnimation = useScrollAnimation({ threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  const communityAnimation = useScrollAnimation({ threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  const pricingAnimation = useScrollAnimation({ threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  const howItWorksAnimation = useScrollAnimation({ threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  const ctaAnimation = useScrollAnimation({ threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
   // Scroll to top when component mounts
   React.useEffect(() => {
@@ -336,14 +456,23 @@ function Services() {
   }, []);
 
   return (
-    <PageContainer>
+    <ErrorBoundary>
+      <SEOHead 
+        title="Our Services"
+        description="Transforming STEM education through expertly crafted field experiences, professional development, and community programs. World-class energy literacy education for students, educators, and communities."
+        keywords="STEM education, energy literacy, field experiences, professional development, community programs, OpenSciEd, educational services, science education"
+        canonical="/services"
+      />
+      <PageContainer>
       {/* Hero Section */}
       <AnimatedSection 
         ref={heroAnimation.ref}
         shouldAnimate={heroAnimation.shouldAnimate}
+        role="banner"
+        aria-label="Services page hero section"
       >
         <HeroSection>
-          <HeroTitle>Our Services</HeroTitle>
+          <HeroTitle id="page-title">Our Services</HeroTitle>
           <HeroSubtitle>
             Transforming STEM education through expertly crafted field experiences, 
             professional development, and community programs. We bring world-class 
@@ -353,12 +482,14 @@ function Services() {
       </AnimatedSection>
 
       {/* Field Experiences Section */}
-      <Section>
+      <Section as="section" aria-labelledby="field-experiences-title">
         <AnimatedSection 
           ref={fieldAnimation.ref}
           shouldAnimate={fieldAnimation.shouldAnimate}
+          role="region"
+          aria-label="Field experiences services"
         >
-          <SectionTitle>Field Experiences</SectionTitle>
+          <SectionTitle id="field-experiences-title">Field Experiences</SectionTitle>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <p style={{ color: '#e0e6ed', fontSize: '1.2rem', lineHeight: '1.8', maxWidth: '800px', margin: '0 auto' }}>
               Immerse your students in hands-on energy exploration with our expertly designed 
@@ -789,7 +920,8 @@ function Services() {
           </div>
         </CTASection>
       </AnimatedSection>
-    </PageContainer>
+      </PageContainer>
+    </ErrorBoundary>
   );
 }
 
